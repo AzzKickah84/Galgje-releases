@@ -1,6 +1,10 @@
 ﻿# Galgje — Download
 
-Public download page for **Galgje** (advanced Hangman for Windows).
+Public download page
+## User manual (with screenshots)
+
+**[View manual online](https://azzkickah84.github.io/Galgje-releases/manual.html)** — full HTML guide with game screenshots.
+ for **Galgje** (advanced Hangman for Windows).
 
 This repository contains **installers and documentation only**. Source code is not published here.
 
@@ -44,3 +48,4 @@ SHA-256 (`GalgjeSetup_v6.8.2.exe`):
 ## Author
 
 Thijs Boekholt
+
