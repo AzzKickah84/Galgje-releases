@@ -12,7 +12,21 @@ This repository contains **installers and documentation only**. Source code is n
 | [manual.html](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.2/manual.html) | User manual |
 | [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.2/CHANGELOG.md) | Release notes |
 
-**All releases:** [github.com/AzzKickah84/Galgje-releases/releases](https://github.com/AzzKickah84/Galgje-releases/releases)
+Direct installer link: **https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.2/GalgjeSetup_v6.8.2.exe**
+
+## All releases
+
+| Version | Installer |
+|---------|-----------|
+| **6.8.2** (latest) | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.2/GalgjeSetup_v6.8.2.exe) |
+| 6.8.1 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.1/GalgjeSetup_v6.8.1.exe) |
+| 6.8.0 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.0/GalgjeSetup_v6.8.0.exe) |
+| 6.7.0 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.7.0/GalgjeSetup_v6.7.0.exe) |
+| 6.6.1 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.6.1/GalgjeSetup_v6.6.1.exe) |
+| 6.6.0 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.6.0/GalgjeSetup_v6.6.0.exe) |
+| 6.5.1 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.5.1/GalgjeSetup_v6.5.1.exe) |
+
+Full release history: [github.com/AzzKickah84/Galgje-releases/releases](https://github.com/AzzKickah84/Galgje-releases/releases)
 
 ## Requirements
 
