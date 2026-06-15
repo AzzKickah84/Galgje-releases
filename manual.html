@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galgje v6.8.2 — User Manual</title>
+  <title>Galgje v6.8.2 - User Manual</title>
   <link rel="icon" href="app.ico" type="image/x-icon">
   <style>
     :root {
@@ -244,6 +244,155 @@
       box-shadow: 0 12px 40px rgba(74,158,255,0.15);
     }
     .hero-shot img { width: 100%; display: block; }
+    /* Stats import guide */
+    .import-hero {
+      background: linear-gradient(135deg, rgba(124,92,255,0.18), rgba(74,158,255,0.12));
+      border: 1px solid rgba(124,92,255,0.35);
+      border-radius: 16px;
+      padding: 1.75rem 2rem;
+      margin: 1.5rem 0 2rem;
+    }
+    .import-hero h3 { margin-top: 0; color: var(--text); font-size: 1.25rem; }
+    .import-hero p { margin-bottom: 0; color: #c5d0de; }
+    .path-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .path-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      text-decoration: none;
+      color: inherit;
+      transition: border-color 0.15s, transform 0.15s;
+    }
+    .path-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .path-card .icon { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .path-card h4 { margin: 0 0 0.35rem; color: var(--text); }
+    .path-card p { margin: 0; font-size: 0.88rem; color: var(--muted); }
+    .path-card.recommended { border-color: rgba(61,214,140,0.45); background: rgba(61,214,140,0.05); }
+    .win-mock {
+      background: #1f1f1f;
+      border: 1px solid #3a3a3a;
+      border-radius: 8px;
+      overflow: hidden;
+      margin: 1rem 0;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+      font-family: "Segoe UI", system-ui, sans-serif;
+    }
+    .win-titlebar {
+      background: linear-gradient(180deg, #3a3a3a, #2a2a2a);
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.78rem;
+      color: #ddd;
+    }
+    .win-dots { display: flex; gap: 6px; margin-right: 0.5rem; }
+    .win-dots span { width: 11px; height: 11px; border-radius: 50%; display: block; }
+    .win-dots .r { background: #ff5f57; }
+    .win-dots .y { background: #febc2e; }
+    .win-dots .g { background: #28c840; }
+    .win-body { padding: 1rem 1.25rem; background: #252526; color: #ccc; font-size: 0.88rem; }
+    .win-run-row { display: flex; align-items: center; gap: 0.75rem; margin: 0.75rem 0; }
+    .win-run-row label { min-width: 5rem; color: #999; }
+    .win-run-input {
+      flex: 1;
+      background: #1e1e1e;
+      border: 1px solid #0078d4;
+      border-radius: 4px;
+      padding: 0.35rem 0.6rem;
+      color: #fff;
+      font-family: Consolas, monospace;
+      font-size: 0.85rem;
+    }
+    .win-btn {
+      display: inline-block;
+      background: #0078d4;
+      color: #fff;
+      border: none;
+      padding: 0.35rem 1.25rem;
+      border-radius: 4px;
+      font-size: 0.82rem;
+    }
+    .win-btn.secondary { background: #3a3a3a; color: #ddd; }
+    .explorer-split {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 0.75rem;
+      align-items: center;
+      margin: 1rem 0;
+    }
+    .explorer-pane {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 6px;
+      padding: 0.75rem;
+      font-size: 0.82rem;
+    }
+    .explorer-pane .path { color: #9cdcfe; font-family: Consolas, monospace; font-size: 0.78rem; margin-bottom: 0.5rem; word-break: break-all; }
+    .explorer-pane .file { padding: 0.2rem 0; color: #ccc; }
+    .explorer-pane .file.highlight { color: #4ec9b0; font-weight: 600; }
+    .explorer-arrow { font-size: 1.5rem; color: var(--accent); text-align: center; }
+    .format-block {
+      background: #0d1117;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 1rem 0;
+    }
+    .format-block-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      background: var(--surface2);
+      border-bottom: 1px solid var(--border);
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+    .format-block pre {
+      margin: 0;
+      padding: 1rem 1.25rem;
+      overflow-x: auto;
+      font-family: Consolas, "Cascadia Code", monospace;
+      font-size: 0.84rem;
+      line-height: 1.55;
+      color: #e6edf3;
+    }
+    .format-block .cm { color: #8b949e; }
+    .format-block .key { color: #79c0ff; }
+    .format-block .num { color: #a5d6ff; }
+    .format-block .str { color: #7ee787; }
+    .copy-btn {
+      background: var(--accent-soft);
+      border: 1px solid rgba(74,158,255,0.4);
+      color: var(--accent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .copy-btn:hover { background: rgba(74,158,255,0.22); }
+    .copy-btn.copied { color: var(--success); border-color: var(--success); }
+    .verify-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .verify-gallery .screenshot { margin: 0; }
+    .checklist { list-style: none; padding: 0; margin: 1rem 0; }
+    .checklist li {
+      padding: 0.65rem 0 0.65rem 2rem;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      color: #c5d0de;
+    }
+    .checklist li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: 700;
+    }
+    .import-step-visual { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; align-items: start; margin: 1.5rem 0; }
+    @media (max-width: 768px) { .import-step-visual { grid-template-columns: 1fr; } .explorer-split { grid-template-columns: 1fr; } .explorer-arrow { transform: rotate(90deg); } }
   </style>
 </head>
 <body>
@@ -253,7 +402,7 @@
     <div class="sidebar-brand">
       <img src="app.ico" alt="Galgje icon" width="48" height="48">
       <h1>Galgje Manual</h1>
-      <p>Version 6.8.2 — Complete Guide</p>
+      <p>Version 6.8.2 - Complete Guide</p>
     </div>
     <nav>
       <div class="section">Getting Started</div>
@@ -284,6 +433,8 @@
       <a href="#achievements">Achievements</a>
       <a href="#data">Data &amp; File Locations</a>
       <a href="#replace-stats" style="color:var(--warning);font-weight:600;">Import Your Own Stats</a>
+      <a href="#stats-walkthrough" style="padding-left:2rem;font-size:0.85rem;">Step-by-step guide</a>
+      <a href="#stats-format" style="padding-left:2rem;font-size:0.85rem;">File formats</a>
       <a href="#troubleshooting">Troubleshooting</a>
       <a href="#reference">Button Reference</a>
     </nav>
@@ -293,7 +444,7 @@
 
     <div class="hero">
       <div class="badge">Official User Manual</div>
-      <h2>Galgje — Advanced Hangman for Windows</h2>
+      <h2>Galgje - Advanced Hangman for Windows</h2>
       <p>This manual covers every feature of Galgje v6.8.2: from your first game to advanced multiplayer sessions with timers, statistics, achievements, and the presentation Word Display window.</p>
       <div class="tip"><strong>New users</strong> After installing, open this manual from the Start Menu shortcut <strong>User Manual - Import Your Own Stats</strong> (or the desktop shortcut created during setup). Jump to <a href="#replace-stats" style="color:var(--accent)">Import Your Own Stats</a> if you want to load your existing game history.</div>
       <figure class="hero-shot">
@@ -331,7 +482,7 @@
       <h2>Main Window Overview</h2>
       <p>The main window is organized into distinct zones. The screenshot below shows a live game in progress:</p>
       <figure class="screenshot">
-        <img src="screenshots/main-gameplay.png" alt="Galgje main window — gameplay view with hangman drawing, player list, and statistics panel">
+        <img src="screenshots/main-gameplay.png" alt="Galgje main window - gameplay view with hangman drawing, player list, and statistics panel">
         <figcaption>The main Galgje window: word display (top), guess controls &amp; timer, hangman drawing (left), player management (center), and statistics tabs (right).</figcaption>
       </figure>
       <p>For reference, here is a simplified map of the interface:</p>
@@ -355,17 +506,17 @@
       </div>
       <h3>Key Display Areas</h3>
       <ul>
-        <li><strong>Current Word</strong> — Shows the word as underscores with revealed letters (blue header bar).</li>
-        <li><strong>Hangman panel</strong> — Visual gallows that updates with each wrong guess (up to 10 stages).</li>
-        <li><strong>Correct / Wrong letters</strong> — Running lists of all letters guessed correctly and incorrectly.</li>
-        <li><strong>Timer</strong> — Large countdown display; color changes as time runs low.</li>
-        <li><strong>Selected Player</strong> — Shows who is currently active for letter guesses.</li>
+        <li><strong>Current Word</strong> - Shows the word as underscores with revealed letters (blue header bar).</li>
+        <li><strong>Hangman panel</strong> - Visual gallows that updates with each wrong guess (up to 10 stages).</li>
+        <li><strong>Correct / Wrong letters</strong> - Running lists of all letters guessed correctly and incorrectly.</li>
+        <li><strong>Timer</strong> - Large countdown display; color changes as time runs low.</li>
+        <li><strong>Selected Player</strong> - Shows who is currently active for letter guesses.</li>
       </ul>
     </section>
 
     <!-- QUICK START -->
     <section id="quickstart">
-      <h2>Quick Start — Your First Game in 5 Steps</h2>
+      <h2>Quick Start - Your First Game in 5 Steps</h2>
       <div class="steps">
         <div class="step"><div class="step-body"><h4>Set a word</h4><p>Type a word in <strong>Custom Word</strong> and press Enter, or click <span class="btn-ref">Random Word</span> for a Dutch word from the OpenTaal list.</p></div></div>
         <div class="step"><div class="step-body"><h4>Add players</h4><p>Type a name in <strong>Add Player</strong> and click <span class="btn-ref">Add</span> (or press Enter). Repeat for each participant.</p></div></div>
@@ -386,7 +537,7 @@
       <p>Go to the <strong>Played words</strong> tab, find a word (use the search box to filter), and <strong>double-click</strong> it to set it as the current word instantly.</p>
       <h3>New Game</h3>
       <p>Click <span class="btn-ref">New Game</span> to reset the board, clear guessed letters, reset the hangman, and automatically fetch a new random word. Player stats from the previous round are saved first.</p>
-      <div class="tip"><strong>Tip</strong>When switching words mid-game, the timer remembers whether it was paused — it does not auto-start on a new word.</div>
+      <div class="tip"><strong>Tip</strong>When switching words mid-game, the timer remembers whether it was paused - it does not auto-start on a new word.</div>
     </section>
 
     <!-- PLAYERS -->
@@ -394,7 +545,7 @@
       <h2>Managing Players</h2>
       <figure class="screenshot">
         <img src="screenshots/players-tab.png" alt="Players tab showing Anna, Bram, Chris, and Dana with guess counts and error limits">
-        <figcaption>The <strong>Players</strong> tab — click any row to select a player for guessing. Chris is shown eliminated (red).</figcaption>
+        <figcaption>The <strong>Players</strong> tab - click any row to select a player for guessing. Chris is shown eliminated (red).</figcaption>
       </figure>
       <h3>Adding Players</h3>
       <ol>
@@ -439,7 +590,7 @@
       <div class="card-grid">
         <div class="card"><h4>✅ Correct Guess</h4><p>All instances of the letter are revealed in the word display. Timer gains +20 seconds. Game summary copied to clipboard.</p></div>
         <div class="card"><h4>❌ Wrong Guess</h4><p>Letter added to wrong letters list. Hangman advances one stage. Timer loses −30 seconds. Wrong-guess sound plays (unless muted).</p></div>
-        <div class="card"><h4>🔁 Duplicate Guess</h4><p>Guessing a letter already tried counts as a wrong guess — even if another player guessed it first.</p></div>
+        <div class="card"><h4>🔁 Duplicate Guess</h4><p>Guessing a letter already tried counts as a wrong guess - even if another player guessed it first.</p></div>
       </div>
       <div class="warn"><strong>Important</strong>Only one letter per guess. The input box accepts a single character and auto-uppercases it.</div>
     </section>
@@ -468,20 +619,20 @@
     <!-- TIMER -->
     <section id="timer">
       <h2>Timer System</h2>
-      <p>Each game has a <strong>5-minute (300 second)</strong> countdown. The timer does <em>not</em> start automatically — you control it manually.</p>
+      <p>Each game has a <strong>5-minute (300 second)</strong> countdown. The timer does <em>not</em> start automatically - you control it manually.</p>
       <table>
         <tr><th>Action</th><th>Effect</th></tr>
         <tr><td><span class="btn-ref">Resume Timer</span></td><td>Start or resume the countdown</td></tr>
         <tr><td><span class="btn-ref">Pause Timer</span></td><td>Freeze the countdown</td></tr>
         <tr><td>Correct letter guessed</td><td><strong>+20 seconds</strong> (max 5:00)</td></tr>
         <tr><td>Wrong letter guessed</td><td><strong>−30 seconds</strong> (min 0:00)</td></tr>
-        <tr><td>Timer reaches 0:00</td><td>Game ends — host wins (see AzzMastah rule)</td></tr>
+        <tr><td>Timer reaches 0:00</td><td>Game ends - host wins (see AzzMastah rule)</td></tr>
       </table>
       <h3>Color Indicators</h3>
       <ul>
-        <li><strong style="color:var(--success)">Green</strong> — 5:00 to 3:30 remaining</li>
-        <li><strong style="color:var(--warning)">Orange</strong> — 3:30 to 1:00 remaining</li>
-        <li><strong style="color:var(--danger)">Red</strong> — Less than 1:00 remaining</li>
+        <li><strong style="color:var(--success)">Green</strong> - 5:00 to 3:30 remaining</li>
+        <li><strong style="color:var(--warning)">Orange</strong> - 3:30 to 1:00 remaining</li>
+        <li><strong style="color:var(--danger)">Red</strong> - Less than 1:00 remaining</li>
       </ul>
       <div class="tip"><strong>Tip</strong>Pause the timer during word discussions or rule explanations. The paused state is preserved when you switch words.</div>
     </section>
@@ -517,14 +668,14 @@
       <p>Click <span class="btn-ref">Show Word Window</span> to open a secondary presentation window ideal for projectors, large screens, and streaming.</p>
       <figure class="screenshot">
         <img src="screenshots/word-display.png" alt="Word Display window with player cards, hangman, performance graph, and timer">
-        <figcaption>The Word Display window — player cards (left), live hangman (center), performance graph (right), and countdown timer.</figcaption>
+        <figcaption>The Word Display window - player cards (left), live hangman (center), performance graph (right), and countdown timer.</figcaption>
       </figure>
       <h3>Layout</h3>
       <ul>
-        <li><strong>Left column</strong> — Player cards showing each player's name, status, guessed letters, and errors</li>
-        <li><strong>Center</strong> — Large animated hangman drawing</li>
-        <li><strong>Right column</strong> — Performance graph and live statistics</li>
-        <li><strong>Bottom</strong> — Timer, eliminated players section, and version branding</li>
+        <li><strong>Left column</strong> - Player cards showing each player's name, status, guessed letters, and errors</li>
+        <li><strong>Center</strong> - Large animated hangman drawing</li>
+        <li><strong>Right column</strong> - Performance graph and live statistics</li>
+        <li><strong>Bottom</strong> - Timer, eliminated players section, and version branding</li>
       </ul>
       <p>The Word Display updates in real time as letters are guessed. On game over or when marking a winner, the entire window renders to a bitmap and copies to your clipboard automatically.</p>
       <div class="tip"><strong>Streaming tip</strong>Keep the Word Display on your stream monitor while operating the main window on your control screen.</div>
@@ -540,7 +691,7 @@
       <h2>Played Words Tab</h2>
       <figure class="screenshot">
         <img src="screenshots/played-words-tab.png" alt="Played words tab listing previously used words">
-        <figcaption>Previously played words — search, filter, double-click to reuse, or delete entries.</figcaption>
+        <figcaption>Previously played words - search, filter, double-click to reuse, or delete entries.</figcaption>
       </figure>
       <p>History of all words used in previous games. Use the <strong>Search Played Word</strong> box above the tabs to filter the list. <strong>Double-click</strong> a word to reuse it. Select a word and click <span class="btn-ref">Delete</span> (if available) to remove it from history.</p>
     </section>
@@ -549,16 +700,16 @@
       <h2>Player Statistics Tab</h2>
       <figure class="screenshot">
         <img src="screenshots/player-statistics.png" alt="Player Statistics tab with sortable columns for games, wins, eliminations, and win rate">
-        <figcaption>All-time player statistics — sort by any column, export top 10, or backup and reset.</figcaption>
+        <figcaption>All-time player statistics - sort by any column, export top 10, or backup and reset.</figcaption>
       </figure>
       <p>All-time statistics for every player who has ever participated:</p>
       <ul>
-        <li><strong>Games</strong> — Total games played</li>
-        <li><strong>Wins</strong> — Games won</li>
-        <li><strong>Eliminated</strong> — Times eliminated</li>
-        <li><strong>Errors</strong> — Total wrong guesses (all games)</li>
-        <li><strong>Guesses</strong> — Total letter guesses (all games)</li>
-        <li><strong>Win Rate</strong> — Percentage of games won</li>
+        <li><strong>Games</strong> - Total games played</li>
+        <li><strong>Wins</strong> - Games won</li>
+        <li><strong>Eliminated</strong> - Times eliminated</li>
+        <li><strong>Errors</strong> - Total wrong guesses (all games)</li>
+        <li><strong>Guesses</strong> - Total letter guesses (all games)</li>
+        <li><strong>Win Rate</strong> - Percentage of games won</li>
       </ul>
       <p>Click any column header to sort. Double-click a player for details. Click <span class="btn-ref">Refresh Stats</span> to force a reload. Click <span class="btn-ref">Copy Stats Top10</span> to copy the top 10 players to clipboard.</p>
       <p>Click <span class="btn-ref">Backup + Reset all Stats</span> to export a timestamped CSV backup and then clear all statistics.</p>
@@ -578,9 +729,9 @@
       <h2>Notes Tab</h2>
       <figure class="screenshot">
         <img src="screenshots/notes-tab.png" alt="Notes tab with auto-saved house rules and session observations">
-        <figcaption>The Notes tab — free-form text that auto-saves as you type.</figcaption>
+        <figcaption>The Notes tab - free-form text that auto-saves as you type.</figcaption>
       </figure>
-      <p>Free-form text area for house rules, word hints, session notes, or observations. Notes <strong>auto-save</strong> as you type — no save button needed. Content persists between sessions.</p>
+      <p>Free-form text area for house rules, word hints, session notes, or observations. Notes <strong>auto-save</strong> as you type - no save button needed. Content persists between sessions.</p>
       <div class="tip"><strong>Example uses</strong>Record agreed house rules, track which words were too easy, note player agreements, or plan the next word theme.</div>
     </section>
 
@@ -604,8 +755,8 @@
       <h2>Sound &amp; Mute</h2>
       <p>Click the <span class="btn-ref">🔊</span> button (top-right) to toggle sound effects. When muted, the button turns pink and shows 🔇.</p>
       <ul>
-        <li><strong>Wrong guess</strong> — Plays <code>wrong_guess.wav</code></li>
-        <li><strong>Victory</strong> — Plays <code>bingbing.wav</code> when marking a winner</li>
+        <li><strong>Wrong guess</strong> - Plays <code>wrong_guess.wav</code></li>
+        <li><strong>Victory</strong> - Plays <code>bingbing.wav</code> when marking a winner</li>
       </ul>
     </section>
 
@@ -636,7 +787,7 @@
       <h2>Data &amp; File Locations</h2>
       <p>When installed via the setup wizard, user data is stored in:</p>
       <p><code>%LocalAppData%\Galgje\</code> (typically <code>C:\Users\YourName\AppData\Local\Galgje\</code>)</p>
-      <div class="warn"><strong>Important</strong>Do not put statistics or log files in <code>Program Files\Galgje</code> — that folder is read-only. On startup, Galgje automatically copies any data files found there into AppData once. For manual restore, copy files directly to the AppData folder above.</div>
+      <div class="warn"><strong>Important</strong>Do not put statistics or log files in <code>Program Files\Galgje</code> - that folder is read-only. On startup, Galgje automatically copies any data files found there into AppData once. For manual restore, copy files directly to the AppData folder above.</div>
       <table>
         <tr><th>File</th><th>Contents</th></tr>
         <tr><td>hangman_log.txt</td><td>Full game event log</td></tr>
@@ -653,47 +804,192 @@
 
     <!-- REPLACE STATS -->
     <section id="replace-stats">
-      <h2>Replacing Stats &amp; Data Files with Your Own</h2>
-      <p>Galgje never reads statistics directly from the install folder during normal use. All live data is stored in <code>%LocalAppData%\Galgje\</code>. To load your own statistics — or try the bundled examples — follow these steps:</p>
+      <h2>Import Your Own Stats &amp; Data</h2>
 
-      <div class="steps">
-        <div class="step"><div class="step-body"><h4>Close Galgje completely</h4><p>Exit the application so files are not locked while you copy.</p></div></div>
-        <div class="step"><div class="step-body"><h4>Open your Galgje data folder</h4><p>Press <kbd>Win</kbd>+<kbd>R</kbd>, type <code>%LocalAppData%\Galgje</code>, and press Enter. Create the folder if it does not exist yet.</p></div></div>
-        <div class="step"><div class="step-body"><h4>Back up existing files (recommended)</h4><p>Copy the current contents of the data folder to a safe location before replacing anything.</p></div></div>
-        <div class="step"><div class="step-body"><h4>Copy your files</h4><p>Copy your own <code>player_statistics.log</code>, <code>played_words.txt</code>, <code>hangman_log.txt</code>, <code>notes.txt</code>, and/or <code>player_achievements.json</code> into the data folder, overwriting the existing files.</p></div></div>
-        <div class="step"><div class="step-body"><h4>Start Galgje</h4><p>Launch the game. Your statistics, played words, notes, and log history appear immediately in the corresponding tabs.</p></div></div>
+      <div class="import-hero">
+        <h3>Your game history lives in one folder</h3>
+        <p>Galgje reads statistics from <code>%LocalAppData%\Galgje\</code> - never from Program Files. Copy files there, restart the app, and your leaderboard, played words, notes, and log appear instantly. No import wizard needed.</p>
       </div>
 
-      <h3>Try the bundled example stats first</h3>
-      <p>The installer includes sample files in:</p>
-      <p><code>C:\Program Files\Galgje\example-data\</code></p>
-      <p>Copy the files from that folder into <code>%LocalAppData%\Galgje\</code> to preview how statistics, played words, notes, and the game log look in the app.</p>
+      <h3>Pick your path</h3>
+      <div class="path-cards">
+        <a class="path-card recommended" href="#stats-try-example">
+          <div class="icon">🎁</div>
+          <h4>Try example stats first</h4>
+          <p>Best for new users. Copy the bundled sample files and see how everything looks before using your own data.</p>
+        </a>
+        <a class="path-card" href="#stats-walkthrough">
+          <div class="icon">📂</div>
+          <h4>Import your own files</h4>
+          <p>Already have <code>player_statistics.log</code> or other Galgje data? Follow the step-by-step guide with pictures.</p>
+        </a>
+        <a class="path-card" href="#stats-format">
+          <div class="icon">📝</div>
+          <h4>Build from scratch</h4>
+          <p>Create or edit files manually using the format cheat sheet and copy-paste templates below.</p>
+        </a>
+      </div>
 
-      <h3>Statistics file format</h3>
-      <p><code>player_statistics.log</code> uses comma-separated values, one player per line:</p>
-      <div class="ui-map">PlayerName,Games,Wins,Eliminations,TotalErrors,TotalGuesses
-Anna,42,18,5,87,312
-Bram,38,12,8,102,280</div>
-      <ul>
-        <li>Lines starting with <code>#</code> are comments and are ignored</li>
-        <li><strong>Games</strong> — total games played</li>
-        <li><strong>Wins</strong> — games won (must not exceed Games)</li>
-        <li><strong>Eliminations</strong> — times eliminated</li>
-        <li><strong>TotalErrors</strong> — cumulative wrong guesses</li>
-        <li><strong>TotalGuesses</strong> — cumulative letter guesses</li>
-      </ul>
+      <h3 id="stats-try-example">Option A: Try the bundled example (recommended)</h3>
+      <p>The installer includes ready-made sample files at <code>C:\Program Files\Galgje\example-data\</code>. They contain fake players (Anna, Bram, Chris...) so you can explore every tab without risking your real data.</p>
 
-      <h3>Other replaceable files</h3>
+      <div class="import-step-visual">
+        <div>
+          <div class="steps">
+            <div class="step"><div class="step-body"><h4>Close Galgje</h4><p>Exit completely so files are not locked.</p></div></div>
+            <div class="step"><div class="step-body"><h4>Open the data folder</h4><p>Press <kbd>Win</kbd>+<kbd>R</kbd>, type <code>%LocalAppData%\Galgje</code>, press Enter. Create the folder if it does not exist.</p></div></div>
+            <div class="step"><div class="step-body"><h4>Copy all example files</h4><p>Select everything in <code>example-data\</code> and copy into the Galgje folder. Overwrite when asked.</p></div></div>
+            <div class="step"><div class="step-body"><h4>Start Galgje</h4><p>Open the app. Check the tabs below to confirm the import worked.</p></div></div>
+          </div>
+        </div>
+        <div>
+          <div class="win-mock">
+            <div class="win-titlebar"><div class="win-dots"><span class="r"></span><span class="y"></span><span class="g"></span></div>Run</div>
+            <div class="win-body">
+              <p style="margin:0 0 0.5rem;color:#999;font-size:0.82rem;">Type the name of a program, folder, document, or Internet resource.</p>
+              <div class="win-run-row"><label>Open:</label><div class="win-run-input">%LocalAppData%\Galgje</div></div>
+              <div style="text-align:right;margin-top:1rem;"><span class="win-btn secondary">Cancel</span> <span class="win-btn">OK</span></div>
+            </div>
+          </div>
+          <div class="explorer-split">
+            <div class="explorer-pane">
+              <div class="path">📁 C:\Program Files\Galgje\example-data</div>
+              <div class="file highlight">player_statistics.log</div>
+              <div class="file highlight">played_words.txt</div>
+              <div class="file highlight">notes.txt</div>
+              <div class="file highlight">hangman_log.txt</div>
+            </div>
+            <div class="explorer-arrow">→</div>
+            <div class="explorer-pane">
+              <div class="path">📁 C:\Users\You\AppData\Local\Galgje</div>
+              <div class="file highlight">player_statistics.log</div>
+              <div class="file highlight">played_words.txt</div>
+              <div class="file highlight">notes.txt</div>
+              <div class="file highlight">hangman_log.txt</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 id="stats-walkthrough">Option B: Import your own files (step-by-step)</h3>
+      <div class="steps">
+        <div class="step"><div class="step-body"><h4>Close Galgje completely</h4><p>Check the system tray - the app must not be running while you copy files.</p></div></div>
+        <div class="step"><div class="step-body"><h4>Open your Galgje data folder</h4><p><kbd>Win</kbd>+<kbd>R</kbd> → <code>%LocalAppData%\Galgje</code> → Enter.</p></div></div>
+        <div class="step"><div class="step-body"><h4>Back up what's there (recommended)</h4><p>Copy the entire folder to your Desktop or Documents before overwriting anything.</p></div></div>
+        <div class="step"><div class="step-body"><h4>Copy your files in</h4><p>Paste your versions of the files below. You can copy one file or all of them - Galgje loads whatever is present.</p></div></div>
+        <div class="step"><div class="step-body"><h4>Launch Galgje and verify</h4><p>Your data should appear immediately. Use the checklist and screenshots in the next section to confirm.</p></div></div>
+      </div>
+
       <table>
-        <tr><th>File</th><th>Format</th></tr>
-        <tr><td><code>played_words.txt</code></td><td>One word per line (plain text)</td></tr>
-        <tr><td><code>hangman_log.txt</code></td><td>Plain text log; one event per line</td></tr>
-        <tr><td><code>notes.txt</code></td><td>Free-form plain text for the Notes tab</td></tr>
-        <tr><td><code>player_achievements.json</code></td><td>JSON file created by Galgje; copy from another installation to transfer achievements</td></tr>
+        <tr><th>Copy this file</th><th>What it controls in Galgje</th></tr>
+        <tr><td><code>player_statistics.log</code></td><td><strong>Player Statistics</strong> tab - games, wins, eliminations, errors, guesses</td></tr>
+        <tr><td><code>played_words.txt</code></td><td><strong>Played words</strong> tab - word history</td></tr>
+        <tr><td><code>notes.txt</code></td><td><strong>Notes</strong> tab - house rules and session notes</td></tr>
+        <tr><td><code>hangman_log.txt</code></td><td><strong>Game Log</strong> tab - event history</td></tr>
+        <tr><td><code>player_achievements.json</code></td><td>Achievement progress (optional - copy from another Galgje PC)</td></tr>
       </table>
 
-      <div class="tip"><strong>Tip</strong>Use the in-app <span class="btn-ref">Backup + Reset all Stats</span> button before replacing <code>player_statistics.log</code> manually — it exports a timestamped CSV backup first.</div>
-      <div class="warn"><strong>Do not copy data files into Program Files</strong> — The install folder is read-only. Always use <code>%LocalAppData%\Galgje</code>. Galgje only auto-imports from Program Files once on startup if your AppData folder is still empty.</div>
+      <h3 id="stats-verify">Verify it worked (what you should see)</h3>
+      <p>After copying example data or your own files, each tab should show your content. Here is what the example stats look like in Galgje:</p>
+      <ul class="checklist">
+        <li><strong>Player Statistics</strong> - Anna, Bram, Chris, and other players with games and win rates</li>
+        <li><strong>Played words</strong> - HANGMAN, GALGJE, COMPUTER, and more</li>
+        <li><strong>Notes</strong> - House rules and session notes</li>
+        <li><strong>Game Log</strong> - Timestamped events from past games</li>
+      </ul>
+      <div class="verify-gallery">
+        <figure class="screenshot">
+          <img src="screenshots/player-statistics.png" alt="Player Statistics tab showing imported example stats for Anna, Bram, Chris, and Dana">
+          <figcaption><strong>Player Statistics</strong> - imported leaderboard</figcaption>
+        </figure>
+        <figure class="screenshot">
+          <img src="screenshots/played-words-tab.png" alt="Played words tab showing imported word history">
+          <figcaption><strong>Played words</strong> - your word history</figcaption>
+        </figure>
+        <figure class="screenshot">
+          <img src="screenshots/notes-tab.png" alt="Notes tab showing imported house rules">
+          <figcaption><strong>Notes</strong> - auto-saved text</figcaption>
+        </figure>
+        <figure class="screenshot">
+          <img src="screenshots/game-log-tab.png" alt="Game Log tab showing imported event history">
+          <figcaption><strong>Game Log</strong> - past events</figcaption>
+        </figure>
+      </div>
+
+      <h3 id="stats-format">File formats cheat sheet</h3>
+      <p>Every file is plain text. You can edit them in Notepad. Lines starting with <code>#</code> are comments (statistics file only) and are ignored by Galgje.</p>
+
+      <h4>player_statistics.log (most important)</h4>
+      <p>One player per line. Six comma-separated numbers after the name. <strong>Wins must not exceed Games.</strong></p>
+      <div class="format-block">
+        <div class="format-block-header">
+          <span>player_statistics.log</span>
+          <button type="button" class="copy-btn" data-copy="stats-template">Copy blank template</button>
+        </div>
+        <pre id="stats-template"><span class="cm"># Player Statistics - Format: PlayerName,Games,Wins,Eliminations,TotalErrors,TotalGuesses</span>
+<span class="cm"># Lines starting with # are ignored</span>
+
+<span class="key">Anna</span>,<span class="num">42</span>,<span class="num">18</span>,<span class="num">5</span>,<span class="num">87</span>,<span class="num">312</span>
+<span class="key">Bram</span>,<span class="num">38</span>,<span class="num">12</span>,<span class="num">8</span>,<span class="num">102</span>,<span class="num">280</span>
+<span class="key">YourName</span>,<span class="num">0</span>,<span class="num">0</span>,<span class="num">0</span>,<span class="num">0</span>,<span class="num">0</span></pre>
+      </div>
+      <table>
+        <tr><th>Column</th><th>Meaning</th><th>Rules</th></tr>
+        <tr><td>PlayerName</td><td>Display name</td><td>No commas in the name. Case is kept as typed.</td></tr>
+        <tr><td>Games</td><td>Total games played</td><td>Whole number, 0 or higher</td></tr>
+        <tr><td>Wins</td><td>Games won</td><td>Must be ≤ Games</td></tr>
+        <tr><td>Eliminations</td><td>Times eliminated</td><td>Whole number, 0 or higher</td></tr>
+        <tr><td>TotalErrors</td><td>All-time wrong guesses</td><td>Whole number, 0 or higher</td></tr>
+        <tr><td>TotalGuesses</td><td>All-time letter guesses</td><td>Whole number, 0 or higher</td></tr>
+      </table>
+
+      <h4>played_words.txt</h4>
+      <p>One word per line. Uppercase is applied automatically when you play; stored text can be any case.</p>
+      <div class="format-block">
+        <div class="format-block-header">
+          <span>played_words.txt</span>
+          <button type="button" class="copy-btn" data-copy="words-template">Copy template</button>
+        </div>
+        <pre id="words-template"><span class="str">HANGMAN</span>
+<span class="str">GALGJE</span>
+<span class="str">COMPUTER</span>
+<span class="str">YOURWORD</span></pre>
+      </div>
+
+      <h4>notes.txt</h4>
+      <p>Free-form plain text. Line breaks are preserved. Shown in the Notes tab and auto-saved when edited in-app.</p>
+      <div class="format-block">
+        <div class="format-block-header">
+          <span>notes.txt</span>
+          <button type="button" class="copy-btn" data-copy="notes-template">Copy template</button>
+        </div>
+        <pre id="notes-template">House rules:
+- Dutch words only unless agreed otherwise
+- Timer is optional - pause for discussions
+- Host wins at 10 total wrong guesses
+
+Session notes go here.</pre>
+      </div>
+
+      <h4>hangman_log.txt</h4>
+      <p>Plain text, one event per line. Galgje appends new events during gameplay; you can prepend old history when migrating.</p>
+      <div class="format-block">
+        <div class="format-block-header">
+          <span>hangman_log.txt</span>
+          <button type="button" class="copy-btn" data-copy="log-template">Copy template</button>
+        </div>
+        <pre id="log-template">[14:32:01] === NEW GAME ===
+[14:32:05] WORD SELECTED: HANGMAN
+[14:32:12] Anna guessed 'H' - CORRECT
+[14:32:18] Bram guessed 'E' - WRONG (Errors: 1)</pre>
+      </div>
+
+      <h4>player_achievements.json</h4>
+      <p>JSON file created automatically by Galgje. To transfer achievements from another PC, copy the entire file from that PC's <code>%LocalAppData%\Galgje\</code> folder. Do not edit by hand unless you know JSON.</p>
+
+      <div class="tip"><strong>Pro tip</strong> Use the in-app <span class="btn-ref">Backup + Reset all Stats</span> button before replacing <code>player_statistics.log</code> manually. It exports a timestamped CSV backup first, so you can always undo.</div>
+      <div class="warn"><strong>Never copy data into Program Files</strong> - <code>C:\Program Files\Galgje\</code> is read-only. Always use <code>%LocalAppData%\Galgje</code>. Galgje only auto-imports from the install folder once on first run when AppData is still empty.</div>
+      <div class="note"><strong>Stats not showing?</strong> Confirm files are in AppData (not Program Files), filenames match exactly, and Galgje was restarted after copying. Check that <code>player_statistics.log</code> uses commas with no extra spaces and six numeric columns per line.</div>
     </section>
 
     <!-- TROUBLESHOOTING -->
@@ -704,7 +1000,7 @@ Bram,38,12,8,102,280</div>
         <tr><td>App won't start</td><td>Install .NET 8 Desktop Runtime (x64)</td></tr>
         <tr><td>Random Word fails</td><td>Check internet connection; bundled offline list should work without it. Reinstall if <code>opentaal_wordlist.txt</code> is missing from the install folder.</td></tr>
         <tr><td>No sound</td><td>Check the mute button (🔊/🔇) and Windows volume settings</td></tr>
-        <tr><td>Stats not showing</td><td>Data lives in <code>%LocalAppData%\Galgje</code>, not Program Files. Copy files there, or restart — Galgje auto-imports from the install folder.</td></tr>
+        <tr><td>Stats not showing</td><td>Data lives in <code>%LocalAppData%\Galgje</code>, not Program Files. Copy files there, or restart - Galgje auto-imports from the install folder.</td></tr>
         <tr><td>Can't guess letters</td><td>Ensure a player is selected and not eliminated</td></tr>
         <tr><td>Timer stuck</td><td>Pause and resume, or start a New Game</td></tr>
       </table>
@@ -740,11 +1036,26 @@ Bram,38,12,8,102,280</div>
     </section>
 
     <footer>
-      <p>© 2025 Thijs Boekholt — Galgje v6.8.2 User Manual</p>
+      <p>© 2025 Thijs Boekholt - Galgje v6.8.2 User Manual</p>
       <p>See also: <a href="press-release.html" style="color:var(--accent)">Press Release</a> · <a href="CHANGELOG.md" style="color:var(--accent)">Changelog</a></p>
     </footer>
 
   </main>
 </div>
+<script>
+document.querySelectorAll('.copy-btn[data-copy]').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var el = document.getElementById(btn.getAttribute('data-copy'));
+    if (!el) return;
+    var text = el.textContent;
+    navigator.clipboard.writeText(text).then(function() {
+      var orig = btn.textContent;
+      btn.textContent = 'Copied!';
+      btn.classList.add('copied');
+      setTimeout(function() { btn.textContent = orig; btn.classList.remove('copied'); }, 2000);
+    });
+  });
+});
+</script>
 </body>
 </html>
