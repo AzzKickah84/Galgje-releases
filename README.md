@@ -1,36 +1,22 @@
-﻿# Galgje — Download
+﻿# Galgje - Download
 
-Public download page
+Public download page for **Galgje** (advanced Hangman for Windows).
+
+This repository contains **installers and documentation only**. Galgje source code is **not** published here.
+
 ## User manual (with screenshots)
 
-**[View manual online](https://azzkickah84.github.io/Galgje-releases/manual.html)** — full HTML guide with game screenshots.
- for **Galgje** (advanced Hangman for Windows).
+**[View manual online](https://azzkickah84.github.io/Galgje-releases/manual.html)** - full HTML guide including stats import walkthrough.
 
-This repository contains **installers and documentation only**. Source code is not published here.
-
-## Latest version (v6.8.2)
+## Latest version (v6.8.3)
 
 | File | Description |
 |------|-------------|
-| [GalgjeSetup_v6.8.2.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.2/GalgjeSetup_v6.8.2.exe) | Windows installer (~5.9 MB) |
-| [manual.html](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.2/manual.html) | User manual |
-| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.2/CHANGELOG.md) | Release notes |
+| [GalgjeSetup_v6.8.3.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.3/GalgjeSetup_v6.8.3.exe) | Windows installer (~5.89 MB) |
+| [manual.html](https://azzkickah84.github.io/Galgje-releases/manual.html) | User manual with screenshots |
+| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.3/GalgjeSetup_v6.8.3.exe) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
 
-Direct installer link: **https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.2/GalgjeSetup_v6.8.2.exe**
-
-## All releases
-
-| Version | Installer |
-|---------|-----------|
-| **6.8.2** (latest) | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.2/GalgjeSetup_v6.8.2.exe) |
-| 6.8.1 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.1/GalgjeSetup_v6.8.1.exe) |
-| 6.8.0 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.0/GalgjeSetup_v6.8.0.exe) |
-| 6.7.0 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.7.0/GalgjeSetup_v6.7.0.exe) |
-| 6.6.1 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.6.1/GalgjeSetup_v6.6.1.exe) |
-| 6.6.0 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.6.0/GalgjeSetup_v6.6.0.exe) |
-| 6.5.1 | [Download](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.5.1/GalgjeSetup_v6.5.1.exe) |
-
-Full release history: [github.com/AzzKickah84/Galgje-releases/releases](https://github.com/AzzKickah84/Galgje-releases/releases)
+**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.3/GalgjeSetup_v6.8.3.exe
 
 ## Requirements
 
@@ -39,13 +25,12 @@ Full release history: [github.com/AzzKickah84/Galgje-releases/releases](https://
 
 ## Verify download (optional)
 
-SHA-256 (`GalgjeSetup_v6.8.2.exe`):
+SHA-256 (`GalgjeSetup_v6.8.3.exe`):
 
-```
-407121f84fba422df9a99ec430d71b26efd8b63a5ef8af29e4a5018ddb062690
-```
+`
+485a74b7b9ec7127e82bb94003196417f50b1e587db3dd186a6a5c3408097716
+`
 
 ## Author
 
 Thijs Boekholt
-
