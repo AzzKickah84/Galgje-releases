@@ -8,15 +8,15 @@ This repository contains **installers and documentation only**. Galgje source co
 
 **[View manual online](https://azzkickah84.github.io/Galgje-releases/manual.html)** - full HTML guide including stats import walkthrough.
 
-## Latest version (v6.8.3)
+## Latest version (v6.8.5)
 
 | File | Description |
 |------|-------------|
-| [GalgjeSetup_v6.8.3.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.3/GalgjeSetup_v6.8.3.exe) | Windows installer (~5.89 MB) |
+| [GalgjeSetup_v6.8.5.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.5/GalgjeSetup_v6.8.5.exe) | Windows installer (~5.9 MB) |
 | [manual.html](https://azzkickah84.github.io/Galgje-releases/manual.html) | User manual with screenshots |
-| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.3/GalgjeSetup_v6.8.3.exe) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
+| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.5/GalgjeSetup_v6.8.5.exe) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
 
-**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.3/GalgjeSetup_v6.8.3.exe
+**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.5/GalgjeSetup_v6.8.5.exe
 
 ## Requirements
 
@@ -25,10 +25,10 @@ This repository contains **installers and documentation only**. Galgje source co
 
 ## Verify download (optional)
 
-SHA-256 (`GalgjeSetup_v6.8.3.exe`):
+SHA-256 (`GalgjeSetup_v6.8.5.exe`):
 
 `
-485a74b7b9ec7127e82bb94003196417f50b1e587db3dd186a6a5c3408097716
+4e43ced9a141953d4705ad2b340c4f3425a8862a9a92cc3720529b676437ce24
 `
 
 ## Author
