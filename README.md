@@ -6,6 +6,8 @@ This repository contains **installers and documentation only**. Galgje source co
 
 ## User manual (with screenshots)
 
+**[View press release](https://azzkickah84.github.io/Galgje-releases/press-release.html)** - extended feature overview.
+
 **[View manual online](https://azzkickah84.github.io/Galgje-releases/manual.html)** - full HTML guide including stats import walkthrough.
 
 ## Latest version (v6.8.5)
@@ -34,3 +36,4 @@ SHA-256 (`GalgjeSetup_v6.8.5.exe`):
 ## Author
 
 Thijs Boekholt
+

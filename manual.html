@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galgje v6.8.5 - User Manual</title>
+  <title>Galgje v7.3.6 - User Manual</title>
   <link rel="icon" href="app.ico" type="image/x-icon">
   <style>
     :root {
@@ -118,17 +118,30 @@
       background: var(--surface2);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 1.5rem;
-      font-family: Consolas, monospace;
-      font-size: 0.82rem;
-      line-height: 1.5;
-      overflow-x: auto;
-      color: #a8b8cc;
+      padding: 1.1rem;
       margin: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
     }
-    .ui-map .hl { color: var(--accent); font-weight: bold; }
-    .ui-map .hl2 { color: var(--success); }
-    .ui-map .hl3 { color: var(--warning); }
+    .ui-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+    .ui-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 0.7rem 0.85rem;
+      flex: 1 1 160px;
+      min-width: 150px;
+    }
+    .ui-box .ui-title { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--accent); font-weight: 700; margin-bottom: 0.4rem; }
+    .ui-box .ui-title.green { color: var(--success); }
+    .ui-box .ui-title.amber { color: var(--warning); }
+    .ui-box p { font-size: 0.84rem; color: var(--muted); margin: 0.35rem 0 0; }
+    .ui-chip { display: inline-block; background: var(--surface3); border: 1px solid var(--border); border-radius: 6px; padding: 0.12rem 0.5rem; font-size: 0.76rem; color: #c5d0de; margin: 0.18rem 0.2rem 0 0; }
+    .ui-split { display: flex; gap: 0.6rem; }
+    .ui-hangman { flex: 0 0 170px; display: flex; align-items: center; text-align: center; }
+    .ui-panels { flex: 1; display: flex; flex-direction: column; gap: 0.6rem; }
+    @media (max-width: 640px) { .ui-split { flex-direction: column; } .ui-hangman { flex: auto; } }
     .steps { counter-reset: step; }
     .step {
       display: flex;
@@ -400,9 +413,9 @@
 
   <aside class="sidebar">
     <div class="sidebar-brand">
-      <img src="app.ico" alt="Galgje icon" width="48" height="48">
+      <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/app.ico" alt="Galgje icon" width="48" height="48">
       <h1>Galgje Manual</h1>
-      <p>Version 6.8.5 - Complete Guide</p>
+      <p>Version 7.3.6 - Complete Guide</p>
     </div>
     <nav>
       <div class="section">Getting Started</div>
@@ -445,10 +458,10 @@
     <div class="hero">
       <div class="badge">Official User Manual</div>
       <h2>Galgje - Advanced Hangman for Windows</h2>
-      <p>This manual covers every feature of Galgje v6.8.5: from your first game to advanced multiplayer sessions with timers, statistics, achievements, the presentation Word Display window, and the menu bar with settings.</p>
+      <p>This manual covers every feature of Galgje v7.3.6: from your first game to advanced multiplayer sessions with timers, statistics, achievements, stats sets, the presentation Word Display window, and the menu bar with settings.</p>
       <div class="tip"><strong>New users</strong> After installing, open this manual from the Start Menu shortcut <strong>User Manual - Import Your Own Stats</strong> (or the desktop shortcut created during setup). Jump to <a href="#replace-stats" style="color:var(--accent)">Import Your Own Stats</a> if you want to load your existing game history.</div>
       <figure class="hero-shot">
-        <img src="screenshots/main-gameplay.png" alt="Galgje main window during active gameplay with hangman, players, and statistics">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/main-gameplay.png" alt="Galgje main window during active gameplay with hangman, players, and statistics">
       </figure>
     </div>
 
@@ -469,7 +482,7 @@
       <h2>Installation</h2>
       <div class="steps">
         <div class="step"><div class="step-body"><h4>Install .NET 8 Desktop Runtime</h4><p>Download from <a href="https://dotnet.microsoft.com/download/dotnet/8.0/runtime" style="color:var(--accent)">dotnet.microsoft.com</a> if not already installed. The setup wizard checks this automatically.</p></div></div>
-        <div class="step"><div class="step-body"><h4>Run the Installer</h4><p>Download from <a href="https://github.com/AzzKickah84/Galgje-releases/releases" style="color:var(--accent)">GitHub Releases</a> or run <code>GalgjeSetup_v6.8.5.exe</code>. Follow the wizard.</p></div></div>
+        <div class="step"><div class="step-body"><h4>Run the Installer</h4><p>Download from <a href="https://github.com/AzzKickah84/Galgje-releases/releases/download/v7.3.6.202606281737/GalgjeSetup_v7.3.6.202606281737.exe" style="color:var(--accent)">GitHub Releases</a> or run <code>GalgjeSetup_v7.3.6.202606281737.exe</code>. Follow the wizard.</p></div></div>
         <div class="step"><div class="step-body"><h4>Enable manual shortcuts</h4><p>Leave <strong>"Create a desktop shortcut to the User Manual"</strong> checked (on by default). The Start Menu always includes <strong>User Manual - Import Your Own Stats</strong>.</p></div></div>
         <div class="step"><div class="step-body"><h4>Open the manual after setup</h4><p>On the finish screen, tick <strong>Open the User Manual</strong> or launch it from Start Menu / Desktop. See <a href="#replace-stats" style="color:var(--accent)">Import Your Own Stats</a> to load your files.</p></div></div>
         <div class="step"><div class="step-body"><h4>Launch Galgje</h4><p>Open from the Start Menu or Desktop. On first run, Galgje creates data files in your user profile (see <a href="#data" style="color:var(--accent)">Data Locations</a>).</p></div></div>
@@ -482,27 +495,56 @@
       <h2>Main Window Overview</h2>
       <p>The main window is organized into distinct zones. The screenshot below shows a live game in progress:</p>
       <figure class="screenshot">
-        <img src="screenshots/main-gameplay.png" alt="Galgje main window - gameplay view with hangman drawing, player list, and statistics panel">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/main-gameplay.png" alt="Galgje main window - gameplay view with hangman drawing, player list, and statistics panel">
         <figcaption>The main Galgje window: word display (top), guess controls &amp; timer, hangman drawing (left), player management (center), and statistics tabs (right).</figcaption>
       </figure>
       <p>For reference, here is a simplified map of the interface:</p>
       <div class="ui-map">
-┌─────────────────────────────────────────────────────────────────────────────┐
-│  <span class="hl">Current Word</span> (large display)          <span class="hl3">Custom Word</span> [textbox] [Use Word]  │
-├─────────────────────────────────────────────────────────────────────────────┤
-│  <span class="hl">Guessed Letter</span> [A] [Process Letter]  <span class="hl2">TIMER 05:00</span> [Pause/Resume]         │
-│  [New Game]  [Random Word]  [Copy Word Progress]  [Show Word Window] [🔊]   │
-├──────────────────┬──────────────────────────────────────────────────────────┤
-│                  │  <span class="hl">Left panel tabs:</span> Player Statistics | Game Log |        │
-│   <span class="hl2">HANGMAN</span>        │  Stats Graph | Notes                                     │
-│   (drawing)      ├──────────────────────────────────────────────────────────┤
-│                  │  <span class="hl">Right panel tabs:</span> Players | Played words               │
-│                  │  [Search Played Word]                                    │
-│                  │  <span class="hl3">Hoster-name:</span> [AzzMastah]                               │
-│                  │  <span class="hl">Selected Player:</span> PlayerName                             │
-│                  │  [Mark Winner] [Eliminate] [Remove] [Reset Stats] [Un-Elim]│
-│                  │  Set errors: [0] [Set]                                   │
-└──────────────────┴──────────────────────────────────────────────────────────┘
+        <div class="ui-row">
+          <div class="ui-box">
+            <div class="ui-title">Current Word</div>
+            <p>Large display showing the word as underscores; correct letters are revealed as they are guessed.</p>
+          </div>
+          <div class="ui-box">
+            <div class="ui-title amber">Set the Word</div>
+            <p>Type a custom word, then:</p>
+            <span class="ui-chip">Use Word</span><span class="ui-chip">Random Word</span>
+          </div>
+        </div>
+        <div class="ui-row">
+          <div class="ui-box">
+            <div class="ui-title">Guess controls</div>
+            <span class="ui-chip">Letter</span><span class="ui-chip">Process Letter</span>
+          </div>
+          <div class="ui-box">
+            <div class="ui-title green">Timer</div>
+            <span class="ui-chip">05:00</span><span class="ui-chip">Pause / Resume</span>
+          </div>
+          <div class="ui-box">
+            <div class="ui-title">Game buttons</div>
+            <span class="ui-chip">New Game</span><span class="ui-chip">Copy Word Progress</span><span class="ui-chip">Show Word Window</span><span class="ui-chip">🔊 Mute</span>
+          </div>
+        </div>
+        <div class="ui-split">
+          <div class="ui-box ui-hangman">
+            <div>
+              <div class="ui-title green">Hangman</div>
+              <p>The gallows drawing on the left, growing with each wrong guess.</p>
+            </div>
+          </div>
+          <div class="ui-panels">
+            <div class="ui-box">
+              <div class="ui-title">Left panel tabs</div>
+              <span class="ui-chip">Player Statistics</span><span class="ui-chip">Game Log</span><span class="ui-chip">Stats Graph</span><span class="ui-chip">Notes</span>
+            </div>
+            <div class="ui-box">
+              <div class="ui-title">Right panel tabs</div>
+              <span class="ui-chip">Players</span><span class="ui-chip">Played words</span>
+              <p>Hoster <span class="ui-chip">AzzMastah</span> and the selected player's controls:</p>
+              <span class="ui-chip">Mark Winner</span><span class="ui-chip">Eliminate</span><span class="ui-chip">Remove</span><span class="ui-chip">Reset Stats</span><span class="ui-chip">Un-Eliminate</span><span class="ui-chip">Set errors</span>
+            </div>
+          </div>
+        </div>
       </div>
       <h3>Key Display Areas</h3>
       <ul>
@@ -544,7 +586,7 @@
     <section id="players">
       <h2>Managing Players</h2>
       <figure class="screenshot">
-        <img src="screenshots/players-tab.png" alt="Players tab showing Anna, Bram, Chris, and Dana with guess counts and error limits">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/players-tab.png" alt="Players tab showing Anna, Bram, Chris, and Dana with guess counts and error limits">
         <figcaption>The <strong>Players</strong> tab - click any row to select a player for guessing. Chris is shown eliminated (red).</figcaption>
       </figure>
       <h3>Adding Players</h3>
@@ -667,7 +709,7 @@
       <h2>Word Display Window</h2>
       <p>Click <span class="btn-ref">Show Word Window</span> to open a secondary presentation window ideal for projectors, large screens, and streaming.</p>
       <figure class="screenshot">
-        <img src="screenshots/word-display.png" alt="Word Display window with player cards, hangman, performance graph, and timer">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/word-display.png" alt="Word Display window with player cards, hangman, performance graph, and timer">
         <figcaption>The Word Display window - player cards (left), live hangman (center), performance graph (right), and countdown timer.</figcaption>
       </figure>
       <h3>Layout</h3>
@@ -690,7 +732,7 @@
     <section id="tab-played">
       <h2>Played Words Tab</h2>
       <figure class="screenshot">
-        <img src="screenshots/played-words-tab.png" alt="Played words tab listing previously used words">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/played-words-tab.png" alt="Played words tab listing previously used words">
         <figcaption>Previously played words - search, filter, double-click to reuse, or delete entries.</figcaption>
       </figure>
       <p>History of all words used in previous games. Use the <strong>Search Played Word</strong> box above the tabs to filter the list. <strong>Double-click</strong> a word to reuse it. Select a word and click <span class="btn-ref">Delete</span> (if available) to remove it from history.</p>
@@ -699,7 +741,7 @@
     <section id="tab-stats">
       <h2>Player Statistics Tab</h2>
       <figure class="screenshot">
-        <img src="screenshots/player-statistics.png" alt="Player Statistics tab with sortable columns for games, wins, eliminations, and win rate">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/player-statistics.png" alt="Player Statistics tab with sortable columns for games, wins, eliminations, and win rate">
         <figcaption>All-time player statistics - sort by any column, export top 10, or backup and reset.</figcaption>
       </figure>
       <p>All-time statistics for every player who has ever participated:</p>
@@ -728,7 +770,7 @@
     <section id="tab-notes">
       <h2>Notes Tab</h2>
       <figure class="screenshot">
-        <img src="screenshots/notes-tab.png" alt="Notes tab with auto-saved house rules and session observations">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/notes-tab.png" alt="Notes tab with auto-saved house rules and session observations">
         <figcaption>The Notes tab - free-form text that auto-saves as you type.</figcaption>
       </figure>
       <p>Free-form text area for house rules, word hints, session notes, or observations. Notes <strong>auto-save</strong> as you type - no save button needed. Content persists between sessions.</p>
@@ -899,19 +941,19 @@
       </ul>
       <div class="verify-gallery">
         <figure class="screenshot">
-          <img src="screenshots/player-statistics.png" alt="Player Statistics tab showing imported example stats for Anna, Bram, Chris, and Dana">
+          <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/player-statistics.png" alt="Player Statistics tab showing imported example stats for Anna, Bram, Chris, and Dana">
           <figcaption><strong>Player Statistics</strong> - imported leaderboard</figcaption>
         </figure>
         <figure class="screenshot">
-          <img src="screenshots/played-words-tab.png" alt="Played words tab showing imported word history">
+          <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/played-words-tab.png" alt="Played words tab showing imported word history">
           <figcaption><strong>Played words</strong> - your word history</figcaption>
         </figure>
         <figure class="screenshot">
-          <img src="screenshots/notes-tab.png" alt="Notes tab showing imported house rules">
+          <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/notes-tab.png" alt="Notes tab showing imported house rules">
           <figcaption><strong>Notes</strong> - auto-saved text</figcaption>
         </figure>
         <figure class="screenshot">
-          <img src="screenshots/game-log-tab.png" alt="Game Log tab showing imported event history">
+          <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/game-log-tab.png" alt="Game Log tab showing imported event history">
           <figcaption><strong>Game Log</strong> - past events</figcaption>
         </figure>
       </div>
@@ -1036,7 +1078,7 @@ Session notes go here.</pre>
     </section>
 
     <footer>
-      <p>© 2026 Thijs Boekholt - Galgje v6.8.5 User Manual</p>
+      <p>© 2026 Thijs Boekholt - Galgje v7.3.6 User Manual</p>
       <p>See also: <a href="press-release.html" style="color:var(--accent)">Press Release</a> · <a href="CHANGELOG.md" style="color:var(--accent)">Changelog</a></p>
     </footer>
 
