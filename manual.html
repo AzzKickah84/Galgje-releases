@@ -1183,16 +1183,30 @@ Session notes go here.</pre>
     <!-- BACKUP & RESTORE -->
     <section id="backup-restore">
       <h2>Backup & Restore Stats</h2>
-      <p>Galgje v8.0.14 provides a clear, three-action dialog for managing your stats: backup, restore, or reset.</p>
+      <p>Galgje v8.0.14 provides a clear, three-action dialog for managing your stats: backup, restore, or reset. Backups are completely safe - all data is preserved even if the backup fails.</p>
 
-      <h3>Opening the Backup/Restore/Reset Dialog</h3>
-      <p>Click the <span class="btn-ref">Backup/Restore/Reset Stats</span> button (bottom of main window) or use <strong>Tools ▸ Backup and Reset All Stats</strong> from the menu. A dialog opens with three options.</p>
+      <h3>The Action Selector Dialog</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/021_Dialog_Backup_Restore_Reset.png" alt="Backup/Restore/Reset action selector dialog with three distinct buttons">
+        <figcaption>Backup/Restore/Reset dialog - choose your action: Create Backup, Restore from Backup, or Reset Stats Only.</figcaption>
+      </figure>
+      <p><strong>Access:</strong> Click the <span class="btn-ref">Backup/Restore/Reset Stats</span> button (bottom of main window) or use <strong>Tools ▸ Backup and Reset All Stats</strong></p>
 
       <h3>Option 1: Create Backup</h3>
+      <p>Backs up all data from the current active set to a new backup stats-set.</p>
+      <p><strong>What gets backed up:</strong></p>
+      <ul>
+        <li>Player statistics (wins, games, errors)</li>
+        <li>Game log (timestamped events)</li>
+        <li>Player achievements and badges</li>
+        <li>Game notes</li>
+        <li>Played words history</li>
+      </ul>
+      <p><strong>Workflow:</strong></p>
       <ol>
-        <li>Backs up all data from the current active set to a new backup stats-set (e.g., <code>"Backup of Default-20260630_145723"</code>)</li>
-        <li>Backs up: stats, game log, achievements, notes, played words</li>
-        <li>After backup completes, you're asked: <strong>"Reset the active set now?"</strong>
+        <li>Click <strong>Create Backup</strong> in the action dialog</li>
+        <li>Backup is created with name like <code>"Backup of Default-20260630_145723"</code></li>
+        <li>You're asked: <strong>"Backup created successfully. Reset the active set now?"</strong>
           <ul>
             <li><strong>Yes</strong> → Active set is cleared (fresh start for new season)</li>
             <li><strong>No</strong> → Active set is left unchanged; backup just acts as an archive</li>
@@ -1201,26 +1215,41 @@ Session notes go here.</pre>
       </ol>
 
       <h3>Option 2: Restore from Backup</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/022_Dialog_Restore_Backup.png" alt="Restore Backup dialog showing list of available backups with names, player counts, and dates">
+        <figcaption>Restore Backup dialog - select a backup to restore and choose your target (active set or new set).</figcaption>
+      </figure>
+      <p><strong>Workflow:</strong></p>
       <ol>
-        <li>Opens the restore dialog showing all available backups (sorted newest first)</li>
-        <li>Each backup shows: name, player count, creation date/time</li>
-        <li>Select a backup and choose:
+        <li>Click <strong>Restore from Backup</strong> in the action dialog</li>
+        <li>A dialog opens showing all available backups (sorted newest first)</li>
+        <li>Each backup shows:
           <ul>
-            <li><span class="btn-ref">Restore to Active Set</span> → Overwrites current set with backup</li>
-            <li><span class="btn-ref">Restore to New Set</span> → Prompts for set name, creates set, populates with backup</li>
+            <li><strong>Name</strong> - The backup set name</li>
+            <li><strong>Players</strong> - How many players were in that backup</li>
+            <li><strong>Created</strong> - Date and time the backup was made</li>
+          </ul>
+        </li>
+        <li>Select a backup and choose your target:
+          <ul>
+            <li><span class="btn-ref">Restore to Active Set</span> → Overwrites current set with backup (current data is overwritten)</li>
+            <li><span class="btn-ref">Restore to New Set</span> → Prompts for set name, creates new set, populates with backup</li>
           </ul>
         </li>
       </ol>
 
       <h3>Option 3: Reset Stats (No Backup)</h3>
+      <p>Clears all stats in the active set <strong>without creating a backup first.</strong></p>
+      <p><strong>Workflow:</strong></p>
       <ol>
-        <li>Clears all stats in the active set <strong>without creating a backup first</strong></li>
-        <li>Confirms with warning: <strong>"This cannot be undone unless you have a backup!"</strong></li>
-        <li>Clears: stats, game log, achievements, notes</li>
+        <li>Click <strong>Reset Stats (No Backup)</strong> in the action dialog</li>
+        <li>Confirmation warning: <strong>"Are you sure? This will clear all stats in the current set. This cannot be undone unless you have a backup!"</strong></li>
+        <li>Click <strong>Yes</strong> to confirm</li>
+        <li>Cleared data: stats, game log, achievements, notes (played words are kept)</li>
       </ol>
 
       <h3>Also Available in Tools Menu</h3>
-      <p><strong>Tools ▸ Restore Backup</strong> (separate menu item) - Opens the restore dialog directly, without the action selector. Use this when you only want to restore a backup.</p>
+      <p><strong>Tools ▸ Restore Backup</strong> (separate menu item) - Opens the restore dialog directly, bypassing the action selector. Use this when you only want to restore a backup.</p>
 
       <h3>Use Cases</h3>
       <ul>
@@ -1229,10 +1258,20 @@ Session notes go here.</pre>
         <li><strong>Accidental reset recovery</strong> - Use Restore to bring back lost stats</li>
         <li><strong>Data comparison</strong> - Restore backup to a new set to compare old vs. new stats side-by-side</li>
         <li><strong>Clean slate (no archive)</strong> - Reset without backup for one-off games</li>
+        <li><strong>Multi-season management</strong> - Create separate stats sets for each league season or tournament</li>
       </ul>
 
-      <div class="tip"><strong>Backups are permanent</strong> Backup sets remain on disk forever (never deleted automatically). Use <strong>Tools ▸ Manage Stats Sets</strong> to delete old backups manually if needed.</div>
-      <div class="warn"><strong>No accidental resets</strong> Every reset action (backup then reset, or direct reset) requires confirmation. You control the flow.</div>
+      <h3>Safety & Data Integrity</h3>
+      <p>Galgje's backup system is designed to prevent data loss:</p>
+      <ul>
+        <li><strong>Backup verification</strong> - Files are verified after copying to ensure they're not corrupted</li>
+        <li><strong>Atomic operations</strong> - If backup fails, incomplete backups are automatically deleted</li>
+        <li><strong>No accidental resets</strong> - Every reset action requires explicit confirmation</li>
+        <li><strong>Permanent backups</strong> - Backup sets are never deleted automatically; you control deletion via Tools ▸ Manage Stats Sets</li>
+      </ul>
+
+      <div class="tip"><strong>Pro tip: Create regular backups</strong> Create a backup at the end of each game night or season. Backups don't interfere with gameplay and take just a few seconds.</div>
+      <div class="warn"><strong>Backup sets are permanent</strong> Backup sets remain on disk forever (never deleted automatically). Use <strong>Tools ▸ Manage Stats Sets</strong> to delete old backups manually if needed.</div>
     </section>
 
     <!-- COPY & EXPORT -->
