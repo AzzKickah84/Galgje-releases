@@ -442,6 +442,7 @@
       <a href="#tab-notes">Notes Tab</a>
       <div class="section">Tools</div>
       <a href="#fullscreen-views">Full-Screen Projector Views</a>
+      <a href="#backup-restore">Backup & Restore Stats</a>
       <a href="#clipboard">Clipboard &amp; Sharing</a>
       <a href="#sound">Sound &amp; Mute</a>
       <a href="#language">Language (EN / NL)</a>
@@ -1110,6 +1111,50 @@ Session notes go here.</pre>
       <div class="tip"><strong>Pro tip</strong> Use the in-app <span class="btn-ref">Backup + Reset all Stats</span> button before replacing <code>player_statistics.log</code> manually. It exports a timestamped CSV backup first, so you can always undo.</div>
       <div class="warn"><strong>Never copy data into Program Files</strong> - <code>C:\Program Files\Galgje\</code> is read-only. Always use <code>%LocalAppData%\Galgje</code>. Galgje only auto-imports from the install folder once on first run when AppData is still empty.</div>
       <div class="note"><strong>Stats not showing?</strong> Confirm files are in AppData (not Program Files), filenames match exactly, and Galgje was restarted after copying. Check that <code>player_statistics.log</code> uses commas with no extra spaces and six numeric columns per line.</div>
+    </section>
+
+    <!-- BACKUP & RESTORE -->
+    <section id="backup-restore">
+      <h2>Backup & Restore Stats</h2>
+      <p>Galgje provides a built-in backup system for protecting your stats. Backups are stored as independent stats-sets so you can keep multiple snapshots and restore them whenever you want.</p>
+
+      <h3>Creating a Backup</h3>
+      <ol>
+        <li>Click <strong>Tools ▸ Backup and Reset All Stats</strong>.</li>
+        <li>A backup stats-set is created (e.g., <code>"Backup of Default-20260630_145723"</code>) containing a complete snapshot of:
+          <ul>
+            <li>All player statistics</li>
+            <li>Game log with all past events</li>
+            <li>Achievements</li>
+            <li>Notes and house rules</li>
+            <li>Played words history</li>
+          </ul>
+        </li>
+        <li>The <strong>active stats-set only</strong> is reset to empty (other sets are untouched).</li>
+        <li>A <strong>Restore Backup</strong> dialog appears, ready for immediate use.</li>
+      </ol>
+
+      <h3>Restoring a Backup</h3>
+      <p>Open <strong>Tools ▸ Restore Backup</strong> at any time to browse available backups and restore one.</p>
+
+      <div class="ui-map">
+        <div class="ui-row">
+          <div class="ui-box"><div class="ui-title">Backup List</div><p>Shows all backups sorted newest first, with player count and creation date.</p></div>
+          <div class="ui-box"><div class="ui-title green">Select</div><p>Click a backup row to select it.</p></div>
+          <div class="ui-box"><div class="ui-title amber">Restore to Active Set</div><p>Overwrites the current set's stats with the backup.</p></div>
+          <div class="ui-box"><div class="ui-title">Restore to New Set</div><p>Prompts for a new set name, creates it, and populates with backup data.</p></div>
+        </div>
+      </div>
+
+      <h3>Use Cases</h3>
+      <ul>
+        <li><strong>Season archival</strong> - Create a backup before resetting for a new season. Restore it anytime to review past standings.</li>
+        <li><strong>Accidental reset recovery</strong> - If you accidentally reset stats, restore the backup immediately.</li>
+        <li><strong>Multi-game events</strong> - Keep separate stats-sets for different tournaments, groups, or venues; backup each before reset.</li>
+        <li><strong>Data comparison</strong> - Restore a backup to a new set to side-by-side compare two periods of game history.</li>
+      </ul>
+
+      <div class="tip"><strong>Backups are permanent</strong> Backup sets remain on disk indefinitely (never deleted automatically). If you want to clean up old backups, use <strong>Tools ▸ Manage Stats Sets</strong> to delete them manually.</div>
     </section>
 
     <!-- COPY & EXPORT -->
