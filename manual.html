@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galgje v7.3.6 - User Manual</title>
+  <title>Galgje v8.0.13 - User Manual</title>
   <link rel="icon" href="app.ico" type="image/x-icon">
   <style>
     :root {
@@ -415,11 +415,12 @@
     <div class="sidebar-brand">
       <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/app.ico" alt="Galgje icon" width="48" height="48">
       <h1>Galgje Manual</h1>
-      <p>Version 7.3.6 - Complete Guide</p>
+      <p>Version 8.0.13 - Complete Guide</p>
     </div>
     <nav>
       <div class="section">Getting Started</div>
       <a href="#intro">Introduction</a>
+      <a href="#how-to-play">New? How Hangman Works</a>
       <a href="#install">Installation</a>
       <a href="#overview">Main Window Overview</a>
       <a href="#quickstart">Quick Start (5 Steps)</a>
@@ -440,6 +441,7 @@
       <a href="#tab-log">Game Log Tab</a>
       <a href="#tab-notes">Notes Tab</a>
       <div class="section">Tools</div>
+      <a href="#fullscreen-views">Full-Screen Projector Views</a>
       <a href="#clipboard">Clipboard &amp; Sharing</a>
       <a href="#sound">Sound &amp; Mute</a>
       <a href="#language">Language (EN / NL)</a>
@@ -448,6 +450,7 @@
       <a href="#replace-stats" style="color:var(--warning);font-weight:600;">Import Your Own Stats</a>
       <a href="#stats-walkthrough" style="padding-left:2rem;font-size:0.85rem;">Step-by-step guide</a>
       <a href="#stats-format" style="padding-left:2rem;font-size:0.85rem;">File formats</a>
+      <a href="#copy-export">Copy &amp; Export Options</a>
       <a href="#troubleshooting">Troubleshooting</a>
       <a href="#reference">Button Reference</a>
     </nav>
@@ -458,7 +461,7 @@
     <div class="hero">
       <div class="badge">Official User Manual</div>
       <h2>Galgje - Advanced Hangman for Windows</h2>
-      <p>This manual covers every feature of Galgje v7.3.6: from your first game to advanced multiplayer sessions with timers, statistics, achievements, stats sets, the presentation Word Display window, and the menu bar with settings.</p>
+      <p>This manual covers every feature of Galgje v8.0.13: from your very first game to advanced multiplayer sessions with timers, statistics, achievements, stats sets, the presentation Word Display window, the new full-screen projector views, and the menu bar with settings.</p>
       <div class="tip"><strong>New users</strong> After installing, open this manual from the Start Menu shortcut <strong>User Manual - Import Your Own Stats</strong> (or the desktop shortcut created during setup). Jump to <a href="#replace-stats" style="color:var(--accent)">Import Your Own Stats</a> if you want to load your existing game history.</div>
       <figure class="hero-shot">
         <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/main-gameplay.png" alt="Galgje main window during active gameplay with hangman, players, and statistics">
@@ -477,12 +480,39 @@
       </div>
     </section>
 
+    <!-- HOW TO PLAY (FIRST TIMERS) -->
+    <section id="how-to-play">
+      <h2>New Here? How Hangman Works</h2>
+      <p>Never played Hangman before? It takes about a minute to learn. One person (the <strong>host</strong>) knows a secret word; everyone else tries to figure it out by guessing one letter at a time.</p>
+
+      <div class="card-grid">
+        <div class="card"><h4>1. There is a hidden word</h4><p>The word is shown as blanks - one underscore per letter, e.g. <code>_ _ _ _ _ _ _</code> for a 7-letter word. Nobody but the host can see the answer.</p></div>
+        <div class="card"><h4>2. Players guess letters</h4><p>On your turn you guess a single letter. If that letter is in the word, every copy of it is revealed. If it is not, it counts as a <strong>wrong guess</strong>.</p></div>
+        <div class="card"><h4>3. Wrong guesses build the gallows</h4><p>Each wrong guess draws one more part of the hangman figure. Too many wrong guesses and the round is lost (or you are eliminated).</p></div>
+        <div class="card"><h4>4. Win by completing the word</h4><p>Reveal every letter before the gallows is finished (and before the timer runs out) and you win the round.</p></div>
+      </div>
+
+      <h3>The goal in one sentence</h3>
+      <p>Guess the hidden word, letter by letter, with as <strong>few wrong guesses as possible</strong> - before the timer hits zero.</p>
+
+      <h3>What makes Galgje different from pen-and-paper Hangman</h3>
+      <ul>
+        <li><strong>Many players at once</strong> - everyone shares the same word; Galgje tracks each player's guesses and errors separately.</li>
+        <li><strong>A live timer</strong> - correct guesses add time, wrong guesses subtract it (you can turn it off in Settings).</li>
+        <li><strong>It remembers everything</strong> - wins, losses, played words, and achievements are saved between sessions.</li>
+        <li><strong>A big-screen mode</strong> - the Word Display and full-screen projector views are built for game nights, classrooms, and streams.</li>
+      </ul>
+
+      <div class="tip"><strong>Brand new? Do this first</strong> Jump to the <a href="#quickstart" style="color:var(--accent)">Quick Start - Your First Game in 5 Steps</a> below. You will have a game running in under a minute.</div>
+      <div class="note"><strong>Showing it to an audience?</strong> Open <span class="btn-ref">Show Word Window</span> for the live board, or use the new <a href="#fullscreen-views" style="color:var(--accent)">Full-Screen Projector Views</a> - they show the puzzle and standings on a second screen <em>without ever revealing the secret word</em>.</div>
+    </section>
+
     <!-- INSTALL -->
     <section id="install">
       <h2>Installation</h2>
       <div class="steps">
         <div class="step"><div class="step-body"><h4>Install .NET 8 Desktop Runtime</h4><p>Download from <a href="https://dotnet.microsoft.com/download/dotnet/8.0/runtime" style="color:var(--accent)">dotnet.microsoft.com</a> if not already installed. The setup wizard checks this automatically.</p></div></div>
-        <div class="step"><div class="step-body"><h4>Run the Installer</h4><p>Download from <a href="https://github.com/AzzKickah84/Galgje-releases/releases/download/v7.3.6.202606281737/GalgjeSetup_v7.3.6.202606281737.exe" style="color:var(--accent)">GitHub Releases</a> or run <code>GalgjeSetup_v7.3.6.202606281737.exe</code>. Follow the wizard.</p></div></div>
+        <div class="step"><div class="step-body"><h4>Run the Installer</h4><p>Download the latest installer from <a href="https://github.com/AzzKickah84/Galgje-releases/releases/latest" style="color:var(--accent)">GitHub Releases</a> (currently <code>GalgjeSetup_v8.0.13.202606300513.exe</code>) and follow the wizard.</p></div></div>
         <div class="step"><div class="step-body"><h4>Enable manual shortcuts</h4><p>Leave <strong>"Create a desktop shortcut to the User Manual"</strong> checked (on by default). The Start Menu always includes <strong>User Manual - Import Your Own Stats</strong>.</p></div></div>
         <div class="step"><div class="step-body"><h4>Open the manual after setup</h4><p>On the finish screen, tick <strong>Open the User Manual</strong> or launch it from Start Menu / Desktop. See <a href="#replace-stats" style="color:var(--accent)">Import Your Own Stats</a> to load your files.</p></div></div>
         <div class="step"><div class="step-body"><h4>Launch Galgje</h4><p>Open from the Start Menu or Desktop. On first run, Galgje creates data files in your user profile (see <a href="#data" style="color:var(--accent)">Data Locations</a>).</p></div></div>
@@ -777,6 +807,54 @@
       <div class="tip"><strong>Example uses</strong>Record agreed house rules, track which words were too easy, note player agreements, or plan the next word theme.</div>
     </section>
 
+    <!-- FULL-SCREEN VIEWS -->
+    <section id="fullscreen-views">
+      <h2>Full-Screen Projector Views</h2>
+      <p>New in <strong>v8.0.13</strong>: the <strong>Tools menu</strong> includes a set of modern, full-screen views designed for a second monitor, projector, or stream overlay. They render the puzzle, standings, and statistics in a clean dark theme with large, readable type - perfect for an audience.</p>
+
+      <div class="note"><strong>Audience-safe by design</strong> None of these views ever reveal the secret word. The Word Progress view shows only the letters that have already been guessed (everything else stays masked as <code>_</code>), and the stats views show standings and numbers - never the current answer.</div>
+
+      <h3>Opening a view</h3>
+      <ol>
+        <li>Open the <strong>Tools</strong> menu in the menu bar.</li>
+        <li>Choose one of the full-screen view options (listed below).</li>
+        <li>The view opens full-screen on your current monitor. Use the footer buttons or keyboard shortcuts to control it.</li>
+      </ol>
+
+      <h3>Available views</h3>
+      <div class="card-grid">
+        <div class="card"><h4>🔤 Word Progress</h4><p>The masked puzzle with the hangman gallows, an A–Z letter board (hits in green, misses in red), and a per-player error leaderboard. The answer is never shown.</p></div>
+        <div class="card"><h4>📊 Standings / Stats</h4><p>Summary tiles plus a ranked leaderboard with win-rate bars - the all-time picture at a glance.</p></div>
+        <div class="card"><h4>🏆 Podium</h4><p>A medal podium highlighting the top three players (gold, silver, bronze) for end-of-night reveals.</p></div>
+        <div class="card"><h4>🎬 Presentation Mode</h4><p>Auto-cycles between the standings and the live word progress every few seconds. Hands-free - great for streams and lobbies.</p></div>
+        <div class="card"><h4>🕹️ Last Game</h4><p>A full-screen recap of the most recently finished round.</p></div>
+        <div class="card"><h4>🎯 All-Time</h4><p>Career totals across every session, formatted for the big screen.</p></div>
+        <div class="card"><h4>📄 Game Log</h4><p>The timestamped event feed, shown large for review or archiving.</p></div>
+      </div>
+
+      <h3>On-screen controls (footer)</h3>
+      <div class="ui-map">
+        <div class="ui-row">
+          <div class="ui-box"><div class="ui-title green">Move to Next Screen</div><p>Send the view to your next monitor - handy for multi-display setups.</p></div>
+          <div class="ui-box"><div class="ui-title">Copy</div><p>Copies the current view's text (standings, word state, log) to the clipboard.</p></div>
+          <div class="ui-box"><div class="ui-title amber">Close</div><p>Returns to the main window.</p></div>
+          <div class="ui-box"><div class="ui-title">Live Clock</div><p>A running clock and date are shown in the corner for streams and classrooms.</p></div>
+        </div>
+      </div>
+
+      <h3>Keyboard shortcuts</h3>
+      <table>
+        <tr><th>Key</th><th>Action</th></tr>
+        <tr><td><kbd>Esc</kbd></td><td>Close the full-screen view</td></tr>
+        <tr><td><kbd>C</kbd></td><td>Copy the current view to the clipboard</td></tr>
+        <tr><td><kbd>←</kbd> / <kbd>→</kbd></td><td>Move the view to the next monitor</td></tr>
+        <tr><td><kbd>Space</kbd> / <kbd>↑</kbd> / <kbd>↓</kbd></td><td>In Presentation Mode: advance to the next slide</td></tr>
+        <tr><td><kbd>P</kbd></td><td>In Presentation Mode: pause / resume the auto-cycle</td></tr>
+      </table>
+
+      <div class="tip"><strong>Game-night setup</strong> Put Presentation Mode or the Word Progress view on the projector, keep the main window on your laptop, and run the whole evening without ever spoiling the word.</div>
+    </section>
+
     <!-- CLIPBOARD -->
     <section id="clipboard">
       <h2>Clipboard &amp; Sharing</h2>
@@ -1034,6 +1112,97 @@ Session notes go here.</pre>
       <div class="note"><strong>Stats not showing?</strong> Confirm files are in AppData (not Program Files), filenames match exactly, and Galgje was restarted after copying. Check that <code>player_statistics.log</code> uses commas with no extra spaces and six numeric columns per line.</div>
     </section>
 
+    <!-- COPY & EXPORT -->
+    <section id="copy-export">
+      <h2>Copy & Export Options (Tools Menu)</h2>
+      <p>Galgje provides powerful copy and export features to share game data, statistics, and reports. All copy operations automatically place content in your clipboard for immediate pasting into documents, emails, or other applications.</p>
+
+      <h3>📋 Copy Word Progress</h3>
+      <p><strong>What it does:</strong> Copies the current game state to your clipboard (word display, correct letters, wrong letters, active players, timer remaining).</p>
+      <p><strong>Use case:</strong> Share the current game board with remote players, screenshots, or documentation.</p>
+      <p><strong>Output format:</strong> Plain text, formatted for readability:</p>
+      <div class="format-block">
+        <pre>_ _ _ _ _ _ _
+
+Total wrong guesses: 2
+
+Correct letters: A, E, O
+Wrong letters: X, Z
+Active players: 3
+Time remaining: 04:32</pre>
+      </div>
+
+      <h3>📊 Copy Stats (Top 10 Players)</h3>
+      <p><strong>What it does:</strong> Exports the top 10 players by games played, with their complete statistics.</p>
+      <p><strong>Use case:</strong> Create a leaderboard for email, documents, or share current standings.</p>
+      <p><strong>Output format:</strong> Tab-separated table (works in Excel, spreadsheets):</p>
+      <div class="format-block">
+        <pre>Player          Games   Wins    Win %   Eliminations   Avg Errors
+Anna              42      18      42.9%   5              2.07
+Bram              38      12      31.6%   8              2.68
+Chris             35      15      42.9%   6              2.14</pre>
+      </div>
+
+      <h3>🏆 Copy Achievements Report</h3>
+      <p><strong>What it does:</strong> Generates a detailed achievements and badges report for all players.</p>
+      <p><strong>Use case:</strong> Display player accomplishments, milestones, and badges earned.</p>
+
+      <h3>📈 Copy Last Game Report</h3>
+      <p><strong>What it does:</strong> Exports detailed information about the most recently completed game (word, players, guesses, time, winner).</p>
+      <p><strong>Use case:</strong> Create a record of individual game results for documentation or fun recaps.</p>
+
+      <h3>🎯 Copy All-Time Report</h3>
+      <p><strong>What it does:</strong> Generates a comprehensive summary of all players' career statistics and achievements across all sessions.</p>
+      <p><strong>Use case:</strong> Year-end summaries, seasonal reports, long-term statistics.</p>
+
+      <h3>📸 Copy Last Game Image</h3>
+      <p><strong>What it does:</strong> Captures the last game result as an image and copies it to your clipboard.</p>
+      <p><strong>Use case:</strong> Share screenshots on social media, create memory albums, send fun game recaps to friends.</p>
+
+      <h3>📸 Copy Last Game Overview Image</h3>
+      <p><strong>What it does:</strong> Takes a screenshot of the full game window with all details (players, guesses, timeline) and copies it as an image.</p>
+      <p><strong>Use case:</strong> Comprehensive visual documentation of game progress.</p>
+
+      <h3>📸 Copy All-Time Image</h3>
+      <p><strong>What it does:</strong> Captures all-time player statistics as a formatted image.</p>
+      <p><strong>Use case:</strong> Create shareable leaderboard images, final season standings.</p>
+
+      <h3>📸 Copy Complete Stats Image</h3>
+      <p><strong>What it does:</strong> Generates a comprehensive image containing statistics, charts, and detailed breakdowns.</p>
+      <p><strong>Use case:</strong> Professional reports, archival documentation, print-friendly summaries.</p>
+
+      <h3>📄 Copy Game Log</h3>
+      <p><strong>What it does:</strong> Copies the game log (all events with timestamps) to your clipboard.</p>
+      <p><strong>Use case:</strong> Analyze game flow, review every guess, create detailed game records.</p>
+      <p><strong>Output format:</strong> Plain text, one timestamped event per line:</p>
+      <div class="format-block">
+        <pre>[2026-06-30 14:32:01] WORD SELECTED: HANGMAN
+[2026-06-30 14:32:05] Anna guessed 'H' - CORRECT
+[2026-06-30 14:32:12] Bram guessed 'E' - WRONG (Errors: 1)
+[2026-06-30 14:32:18] Anna guessed 'A' - CORRECT</pre>
+      </div>
+
+      <h3>📊 Statistics Export Center</h3>
+      <p><strong>What it does:</strong> Opens a dedicated center for exporting statistics in multiple formats (HTML, CSV, PDF-ready).</p>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Export player comparisons</li>
+        <li>Save reports as HTML (then print to PDF)</li>
+        <li>Export CSV for Excel/spreadsheets</li>
+        <li>Generate detailed statistical breakdowns</li>
+        <li>Compare player performance across sessions</li>
+      </ul>
+
+      <h3>💡 Pro Tips</h3>
+      <ul>
+        <li><strong>Clipboard workflow:</strong> Copy → Paste into Word/Email/Google Docs immediately</li>
+        <li><strong>Screenshots:</strong> Use Copy...Image options, then paste into PowerPoint, Teams, or social media</li>
+        <li><strong>Spreadsheets:</strong> Copy stats, paste into Excel - tables are automatically recognized</li>
+        <li><strong>PDF creation:</strong> Use Copy...Image options or Export Center HTML, then File → Print → Save as PDF</li>
+        <li><strong>Social sharing:</strong> Use image options for Twitter, Facebook, Discord with screenshots</li>
+      </ul>
+    </section>
+
     <!-- TROUBLESHOOTING -->
     <section id="troubleshooting">
       <h2>Troubleshooting</h2>
@@ -1078,7 +1247,7 @@ Session notes go here.</pre>
     </section>
 
     <footer>
-      <p>© 2026 Thijs Boekholt - Galgje v7.3.6 User Manual</p>
+      <p>© 2026 Thijs Boekholt - Galgje v8.0.13 User Manual</p>
       <p>See also: <a href="press-release.html" style="color:var(--accent)">Press Release</a> · <a href="CHANGELOG.md" style="color:var(--accent)">Changelog</a></p>
     </footer>
 

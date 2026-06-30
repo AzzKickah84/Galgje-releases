@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galgje v7.3.6 — Extended Press Release</title>
+  <title>Galgje v8.0.1 - Extended Press Release</title>
   <link rel="icon" href="app.ico" type="image/x-icon">
-  <meta name="description" content="Galgje v7.3.6 — the most advanced Hangman game for Windows. Unlimited multiplayer, stats sets manager, analytics-grade statistics, customizable shortcuts, cinematic Word Display, and a gorgeous interface.">
+  <meta name="description" content="Galgje v8.0.1 - the most advanced Hangman game for Windows. Unlimited multiplayer, stats sets manager, analytics-grade statistics, customizable shortcuts, cinematic Word Display, and a gorgeous interface.">
   <style>
     :root {
       --bg: #0a0e14;
@@ -366,11 +366,11 @@
     <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/app.ico" alt="Galgje icon" class="logo" width="104" height="104">
     <div>
       <span class="badge">Extended Press Release</span>
-      <span class="badge new">Version 7.3.6</span>
+      <span class="badge new">Version 8.0.1</span>
     </div>
-    <h1>Galgje — Hangman, Reimagined</h1>
+    <h1>Galgje - Hangman, Reimagined</h1>
     <p class="subtitle">The ultimate Windows hangman experience: unlimited local multiplayer, analytics-grade statistics, a cinematic Word Display for the big screen, colorful menu-bar icons, clipboard-ready reports and images, and an interface that feels as polished as it plays.</p>
-    <p class="meta">Developer: Thijs Boekholt &nbsp;|&nbsp; June 17, 2026 &nbsp;|&nbsp; Windows 10/11 (64-bit) &nbsp;|&nbsp; .NET 8</p>
+    <p class="meta">Developer: Thijs Boekholt &nbsp;|&nbsp; June 28, 2026 &nbsp;|&nbsp; Windows 10/11 (64-bit) &nbsp;|&nbsp; .NET 8</p>
     <nav class="hero-nav" aria-label="Page sections">
       <a href="#whats-new">What's New</a>
       <a href="#interface">Interface</a>
@@ -382,79 +382,95 @@
       <a href="#download">Download</a>
     </nav>
     <figure class="hero-screenshot">
-      <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/main-gameplay.png" alt="Galgje main window — multiplayer hangman with live statistics, timer, and custom hangman drawing">
+      <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/main-gameplay.png" alt="Galgje main window - multiplayer hangman with live statistics, timer, and custom hangman drawing">
     </figure>
   </header>
 
   <main class="container">
 
     <div class="lead">
-      <strong>FOR IMMEDIATE RELEASE</strong> — <em>Galgje</em> (Dutch for “gallows” / hangman) ships version <strong>7.3.6</strong> as a feature-complete, production-ready Windows desktop game. Built for living-room game nights, classrooms, and streamers, Galgje combines classic letter-by-letter word guessing with unlimited local multiplayer, independent <strong>stats sets</strong> (each with its own notes, game log, and played words), a redesigned <strong>Stats Sets Manager</strong>, configurable game rules, a pressure-cooker timer, persistent career statistics, 15+ achievements, a full <strong>Player Manager</strong> analytics suite, customizable keyboard shortcuts, and more export options than any hangman game has any right to offer — text <em>and</em> beautiful clipboard images. Download free from <a href="https://github.com/AzzKickah84/Galgje-releases/releases">GitHub Releases</a>.
+      <strong>FOR IMMEDIATE RELEASE</strong> - <em>Galgje</em> (Dutch for “gallows” / hangman) ships version <strong>7.3.6</strong> as a feature-complete, production-ready Windows desktop game. Built for living-room game nights, classrooms, and streamers, Galgje combines classic letter-by-letter word guessing with unlimited local multiplayer, independent <strong>stats sets</strong> (each with its own notes, game log, and played words), a redesigned <strong>Stats Sets Manager</strong>, configurable game rules, a pressure-cooker timer, persistent career statistics, 15+ achievements, a full <strong>Player Manager</strong> analytics suite, customizable keyboard shortcuts, and more export options than any hangman game has any right to offer - text <em>and</em> beautiful clipboard images. Download free from <a href="https://github.com/AzzKickah84/Galgje-releases/releases">GitHub Releases</a>.
     </div>
 
     <p class="quote">“It’s not just hangman. It’s hangman with a league table, rivalries, and a one-click screenshot of last night’s carnage.”</p>
 
-    <h2 id="whats-new">What's New in v7.3.x</h2>
+    <h2 id="whats-new">What's New in v8.0.x</h2>
     <div class="version-block">
-      <strong>v7.3.6</strong> — <strong>Stats set switching fixed</strong>: notes and game log now load from the correct set's files when you change the active stats set. File paths (<code>hangman_log.txt</code>, <code>notes.txt</code>, <code>played_words.txt</code>) update dynamically to the active set directory.
+      <strong>v8.0.1</strong> - <strong>Windows ME Theming Engine</strong>: comprehensive `WindowsMETheme.cs` class applies authentic WinME styling (bright teal gradients, green accents, classic gray) across all settings and customization dialogs. Recursive control theming for buttons, group boxes, tabs, text boxes, data grids. Gradient banner headers with etched borders. Consistent font styling throughout.
     </div>
     <div class="version-block">
-      <strong>v7.3.5</strong> — Players menu shows all management options again; default players no longer auto-load on startup (empty roster until you add players).
+      <strong>v8.0.0</strong> - <strong>Major performance optimization with PlayerStatsRepository caching</strong>: in-memory cache eliminates repeated file I/O, ~5-10x faster stats retrieval. Automatic cache invalidation on save. Singleton pattern for thread-safe access.
+    </div>
+    <h2>Earlier highlights (v7.3.x)</h2>
+    <div class="version-block">
+      <strong>v7.3.9</strong> - Stats Editor/Manager complete redesign: Windows 2000/ME styling, statistics overview banner, player search/filter, per-player context menus, bulk operations, Win% column, multi-select support.
     </div>
     <div class="version-block">
-      <strong>v7.3.4</strong> — Players menu repopulated; new <strong>Show Stats of Selected Player</strong>; status bar text dark blue for readability.
+      <strong>v7.3.8</strong> - <strong>Status bar copyright text fixed</strong>: removed em-dashes and fixed label positioning to fully display the version number; copyright text cleaned up.
     </div>
     <div class="version-block">
-      <strong>v7.3.3</strong> — All player actions accessible from Tools menu with a Player Actions submenu.
+      <strong>v7.3.7</strong> - <strong>Status bar live stats enhanced</strong>: now shows much more information - Set name, Player count, Total games, Total wins, In-game count (with active count), Played words, Total errors. All stats fit compactly with perfect readability.
     </div>
     <div class="version-block">
-      <strong>v7.3.2</strong> — <strong>Stats Sets Manager</strong> full redesign: single screen with FROM/TO player lists side by side, big Copy/Move buttons, Windows 2000 classic gradient title and silver (#D4D0C8) chrome. Copy now works (with optional stats reset); Move asks for confirmation and reports transfers.
+      <strong>v7.3.6</strong> - <strong>Stats set switching fixed</strong>: notes and game log now load from the correct set's files when you change the active stats set. File paths (<code>hangman_log.txt</code>, <code>notes.txt</code>, <code>played_words.txt</code>) update dynamically to the active set directory.
     </div>
     <div class="version-block">
-      <strong>v7.3.1</strong> — Fixed crash opening Stats Sets Manager; improved Win2000 groupboxes, beveled borders, and status bar showing active set.
+      <strong>v7.3.5</strong> - Players menu shows all management options again; default players no longer auto-load on startup (empty roster until you add players).
     </div>
     <div class="version-block">
-      <strong>v7.3.0</strong> — Tabbed Stats Sets workflow (Manage Sets + Copy/Move Players), arrow buttons, multi-select batch operations, live preview of target set.
+      <strong>v7.3.4</strong> - Players menu repopulated; new <strong>Show Stats of Selected Player</strong>; status bar text dark blue for readability.
     </div>
     <div class="version-block">
-      <strong>v7.2.0</strong> — More intuitive stats-set management with side-by-side lists and Copy/Move buttons.
+      <strong>v7.3.3</strong> - All player actions accessible from Tools menu with a Player Actions submenu.
+    </div>
+    <div class="version-block">
+      <strong>v7.3.2</strong> - <strong>Stats Sets Manager</strong> full redesign: single screen with FROM/TO player lists side by side, big Copy/Move buttons, Windows 2000 classic gradient title and silver (#D4D0C8) chrome. Copy now works (with optional stats reset); Move asks for confirmation and reports transfers.
+    </div>
+    <div class="version-block">
+      <strong>v7.3.1</strong> - Fixed crash opening Stats Sets Manager; improved Win2000 groupboxes, beveled borders, and status bar showing active set.
+    </div>
+    <div class="version-block">
+      <strong>v7.3.0</strong> - Tabbed Stats Sets workflow (Manage Sets + Copy/Move Players), arrow buttons, multi-select batch operations, live preview of target set.
+    </div>
+    <div class="version-block">
+      <strong>v7.2.0</strong> - More intuitive stats-set management with side-by-side lists and Copy/Move buttons.
     </div>
 
     <h2>Earlier highlights (v7.0–v7.1)</h2>
     <div class="version-block">
-      <strong>v7.1.1</strong> — Stats Editor set switcher, clearer grid header, WinME-compatible styling throughout stats workflows.
+      <strong>v7.1.1</strong> - Stats Editor set switcher, clearer grid header, WinME-compatible styling throughout stats workflows.
     </div>
     <div class="version-block">
-      <strong>v7.0.8</strong> — <strong>Settings → Keyboard shortcuts</strong> tab; Player Manager panels resize with the window.
+      <strong>v7.0.8</strong> - <strong>Settings → Keyboard shortcuts</strong> tab; Player Manager panels resize with the window.
     </div>
     <div class="version-block">
-      <strong>v7.0.7</strong> — Player Manager opens larger (1280×920), is resizable and maximizable, and scrolls tab content so nothing is clipped on smaller displays.
+      <strong>v7.0.7</strong> - Player Manager opens larger (1280×920), is resizable and maximizable, and scrolls tab content so nothing is clipped on smaller displays.
     </div>
     <div class="version-block">
-      <strong>v7.0.6</strong> — Dutch Random Word now reliably includes long words (12+ letters) from the full OpenTaal list, with accented-letter normalization.
+      <strong>v7.0.6</strong> - Dutch Random Word now reliably includes long words (12+ letters) from the full OpenTaal list, with accented-letter normalization.
     </div>
     <div class="version-block">
-      <strong>v7.0.5</strong> — Random Word no longer caps at 10 letters; any valid A–Z word from Dutch or English lists can appear.
+      <strong>v7.0.5</strong> - Random Word no longer caps at 10 letters; any valid A–Z word from Dutch or English lists can appear.
     </div>
     <div class="version-block">
-      <strong>v7.0.4</strong> — Correct menu translations everywhere; window title shows the real version; clearer labels for text vs image clipboard exports.
+      <strong>v7.0.4</strong> - Correct menu translations everywhere; window title shows the real version; clearer labels for text vs image clipboard exports.
     </div>
     <div class="version-block">
-      <strong>v7.0.3</strong> — <strong>Insights play-by-play</strong>: select any word and see a full game timeline — who guessed which letter, correct/wrong/repeat, and a visual guess strip (with game picker when a word was played multiple times).
+      <strong>v7.0.3</strong> - <strong>Insights play-by-play</strong>: select any word and see a full game timeline - who guessed which letter, correct/wrong/repeat, and a visual guess strip (with game picker when a word was played multiple times).
     </div>
     <div class="version-block">
-      <strong>v7.0.2</strong> — Clipboard image exports fixed (no more hangs); faster stats rendering; <strong>Copy Complete Statistics Image</strong> combines last-game and all-time data in one shareable image.
+      <strong>v7.0.2</strong> - Clipboard image exports fixed (no more hangs); faster stats rendering; <strong>Copy Complete Statistics Image</strong> combines last-game and all-time data in one shareable image.
     </div>
     <ul class="feature-list">
-      <li><strong>Stats Sets Manager</strong> — create, rename, delete, and activate stat sets; copy or move players between sets with confirmation and live counts</li>
-      <li><strong>Game Rules dialog</strong> — configurable wrong-guess limits, elimination rules, host wins on hangman complete, and more</li>
-      <li><strong>Customizable keyboard shortcuts</strong> — remap every major menu command in Settings; duplicate detection included</li>
-      <li><strong>Colorful menu-bar icons</strong> — every menu item has a distinct tinted glyph so you always know what you’re clicking</li>
-      <li><strong>Statistics Export Center</strong> — one dialog for every text and image export (<kbd>Ctrl+Shift+E</kbd>)</li>
-      <li><strong>Copy Complete Statistics Image</strong> — last game + all-time career in a single clipboard-ready poster</li>
-      <li><strong>Insights play-by-play</strong> — letter-by-letter replay for any word in your history</li>
-      <li><strong>Full-length random words</strong> — Dutch OpenTaal and English word lists without artificial length limits</li>
-      <li><strong>Modern dark pop-ups</strong> — in-game messages match the Word Display aesthetic</li>
+      <li><strong>Stats Sets Manager</strong> - create, rename, delete, and activate stat sets; copy or move players between sets with confirmation and live counts</li>
+      <li><strong>Game Rules dialog</strong> - configurable wrong-guess limits, elimination rules, host wins on hangman complete, and more</li>
+      <li><strong>Customizable keyboard shortcuts</strong> - remap every major menu command in Settings; duplicate detection included</li>
+      <li><strong>Colorful menu-bar icons</strong> - every menu item has a distinct tinted glyph so you always know what you’re clicking</li>
+      <li><strong>Statistics Export Center</strong> - one dialog for every text and image export (<kbd>Ctrl+Shift+E</kbd>)</li>
+      <li><strong>Copy Complete Statistics Image</strong> - last game + all-time career in a single clipboard-ready poster</li>
+      <li><strong>Insights play-by-play</strong> - letter-by-letter replay for any word in your history</li>
+      <li><strong>Full-length random words</strong> - Dutch OpenTaal and English word lists without artificial length limits</li>
+      <li><strong>Modern dark pop-ups</strong> - in-game messages match the Word Display aesthetic</li>
     </ul>
 
     <h2 id="interface">An Interface Worth Showing Off</h2>
@@ -468,22 +484,22 @@
       <div class="card highlight">
         <div class="icon">🌈</div>
         <h3>Colorful Menu Icons</h3>
-        <p>Every menu command has a unique Segoe MDL2 glyph on a soft tinted circle — Game, Edit, Players, View, Tools, Help all instantly recognizable.</p>
+        <p>Every menu command has a unique Segoe MDL2 glyph on a soft tinted circle - Game, Edit, Players, View, Tools, Help all instantly recognizable.</p>
       </div>
       <div class="card highlight">
         <div class="icon">📑</div>
         <h3>Organized Tab Layout</h3>
-        <p>Gameplay, Statistics, Notes, Played Words, and Game Log — everything one click away on the main window.</p>
+        <p>Gameplay, Statistics, Notes, Played Words, and Game Log - everything one click away on the main window.</p>
       </div>
       <div class="card highlight">
         <div class="icon">🖥️</div>
         <h3>Classic + Modern Blend</h3>
-        <p>Player Manager and settings use trusted Windows grey GroupBoxes; stats dialogs use a sleek dark chrome — the best of both eras.</p>
+        <p>Player Manager and settings use trusted Windows grey GroupBoxes; stats dialogs use a sleek dark chrome - the best of both eras.</p>
       </div>
       <div class="card highlight">
         <div class="icon">🌍</div>
         <h3>Live Bilingual UI</h3>
-        <p>Switch English ↔ Dutch instantly. Every button, menu, and message relabels in real time — perfect for mixed-language groups.</p>
+        <p>Switch English ↔ Dutch instantly. Every button, menu, and message relabels in real time - perfect for mixed-language groups.</p>
       </div>
       <div class="card highlight">
         <div class="icon">⌨️</div>
@@ -497,12 +513,12 @@
       </div>
     </div>
 
-    <h2 id="gameplay">Core Gameplay — Classic Rules, Smart Systems</h2>
+    <h2 id="gameplay">Core Gameplay - Classic Rules, Smart Systems</h2>
     <div class="grid">
       <div class="card">
         <div class="icon">🎯</div>
         <h3>Letter-by-Letter Guessing</h3>
-        <p>Guess one letter at a time. Correct letters reveal in the word; wrong guesses advance the custom-drawn gallows. Duplicate letters count as wrong — no free retries.</p>
+        <p>Guess one letter at a time. Correct letters reveal in the word; wrong guesses advance the custom-drawn gallows. Duplicate letters count as wrong - no free retries.</p>
       </div>
       <div class="card">
         <div class="icon">👥</div>
@@ -522,7 +538,7 @@
       <div class="card">
         <div class="icon">👑</div>
         <h3>The AzzMastah Rule</h3>
-        <p>When 10 total wrong guesses pile up or the timer hits zero, the host “AzzMastah” wins automatically — a signature twist for competitive nights.</p>
+        <p>When 10 total wrong guesses pile up or the timer hits zero, the host “AzzMastah” wins automatically - a signature twist for competitive nights.</p>
       </div>
       <div class="card">
         <div class="icon">⏱️</div>
@@ -537,27 +553,27 @@
       <div class="card">
         <div class="icon">💾</div>
         <h3>Session Persistence</h3>
-        <p>Close the app mid-game and come back — your session, log, notes, and roster survive between restarts.</p>
+        <p>Close the app mid-game and come back - your session, log, notes, and roster survive between restarts.</p>
       </div>
     </div>
 
     <h3>Main Window Tabs</h3>
     <ul class="feature-list">
-      <li><strong>Gameplay</strong> — word entry, letter buttons, hangman canvas, live player roster, timer, and quick actions</li>
-      <li><strong>Statistics</strong> — sortable all-time leaderboard with games, wins, eliminations, errors, guesses, and win rate</li>
-      <li><strong>Notes</strong> — auto-saved scratchpad for house rules, inside jokes, and stream commentary</li>
-      <li><strong>Played Words</strong> — searchable history with filter, delete, and one-click reuse</li>
-      <li><strong>Game Log</strong> — timestamped event stream of every guess, elimination, and new game</li>
+      <li><strong>Gameplay</strong> - word entry, letter buttons, hangman canvas, live player roster, timer, and quick actions</li>
+      <li><strong>Statistics</strong> - sortable all-time leaderboard with games, wins, eliminations, errors, guesses, and win rate</li>
+      <li><strong>Notes</strong> - auto-saved scratchpad for house rules, inside jokes, and stream commentary</li>
+      <li><strong>Played Words</strong> - searchable history with filter, delete, and one-click reuse</li>
+      <li><strong>Game Log</strong> - timestamped event stream of every guess, elimination, and new game</li>
     </ul>
 
-    <h2 id="word-display">Word Display — Cinema Mode for Game Night</h2>
+    <h2 id="word-display">Word Display - Cinema Mode for Game Night</h2>
     <figure class="screenshot-full">
       <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/word-display.png" alt="Word Display presentation window with player cards, hangman, performance chart, and timer">
-      <figcaption>The Word Display window — a three-column cinematic layout with live player cards, animated hangman, performance graph, and countdown timer. Open with <kbd>Ctrl+W</kbd> or auto-launch on startup from Settings.</figcaption>
+      <figcaption>The Word Display window - a three-column cinematic layout with live player cards, animated hangman, performance graph, and countdown timer. Open with <kbd>Ctrl+W</kbd> or auto-launch on startup from Settings.</figcaption>
     </figure>
-    <p>A dedicated secondary window for projectors, TVs, and streams. Player cards glow with live stats; the hangman updates in sync; the performance chart tells the story of who’s carrying the team. On game over, the entire view renders to a bitmap and copies to the clipboard — ready for Discord, WhatsApp, or your stream overlay.</p>
+    <p>A dedicated secondary window for projectors, TVs, and streams. Player cards glow with live stats; the hangman updates in sync; the performance chart tells the story of who’s carrying the team. On game over, the entire view renders to a bitmap and copies to the clipboard - ready for Discord, WhatsApp, or your stream overlay.</p>
 
-    <h2 id="player-manager">Player Manager — Your Personal Sports Analytics Desk</h2>
+    <h2 id="player-manager">Player Manager - Your Personal Sports Analytics Desk</h2>
     <p>Open with <kbd>Ctrl+Shift+P</kbd> or <strong>Players → Player Manager</strong>. Ten tabs. Zero compromises.</p>
     <div class="grid grid-3">
       <div class="card"><h3>All Players</h3><p>Edit names, notes, colours; quick-jump to Compare, Insights, or History; copy stats; delete or reset individuals.</p></div>
@@ -572,36 +588,36 @@
       <div class="card"><h3>Tools</h3><p>Merge players, export/import, copy league table, tonight summary, last-game & all-time reports, export full history JSON, refresh log cache.</p></div>
     </div>
 
-    <h2 id="statistics">Statistics &amp; Export — Share Everything</h2>
+    <h2 id="statistics">Statistics &amp; Export - Share Everything</h2>
     <figure class="screenshot-full">
       <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/player-statistics.png" alt="Player statistics panel with win rates and leaderboard">
-      <figcaption>Persistent career statistics — tracked across sessions, sortable in real time, exportable as text or gorgeous clipboard images.</figcaption>
+      <figcaption>Persistent career statistics - tracked across sessions, sortable in real time, exportable as text or gorgeous clipboard images.</figcaption>
     </figure>
 
     <h3>Clipboard Reports (Text)</h3>
     <ul class="feature-list">
-      <li><strong>Word Progress</strong> — current word state for posting in chat</li>
-      <li><strong>Top 10 Statistics</strong> — formatted leaderboard snapshot</li>
-      <li><strong>Achievements Report</strong> — per-player or all players</li>
-      <li><strong>Last Game Report</strong> — per-player stats, pairwise comparisons, career snapshot, guess timeline</li>
-      <li><strong>All-Time Report</strong> — career standings, guess-history leaderboard, top rivalries, league table</li>
-      <li><strong>League Table</strong> — sortable by wins, win rate, correct guesses, accuracy, or games played</li>
-      <li><strong>Tonight Summary</strong> — session standings for the current evening</li>
-      <li><strong>Rivalries</strong> — head-to-head records between top players</li>
-      <li><strong>History Session</strong> — deep dive on any past word from your game log</li>
-      <li><strong>Game Log</strong> — last 25 lines of the live event log</li>
+      <li><strong>Word Progress</strong> - current word state for posting in chat</li>
+      <li><strong>Top 10 Statistics</strong> - formatted leaderboard snapshot</li>
+      <li><strong>Achievements Report</strong> - per-player or all players</li>
+      <li><strong>Last Game Report</strong> - per-player stats, pairwise comparisons, career snapshot, guess timeline</li>
+      <li><strong>All-Time Report</strong> - career standings, guess-history leaderboard, top rivalries, league table</li>
+      <li><strong>League Table</strong> - sortable by wins, win rate, correct guesses, accuracy, or games played</li>
+      <li><strong>Tonight Summary</strong> - session standings for the current evening</li>
+      <li><strong>Rivalries</strong> - head-to-head records between top players</li>
+      <li><strong>History Session</strong> - deep dive on any past word from your game log</li>
+      <li><strong>Game Log</strong> - last 25 lines of the live event log</li>
     </ul>
 
     <h3>Clipboard Images</h3>
     <ul class="feature-list">
-      <li><strong>Last Game Stats Image</strong> — poster-style summary of the most recent completed game</li>
-      <li><strong>All-Time Stats Image</strong> — career standings, guess history, league triptych, rivalries</li>
-      <li><strong>Complete Statistics Image</strong> — <em>both</em> last game and all-time in one scroll-stopping image (Edit menu)</li>
+      <li><strong>Last Game Stats Image</strong> - poster-style summary of the most recent completed game</li>
+      <li><strong>All-Time Stats Image</strong> - career standings, guess history, league triptych, rivalries</li>
+      <li><strong>Complete Statistics Image</strong> - <em>both</em> last game and all-time in one scroll-stopping image (Edit menu)</li>
       <li>Every text report above also has a matching image export in the <strong>Statistics Export Center</strong></li>
     </ul>
 
     <h3>Statistics Export Center</h3>
-    <p>Open via <strong>Edit → Statistics Export Center</strong> or <strong>Tools</strong> menu (<kbd>Ctrl+Shift+E</kbd>). Pick a player for achievements, a league metric, or a history session — then copy text or image for any report with one click. No hunting through menus.</p>
+    <p>Open via <strong>Edit → Statistics Export Center</strong> or <strong>Tools</strong> menu (<kbd>Ctrl+Shift+E</kbd>). Pick a player for achievements, a league metric, or a history session - then copy text or image for any report with one click. No hunting through menus.</p>
 
     <h3>15+ Unlockable Achievements</h3>
     <div class="achievements">
@@ -631,7 +647,7 @@
       <tbody>
         <tr><td>New Game</td><td><code>Ctrl+N</code></td><td>Start a fresh round (optional confirmation in Settings)</td></tr>
         <tr><td>Random Word</td><td><code>Ctrl+R</code></td><td>Pick a random word from the Dutch or English bundled list</td></tr>
-        <tr><td>Use This Word</td><td>—</td><td>Confirm the word typed in the entry field</td></tr>
+        <tr><td>Use This Word</td><td> - </td><td>Confirm the word typed in the entry field</td></tr>
         <tr><td>Pause / Resume Timer</td><td><code>Ctrl+P</code></td><td>Toggle the countdown clock</td></tr>
         <tr><td>Exit</td><td><code>Alt+F4</code></td><td>Close Galgje</td></tr>
       </tbody>
@@ -661,13 +677,13 @@
       <thead><tr><th>Item</th><th>Shortcut</th><th>What it does</th></tr></thead>
       <tbody>
         <tr><td>Player Manager</td><td><code>Ctrl+Shift+P</code></td><td>Open the full analytics suite</td></tr>
-        <tr><td>Add Player</td><td>—</td><td>Add someone to the current game</td></tr>
-        <tr><td>Remove Player</td><td>—</td><td>Remove from current game (stats preserved)</td></tr>
-        <tr><td>Eliminate Player</td><td>—</td><td>Mark as eliminated this round</td></tr>
-        <tr><td>Mark Winner</td><td>—</td><td>Declare the winner and end the round</td></tr>
-        <tr><td>Set Errors</td><td>—</td><td>Manually adjust a player’s wrong-guess count</td></tr>
-        <tr><td>Un-Eliminate Player</td><td>—</td><td>Bring an eliminated player back</td></tr>
-        <tr><td>Reset Player Statistics</td><td>—</td><td>Clear one player’s career data</td></tr>
+        <tr><td>Add Player</td><td> - </td><td>Add someone to the current game</td></tr>
+        <tr><td>Remove Player</td><td> - </td><td>Remove from current game (stats preserved)</td></tr>
+        <tr><td>Eliminate Player</td><td> - </td><td>Mark as eliminated this round</td></tr>
+        <tr><td>Mark Winner</td><td> - </td><td>Declare the winner and end the round</td></tr>
+        <tr><td>Set Errors</td><td> - </td><td>Manually adjust a player’s wrong-guess count</td></tr>
+        <tr><td>Un-Eliminate Player</td><td> - </td><td>Bring an eliminated player back</td></tr>
+        <tr><td>Reset Player Statistics</td><td> - </td><td>Clear one player’s career data</td></tr>
       </tbody>
     </table>
 
@@ -676,8 +692,8 @@
       <thead><tr><th>Item</th><th>Shortcut</th><th>What it does</th></tr></thead>
       <tbody>
         <tr><td>Show Word Window</td><td><code>Ctrl+W</code></td><td>Open the cinematic Word Display</td></tr>
-        <tr><td>UI Language → English / Dutch</td><td>—</td><td>Set interface language</td></tr>
-        <tr><td>Word Language → English / Dutch</td><td>—</td><td>Set random-word list language</td></tr>
+        <tr><td>UI Language → English / Dutch</td><td> - </td><td>Set interface language</td></tr>
+        <tr><td>Word Language → English / Dutch</td><td> - </td><td>Set random-word list language</td></tr>
         <tr><td>Switch Language</td><td><code>Ctrl+L</code></td><td>Quick-toggle UI language</td></tr>
       </tbody>
     </table>
@@ -687,12 +703,12 @@
       <thead><tr><th>Item</th><th>Shortcut</th><th>What it does</th></tr></thead>
       <tbody>
         <tr><td>Settings</td><td><code>Ctrl+,</code></td><td>Timer, sound, language, hoster name, confirm new game, word window on startup</td></tr>
-        <tr><td>Mute / Unmute Sound</td><td>—</td><td>Toggle audio effects</td></tr>
-        <tr><td>Backup and Reset All Statistics</td><td>—</td><td>Archive then wipe all player data</td></tr>
-        <tr><td>Copy Last Game / All-Time / Images</td><td>—</td><td>Quick access to key exports</td></tr>
+        <tr><td>Mute / Unmute Sound</td><td> - </td><td>Toggle audio effects</td></tr>
+        <tr><td>Backup and Reset All Statistics</td><td> - </td><td>Archive then wipe all player data</td></tr>
+        <tr><td>Copy Last Game / All-Time / Images</td><td> - </td><td>Quick access to key exports</td></tr>
         <tr><td>Statistics Export Center</td><td><code>Ctrl+Shift+E</code></td><td>Full export dialog</td></tr>
-        <tr><td>Open Data Folder</td><td>—</td><td>Open <code>%LocalAppData%\Galgje</code></td></tr>
-        <tr><td>Open Install Folder</td><td>—</td><td>Open the Galgje program directory</td></tr>
+        <tr><td>Open Data Folder</td><td> - </td><td>Open <code>%LocalAppData%\Galgje</code></td></tr>
+        <tr><td>Open Install Folder</td><td> - </td><td>Open the Galgje program directory</td></tr>
       </tbody>
     </table>
 
@@ -708,42 +724,42 @@
 
     <h3>Settings Dialog Options</h3>
     <ul class="feature-list">
-      <li><strong>General</strong> — UI language, word language, hoster name, confirm new game</li>
-      <li><strong>Timer</strong> — default duration (60 s–1 h), correct-letter bonus, wrong-letter penalty, auto-start</li>
-      <li><strong>Sound</strong> — default mute state</li>
-      <li><strong>Display</strong> — open Word Display on startup</li>
-      <li><strong>Keyboard shortcuts</strong> — select a command, press a new key combo; saved to <code>game_settings.ini</code> and applied immediately (Delete clears a shortcut; duplicates are blocked)</li>
+      <li><strong>General</strong> - UI language, word language, hoster name, confirm new game</li>
+      <li><strong>Timer</strong> - default duration (60 s–1 h), correct-letter bonus, wrong-letter penalty, auto-start</li>
+      <li><strong>Sound</strong> - default mute state</li>
+      <li><strong>Display</strong> - open Word Display on startup</li>
+      <li><strong>Keyboard shortcuts</strong> - select a command, press a new key combo; saved to <code>game_settings.ini</code> and applied immediately (Delete clears a shortcut; duplicates are blocked)</li>
     </ul>
 
     <h2>Screenshots</h2>
     <div class="screenshot-row">
       <figure class="screenshot-card">
         <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/main-window.png" alt="Main window overview">
-        <figcaption><strong>Main Window</strong> — Full layout with tabs and menu bar.</figcaption>
+        <figcaption><strong>Main Window</strong> - Full layout with tabs and menu bar.</figcaption>
       </figure>
       <figure class="screenshot-card">
         <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/players-tab.png" alt="Players tab">
-        <figcaption><strong>Players Tab</strong> — Live per-player errors, guesses, and elimination status.</figcaption>
+        <figcaption><strong>Players Tab</strong> - Live per-player errors, guesses, and elimination status.</figcaption>
       </figure>
     </div>
     <div class="screenshot-row">
       <figure class="screenshot-card">
         <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/notes-tab.png" alt="Notes tab">
-        <figcaption><strong>Notes</strong> — Auto-saved scratchpad for house rules and commentary.</figcaption>
+        <figcaption><strong>Notes</strong> - Auto-saved scratchpad for house rules and commentary.</figcaption>
       </figure>
       <figure class="screenshot-card">
         <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/played-words-tab.png" alt="Played words tab">
-        <figcaption><strong>Played Words</strong> — Searchable archive with one-click reuse.</figcaption>
+        <figcaption><strong>Played Words</strong> - Searchable archive with one-click reuse.</figcaption>
       </figure>
       <figure class="screenshot-card">
         <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/game-log-tab.png" alt="Game log tab">
-        <figcaption><strong>Game Log</strong> — Timestamped event history for every session.</figcaption>
+        <figcaption><strong>Game Log</strong> - Timestamped event history for every session.</figcaption>
       </figure>
     </div>
 
     <h2>Data, Privacy &amp; Import</h2>
     <ul class="feature-list">
-      <li>All player data lives in <code>%LocalAppData%\Galgje\</code> — never in Program Files</li>
+      <li>All player data lives in <code>%LocalAppData%\Galgje\</code> - never in Program Files</li>
       <li>Files: <code>player_statistics.log</code>, <code>hangman_log.txt</code>, <code>played_words.txt</code>, <code>notes.txt</code>, <code>player_achievements.json</code>, <code>word_game_history.json</code></li>
       <li>Example data ships in <code>example-data\</code> for previewing formats before import</li>
       <li>Full visual import guide in the bundled <a href="manual.html">User Manual</a></li>
@@ -762,11 +778,11 @@
     </dl>
 
     <div class="cta" id="download">
-      <h2>Download Galgje v7.3.6</h2>
+      <h2>Download Galgje v8.0.1</h2>
       <p>Free Windows installer with Start Menu shortcuts to the game, User Manual, Press Release, Changelog, and example data. Requires .NET 8 Desktop Runtime.</p>
-      <a class="btn" href="https://github.com/AzzKickah84/Galgje-releases/releases/download/v7.3.6.202606281737/GalgjeSetup_v7.3.6.202606281737.exe">Download GalgjeSetup_v7.3.6.202606281737.exe</a>
+      <a class="btn" href="https://github.com/AzzKickah84/Galgje-releases/releases/download/v8.0.1.202606290251/GalgjeSetup_v8.0.1.202606290251.exe">Download GalgjeSetup_v8.0.1.202606290251.exe</a>
       <p style="margin-top:1rem;font-size:0.9rem;color:var(--muted);">All releases: <a href="https://github.com/AzzKickah84/Galgje-releases/releases">github.com/AzzKickah84/Galgje-releases</a></p>
-      <p style="margin-top:0.35rem;font-size:0.9rem;color:var(--muted);">Mirror: <a href="http://62.45.220.99:8080/GalgjeHangman/GalgjeSetup_v7.3.6.202606281737.exe">62.45.220.99:8080/GalgjeHangman</a></p>
+      <p style="margin-top:0.35rem;font-size:0.9rem;color:var(--muted);">Mirror: <a href="http://62.45.220.99:8080/GalgjeHangman/GalgjeSetup_v8.0.1.202606290251.exe">62.45.220.99:8080/GalgjeHangman</a></p>
       <a class="btn-secondary" href="manual.html">Read the User Manual →</a>
     </div>
 
@@ -774,7 +790,7 @@
 
   <footer>
     <p>© 2025–2026 Thijs Boekholt. All rights reserved.</p>
-    <p>Galgje — Advanced Hangman for Windows. Built with .NET 8 and Windows Forms.</p>
+    <p>Galgje - Advanced Hangman for Windows. Built with .NET 8 and Windows Forms.</p>
     <p><a href="manual.html">User Manual</a> · <a href="CHANGELOG.md">Changelog</a> · <a href="https://github.com/AzzKickah84/Galgje-releases/releases">GitHub Releases</a></p>
   </footer>
 

@@ -6,19 +6,20 @@ This repository contains **installers and documentation only**. Galgje source co
 
 ## User manual (with screenshots)
 
-**[View press release](https://azzkickah84.github.io/Galgje-releases/press-release.html)** - extended feature overview.
-
 **[View manual online](https://azzkickah84.github.io/Galgje-releases/manual.html)** - full HTML guide including stats import walkthrough.
 
-## Latest version (v6.8.5)
+**[View press release](https://azzkickah84.github.io/Galgje-releases/press-release.html)** - extended feature overview with screenshots.
+
+## Latest version (v8.0.13)
 
 | File | Description |
 |------|-------------|
-| [GalgjeSetup_v6.8.5.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.5/GalgjeSetup_v6.8.5.exe) | Windows installer (~5.9 MB) |
+| [GalgjeSetup_v8.0.13.202606300513.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v8.0.13/GalgjeSetup_v8.0.13.202606300513.exe) | Windows installer (~6.54 MB) |
 | [manual.html](https://azzkickah84.github.io/Galgje-releases/manual.html) | User manual with screenshots |
-| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.5/GalgjeSetup_v6.8.5.exe) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
+| [press-release.html](https://azzkickah84.github.io/Galgje-releases/press-release.html) | Extended press release |
+| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v8.0.13/GalgjeSetup_v8.0.13.202606300513.exe) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
 
-**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v6.8.5/GalgjeSetup_v6.8.5.exe
+**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v8.0.13/GalgjeSetup_v8.0.13.202606300513.exe
 
 ## Requirements
 
@@ -27,13 +28,12 @@ This repository contains **installers and documentation only**. Galgje source co
 
 ## Verify download (optional)
 
-SHA-256 (`GalgjeSetup_v6.8.5.exe`):
+SHA-256 (`GalgjeSetup_v8.0.13.202606300513.exe`):
 
 `
-4e43ced9a141953d4705ad2b340c4f3425a8862a9a92cc3720529b676437ce24
+1e41da600d56139d0fd0cf28d06a3e3270af9798581247b12c1dda83ef279c4a
 `
 
 ## Author
 
 Thijs Boekholt
-
