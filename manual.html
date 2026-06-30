@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galgje v8.0.13 - User Manual</title>
+  <title>Galgje v8.0.14 - User Manual</title>
   <link rel="icon" href="app.ico" type="image/x-icon">
   <style>
     :root {
@@ -415,7 +415,7 @@
     <div class="sidebar-brand">
       <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/app.ico" alt="Galgje icon" width="48" height="48">
       <h1>Galgje Manual</h1>
-      <p>Version 8.0.13 - Complete Guide</p>
+      <p>Version 8.0.14 - Complete Guide</p>
     </div>
     <nav>
       <div class="section">Getting Started</div>
@@ -462,7 +462,7 @@
     <div class="hero">
       <div class="badge">Official User Manual</div>
       <h2>Galgje - Advanced Hangman for Windows</h2>
-      <p>This manual covers every feature of Galgje v8.0.13: from your very first game to advanced multiplayer sessions with timers, statistics, achievements, stats sets, the presentation Word Display window, the new full-screen projector views, and the menu bar with settings.</p>
+      <p>This manual covers every feature of Galgje v8.0.14: from your very first game to advanced multiplayer sessions with timers, statistics, achievements, stats sets, the presentation Word Display window, the new full-screen projector views, and the menu bar with settings.</p>
       <div class="tip"><strong>New users</strong> After installing, open this manual from the Start Menu shortcut <strong>User Manual - Import Your Own Stats</strong> (or the desktop shortcut created during setup). Jump to <a href="#replace-stats" style="color:var(--accent)">Import Your Own Stats</a> if you want to load your existing game history.</div>
       <figure class="hero-shot">
         <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/main-gameplay.png" alt="Galgje main window during active gameplay with hangman, players, and statistics">
@@ -811,7 +811,7 @@
     <!-- FULL-SCREEN VIEWS -->
     <section id="fullscreen-views">
       <h2>Full-Screen Projector Views</h2>
-      <p>New in <strong>v8.0.13</strong>: the <strong>Tools menu</strong> includes a set of modern, full-screen views designed for a second monitor, projector, or stream overlay. They render the puzzle, standings, and statistics in a clean dark theme with large, readable type - perfect for an audience.</p>
+      <p>New in <strong>v8.0.14</strong>: the backup/restore/reset workflow has been redesigned for clarity. A single button now opens a dialog with three distinct actions, so you never accidentally lose data by clicking blindly.</p>
 
       <div class="note"><strong>Audience-safe by design</strong> None of these views ever reveal the secret word. The Word Progress view shows only the letters that have already been guessed (everything else stays masked as <code>_</code>), and the stats views show standings and numbers - never the current answer.</div>
 
@@ -1116,45 +1116,56 @@ Session notes go here.</pre>
     <!-- BACKUP & RESTORE -->
     <section id="backup-restore">
       <h2>Backup & Restore Stats</h2>
-      <p>Galgje provides a built-in backup system for protecting your stats. Backups are stored as independent stats-sets so you can keep multiple snapshots and restore them whenever you want.</p>
+      <p>Galgje v8.0.14 provides a clear, three-action dialog for managing your stats: backup, restore, or reset.</p>
 
-      <h3>Creating a Backup</h3>
+      <h3>Opening the Backup/Restore/Reset Dialog</h3>
+      <p>Click the <span class="btn-ref">Backup/Restore/Reset Stats</span> button (bottom of main window) or use <strong>Tools ▸ Backup and Reset All Stats</strong> from the menu. A dialog opens with three options.</p>
+
+      <h3>Option 1: Create Backup</h3>
       <ol>
-        <li>Click <strong>Tools ▸ Backup and Reset All Stats</strong>.</li>
-        <li>A backup stats-set is created (e.g., <code>"Backup of Default-20260630_145723"</code>) containing a complete snapshot of:
+        <li>Backs up all data from the current active set to a new backup stats-set (e.g., <code>"Backup of Default-20260630_145723"</code>)</li>
+        <li>Backs up: stats, game log, achievements, notes, played words</li>
+        <li>After backup completes, you're asked: <strong>"Reset the active set now?"</strong>
           <ul>
-            <li>All player statistics</li>
-            <li>Game log with all past events</li>
-            <li>Achievements</li>
-            <li>Notes and house rules</li>
-            <li>Played words history</li>
+            <li><strong>Yes</strong> → Active set is cleared (fresh start for new season)</li>
+            <li><strong>No</strong> → Active set is left unchanged; backup just acts as an archive</li>
           </ul>
         </li>
-        <li>The <strong>active stats-set only</strong> is reset to empty (other sets are untouched).</li>
-        <li>A <strong>Restore Backup</strong> dialog appears, ready for immediate use.</li>
       </ol>
 
-      <h3>Restoring a Backup</h3>
-      <p>Open <strong>Tools ▸ Restore Backup</strong> at any time to browse available backups and restore one.</p>
+      <h3>Option 2: Restore from Backup</h3>
+      <ol>
+        <li>Opens the restore dialog showing all available backups (sorted newest first)</li>
+        <li>Each backup shows: name, player count, creation date/time</li>
+        <li>Select a backup and choose:
+          <ul>
+            <li><span class="btn-ref">Restore to Active Set</span> → Overwrites current set with backup</li>
+            <li><span class="btn-ref">Restore to New Set</span> → Prompts for set name, creates set, populates with backup</li>
+          </ul>
+        </li>
+      </ol>
 
-      <div class="ui-map">
-        <div class="ui-row">
-          <div class="ui-box"><div class="ui-title">Backup List</div><p>Shows all backups sorted newest first, with player count and creation date.</p></div>
-          <div class="ui-box"><div class="ui-title green">Select</div><p>Click a backup row to select it.</p></div>
-          <div class="ui-box"><div class="ui-title amber">Restore to Active Set</div><p>Overwrites the current set's stats with the backup.</p></div>
-          <div class="ui-box"><div class="ui-title">Restore to New Set</div><p>Prompts for a new set name, creates it, and populates with backup data.</p></div>
-        </div>
-      </div>
+      <h3>Option 3: Reset Stats (No Backup)</h3>
+      <ol>
+        <li>Clears all stats in the active set <strong>without creating a backup first</strong></li>
+        <li>Confirms with warning: <strong>"This cannot be undone unless you have a backup!"</strong></li>
+        <li>Clears: stats, game log, achievements, notes</li>
+      </ol>
+
+      <h3>Also Available in Tools Menu</h3>
+      <p><strong>Tools ▸ Restore Backup</strong> (separate menu item) - Opens the restore dialog directly, without the action selector. Use this when you only want to restore a backup.</p>
 
       <h3>Use Cases</h3>
       <ul>
-        <li><strong>Season archival</strong> - Create a backup before resetting for a new season. Restore it anytime to review past standings.</li>
-        <li><strong>Accidental reset recovery</strong> - If you accidentally reset stats, restore the backup immediately.</li>
-        <li><strong>Multi-game events</strong> - Keep separate stats-sets for different tournaments, groups, or venues; backup each before reset.</li>
-        <li><strong>Data comparison</strong> - Restore a backup to a new set to side-by-side compare two periods of game history.</li>
+        <li><strong>Season archival + reset</strong> - Create backup, choose "Yes" to reset, start fresh season</li>
+        <li><strong>Archive without reset</strong> - Create backup, choose "No" to keep playing; backup is just a snapshot</li>
+        <li><strong>Accidental reset recovery</strong> - Use Restore to bring back lost stats</li>
+        <li><strong>Data comparison</strong> - Restore backup to a new set to compare old vs. new stats side-by-side</li>
+        <li><strong>Clean slate (no archive)</strong> - Reset without backup for one-off games</li>
       </ul>
 
-      <div class="tip"><strong>Backups are permanent</strong> Backup sets remain on disk indefinitely (never deleted automatically). If you want to clean up old backups, use <strong>Tools ▸ Manage Stats Sets</strong> to delete them manually.</div>
+      <div class="tip"><strong>Backups are permanent</strong> Backup sets remain on disk forever (never deleted automatically). Use <strong>Tools ▸ Manage Stats Sets</strong> to delete old backups manually if needed.</div>
+      <div class="warn"><strong>No accidental resets</strong> Every reset action (backup then reset, or direct reset) requires confirmation. You control the flow.</div>
     </section>
 
     <!-- COPY & EXPORT -->
@@ -1292,7 +1303,7 @@ Chris             35      15      42.9%   6              2.14</pre>
     </section>
 
     <footer>
-      <p>© 2026 Thijs Boekholt - Galgje v8.0.13 User Manual</p>
+      <p>© 2026 Thijs Boekholt - Galgje v8.0.14 User Manual</p>
       <p>See also: <a href="press-release.html" style="color:var(--accent)">Press Release</a> · <a href="CHANGELOG.md" style="color:var(--accent)">Changelog</a></p>
     </footer>
 
