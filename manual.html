@@ -465,7 +465,7 @@
       <p>This manual covers every feature of Galgje v8.0.14: from your very first game to advanced multiplayer sessions with timers, statistics, achievements, stats sets, the presentation Word Display window, the new full-screen projector views, and the menu bar with settings.</p>
       <div class="tip"><strong>New users</strong> After installing, open this manual from the Start Menu shortcut <strong>User Manual - Import Your Own Stats</strong> (or the desktop shortcut created during setup). Jump to <a href="#replace-stats" style="color:var(--accent)">Import Your Own Stats</a> if you want to load your existing game history.</div>
       <figure class="hero-shot">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/main-gameplay.png" alt="Galgje main window during active gameplay with hangman, players, and statistics">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/001_Main_Game_Window.png" alt="Galgje main window during active gameplay">
       </figure>
     </div>
 
@@ -757,13 +757,17 @@
     <!-- TABS -->
     <section id="tab-players">
       <h2>Players Tab</h2>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/005_Tab_Players.png" alt="Players tab showing active players with error counts and status">
+        <figcaption>The Players tab - displays all active players with real-time statistics.</figcaption>
+      </figure>
       <p>The live player roster with real-time statistics. Click any row to select that player for guessing. Columns update instantly after each letter processed.</p>
     </section>
 
     <section id="tab-played">
       <h2>Played Words Tab</h2>
       <figure class="screenshot">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/played-words-tab.png" alt="Played words tab listing previously used words">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/006_Tab_Played_Words.png" alt="Played words tab with search and word history">
         <figcaption>Previously played words - search, filter, double-click to reuse, or delete entries.</figcaption>
       </figure>
       <p>History of all words used in previous games. Use the <strong>Search Played Word</strong> box above the tabs to filter the list. <strong>Double-click</strong> a word to reuse it. Select a word and click <span class="btn-ref">Delete</span> (if available) to remove it from history.</p>
@@ -772,7 +776,7 @@
     <section id="tab-stats">
       <h2>Player Statistics Tab</h2>
       <figure class="screenshot">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/player-statistics.png" alt="Player Statistics tab with sortable columns for games, wins, eliminations, and win rate">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/002_Tab_Player_Statistics.png" alt="Player Statistics tab with sortable columns for games, wins, eliminations, and win rate">
         <figcaption>All-time player statistics - sort by any column, export top 10, or backup and reset.</figcaption>
       </figure>
       <p>All-time statistics for every player who has ever participated:</p>
@@ -795,13 +799,17 @@
 
     <section id="tab-log">
       <h2>Game Log Tab</h2>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/003_Tab_Game_Log.png" alt="Game Log tab showing timestamped events and game history">
+        <figcaption>Timestamped log of all game events - words, guesses, eliminations, and winners.</figcaption>
+      </figure>
       <p>Timestamped record of every game event: word selections, guesses, eliminations, wins, and system messages. Use <span class="btn-ref">Copy Last 25 Log Lines</span> to share recent activity. <span class="btn-ref">Clear Log</span> empties the log (saved to file immediately).</p>
     </section>
 
     <section id="tab-notes">
       <h2>Notes Tab</h2>
       <figure class="screenshot">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/notes-tab.png" alt="Notes tab with auto-saved house rules and session observations">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/004_Tab_Notes.png" alt="Notes tab with auto-saved house rules and session observations">
         <figcaption>The Notes tab - free-form text that auto-saves as you type.</figcaption>
       </figure>
       <p>Free-form text area for house rules, word hints, session notes, or observations. Notes <strong>auto-save</strong> as you type - no save button needed. Content persists between sessions.</p>
@@ -1262,6 +1270,16 @@ Chris             35      15      42.9%   6              2.14</pre>
     <!-- TROUBLESHOOTING -->
     <section id="troubleshooting">
       <h2>Troubleshooting</h2>
+      <table>
+        <tr><th>Problem</th><th>Solution</th></tr>
+        <tr><td>App won't start</td><td>Install .NET 8 Desktop Runtime (x64)</td></tr>
+        <tr><td>Random Word fails</td><td>Check internet connection; bundled offline list should work without it. Reinstall if <code>opentaal_wordlist.txt</code> is missing from the install folder.</td></tr>
+        <tr><td>No sound</td><td>Check the mute button (🔊/🔇) and Windows volume settings</td></tr>
+        <tr><td>Stats not showing</td><td>Data lives in <code>%LocalAppData%\Galgje</code>, not Program Files. Copy files there, or restart - Galgje auto-imports from the install folder.</td></tr>
+        <tr><td>Can't guess letters</td><td>Ensure a player is selected and not eliminated</td></tr>
+        <tr><td>Timer stuck</td><td>Pause and resume, or start a New Game</td></tr>
+      </table>
+    </section>
       <table>
         <tr><th>Problem</th><th>Solution</th></tr>
         <tr><td>App won't start</td><td>Install .NET 8 Desktop Runtime (x64)</td></tr>
