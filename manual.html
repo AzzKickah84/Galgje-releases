@@ -524,12 +524,20 @@
     <!-- OVERVIEW -->
     <section id="overview">
       <h2>Main Window Overview</h2>
-      <p>The main window is organized into distinct zones. The screenshot below shows a live game in progress:</p>
+      <p>The main window is your command center for everything in Galgje. Here's what you need to know:</p>
       <figure class="screenshot">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/main-gameplay.png" alt="Galgje main window - gameplay view with hangman drawing, player list, and statistics panel">
-        <figcaption>The main Galgje window: word display (top), guess controls &amp; timer, hangman drawing (left), player management (center), and statistics tabs (right).</figcaption>
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/001_Main_Game_Window.png" alt="Galgje main window - complete gameplay interface">
+        <figcaption>The main Galgje window: word display (top), guess controls, hangman drawing (left), player list (center-left), and statistics tabs (right).</figcaption>
       </figure>
-      <p>For reference, here is a simplified map of the interface:</p>
+      <p><strong>Key Areas in the Main Window:</strong></p>
+      <ul>
+        <li><strong>Top bar</strong> - Word display, custom word input, and game control buttons</li>
+        <li><strong>Left side</strong> - Hangman drawing that grows with each wrong guess</li>
+        <li><strong>Center-left</strong> - Player list with individual error tracking and status</li>
+        <li><strong>Bottom</strong> - Player management controls and special actions</li>
+        <li><strong>Right side</strong> - Tabbed interface for stats, history, and notes</li>
+      </ul>
+    </section>
       <div class="ui-map">
         <div class="ui-row">
           <div class="ui-box">
@@ -737,21 +745,30 @@
 
     <!-- WORD DISPLAY -->
     <section id="word-display">
-      <h2>Word Display Window</h2>
-      <p>Click <span class="btn-ref">Show Word Window</span> to open a secondary presentation window ideal for projectors, large screens, and streaming.</p>
+      <h2>Word Display Window (Secondary Presentation Window)</h2>
+      <p>The Word Display Window is a dedicated secondary window ideal for projectors, large screens, and streaming scenarios.</p>
       <figure class="screenshot">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/word-display.png" alt="Word Display window with player cards, hangman, performance graph, and timer">
-        <figcaption>The Word Display window - player cards (left), live hangman (center), performance graph (right), and countdown timer.</figcaption>
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/007_Word_Display_Form.png" alt="Word Display window - professional presentation with live stats and hangman">
+        <figcaption>The Word Display window - shows the game state on a second monitor for audiences or streamers.</figcaption>
       </figure>
-      <h3>Layout</h3>
+      <h3>What the Word Display Shows</h3>
       <ul>
-        <li><strong>Left column</strong> - Player cards showing each player's name, status, guessed letters, and errors</li>
-        <li><strong>Center</strong> - Large animated hangman drawing</li>
-        <li><strong>Right column</strong> - Performance graph and live statistics</li>
-        <li><strong>Bottom</strong> - Timer, eliminated players section, and version branding</li>
+        <li><strong>Current Word</strong> - Large display with revealed and hidden letters</li>
+        <li><strong>Player Cards</strong> - Each player's name, status, and progress</li>
+        <li><strong>Hangman Drawing</strong> - Live visual representation of wrong guesses</li>
+        <li><strong>Correct/Wrong Letters</strong> - Organized lists of guessed letters</li>
+        <li><strong>Timer</strong> - Large countdown display</li>
+        <li><strong>Winner Overlay</strong> - Automatic announcement when game ends</li>
       </ul>
-      <p>The Word Display updates in real time as letters are guessed. On game over or when marking a winner, the entire window renders to a bitmap and copies to your clipboard automatically.</p>
-      <div class="tip"><strong>Streaming tip</strong>Keep the Word Display on your stream monitor while operating the main window on your control screen.</div>
+      <h3>How to Use</h3>
+      <ol>
+        <li>Click <span class="btn-ref">Show Word Window</span> from the main window</li>
+        <li>Move it to your projector or second monitor</li>
+        <li>Resize as needed for visibility</li>
+        <li>Play normally on the main window - Word Display updates in real-time</li>
+        <li>On game over or winner, the window automatically captures and copies to clipboard</li>
+      </ol>
+      <div class="tip"><strong>Streaming tip</strong> Keep the Word Display on your stream monitor while operating the main window on your control screen.</div>
     </section>
 
     <!-- TABS -->
@@ -862,6 +879,48 @@
       </table>
 
       <div class="tip"><strong>Game-night setup</strong> Put Presentation Mode or the Word Progress view on the projector, keep the main window on your laptop, and run the whole evening without ever spoiling the word.</div>
+    </section>
+
+    <!-- FULL-SCREEN PREVIEW GALLERY -->
+    <section id="preview-gallery">
+      <h2>Full-Screen Preview Views - Gallery & Details</h2>
+      <p>Each full-screen view offers a distinct presentation style. Here's what each one looks like and when to use it:</p>
+
+      <h3>Word Progress View</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/008_Preview_Word_Progress.png" alt="Word Progress full-screen view with masked word, hangman gallows, and letter board">
+        <figcaption>Word Progress view - shows masked puzzle, gallows, and letter board (audience-safe, never reveals the word).</figcaption>
+      </figure>
+      <p><strong>Perfect for:</strong> Live gameplay viewing, stream overlays, classroom displays</p>
+      <p><strong>Shows:</strong> Masked word, hangman gallows (drawn based on wrong guesses), A-Z letter board (green=correct, red=wrong), per-player error leaderboard</p>
+      <p><strong>Never shows:</strong> The actual word being guessed</p>
+
+      <h3>Statistics / Standings View</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/009_Preview_Stats.png" alt="Statistics view with player standings, win rates, and leaderboard">
+        <figcaption>Statistics view - comprehensive leaderboard with medals, win rates, and ranked players.</figcaption>
+      </figure>
+      <p><strong>Perfect for:</strong> Tournament displays, end-of-game standings, performance reviews</p>
+      <p><strong>Shows:</strong> Summary tiles (total players, games, wins), medal podium (top 3), ranked leaderboard with win-rate bars, statistics</p>
+      <p><strong>Use case:</strong> Display between games to show who's winning</p>
+
+      <h3>Game Log / Text View</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/010_Preview_Text_Log.png" alt="Game Log full-screen view with timestamped events">
+        <figcaption>Game Log view - large, readable timestamped event history for review or archiving.</figcaption>
+      </figure>
+      <p><strong>Perfect for:</strong> Event history review, tournament recording, documentation</p>
+      <p><strong>Shows:</strong> Full game log with timestamps, words used, guesses, eliminations, winners</p>
+      <p><strong>Use case:</strong> Keep on screen to follow all game events in real-time</p>
+
+      <h3>Image / Report View</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/011_Preview_Image_Report.png" alt="Image Report view showing formatted statistics as image">
+        <figcaption>Image Report view - renders statistics as a formatted visual report.</figcaption>
+      </figure>
+      <p><strong>Perfect for:</strong> Social media sharing, print-friendly reports, professional documentation</p>
+      <p><strong>Shows:</strong> Stats formatted as an image with logos, colors, and professional layout</p>
+      <p><strong>Use case:</strong> Copy as image and share on Discord, Twitter, or in documents</p>
     </section>
 
     <!-- CLIPBOARD -->
@@ -1318,6 +1377,133 @@ Chris             35      15      42.9%   6              2.14</pre>
         <tr><td>Copy Last 25 Log Lines</td><td>Game Log tab</td><td>Copy recent log to clipboard</td></tr>
         <tr><td>Delete</td><td>Played words tab</td><td>Remove selected word from history</td></tr>
       </table>
+    </section>
+
+    <!-- DIALOGS & SETTINGS -->
+    <section id="dialogs-settings">
+      <h2>Dialogs & Settings Reference</h2>
+      <p>Galgje includes several dialogs and settings windows to customize your game experience. Here's a complete guide:</p>
+
+      <h3>Settings Dialog</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/012_Dialog_Settings.png" alt="Settings dialog showing game configuration options">
+        <figcaption>Settings dialog - configure game behavior, audio, and preferences.</figcaption>
+      </figure>
+      <p><strong>Access:</strong> Tools → Settings or Main menu button</p>
+      <p><strong>Configure:</strong></p>
+      <ul>
+        <li>Game rules (wrong guess limits, bonus/penalty values)</li>
+        <li>Audio settings (mute, volume)</li>
+        <li>Timer behavior (start disabled/enabled, bonuses, penalties)</li>
+        <li>UI appearance (theme, font size)</li>
+        <li>Hoster name (AzzMastah or custom)</li>
+      </ul>
+
+      <h3>Game Rules Dialog</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/013_Dialog_Game_Rules.png" alt="Game Rules dialog explaining elimination and timing rules">
+        <figcaption>Game Rules dialog - reference guide for all game mechanics and limits.</figcaption>
+      </figure>
+      <p><strong>Access:</strong> Tools → Game Rules or Help menu</p>
+      <p><strong>Shows:</strong> Complete rule reference including player limits, timer mechanics, and victory conditions</p>
+
+      <h3>About Dialog</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/014_Dialog_About.png" alt="About dialog showing version and credits">
+        <figcaption>About dialog - version information and developer credits.</figcaption>
+      </figure>
+      <p><strong>Access:</strong> Help → About</p>
+      <p><strong>Shows:</strong> Current version, .NET runtime version, and application information</p>
+
+      <h3>Player Manager Dialog</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/015_Dialog_Player_Manager.png" alt="Player Manager showing player details and actions">
+        <figcaption>Player Manager dialog - manage individual player profiles and achievements.</figcaption>
+      </figure>
+      <p><strong>Access:</strong> Tools → Player Manager</p>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>View all players and their statistics</li>
+        <li>Edit individual player records</li>
+        <li>View player achievements and badges</li>
+        <li>Reset individual player stats</li>
+        <li>Delete players from database</li>
+      </ul>
+
+      <h3>Stats Editor Dialog</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/016_Dialog_Stats_Editor.png" alt="Stats Editor showing detailed statistics for all players">
+        <figcaption>Stats Editor dialog - advanced statistics management and editing.</figcaption>
+      </figure>
+      <p><strong>Access:</strong> Edit → Edit Data Files → Player Statistics</p>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>View and edit all player statistics in a spreadsheet</li>
+        <li>Bulk operations (reset all, export, import)</li>
+        <li>Sort and filter by any column</li>
+        <li>Validate data integrity</li>
+        <li>Undo/redo changes</li>
+      </ul>
+
+      <h3>Stats Export Dialog</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/017_Dialog_Stats_Export.png" alt="Stats Export showing export options and formats">
+        <figcaption>Stats Export dialog - export statistics in multiple formats.</figcaption>
+      </figure>
+      <p><strong>Access:</strong> Edit → Statistics Export Center or Tools → Copy & Export</p>
+      <p><strong>Formats:</strong></p>
+      <ul>
+        <li>HTML (for printing or web viewing)</li>
+        <li>CSV (for spreadsheets)</li>
+        <li>Text (plain format for sharing)</li>
+        <li>Image (screenshot format for social media)</li>
+      </ul>
+
+      <h3>Stats Sets Manager Dialog</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/018_Dialog_Stats_Sets.png" alt="Stats Sets Manager showing all available statistics sets">
+        <figcaption>Stats Sets Manager dialog - organize statistics by independent sets.</figcaption>
+      </figure>
+      <p><strong>Access:</strong> Tools → Stats Sets → Manage Stats Sets</p>
+      <p><strong>Features:</strong></p>
+      <ul>
+        <li>Create new statistics sets (e.g., "Tournament 1", "League Season 2")</li>
+        <li>Switch between sets instantly</li>
+        <li>Rename and delete sets</li>
+        <li>Copy players between sets</li>
+        <li>Move players with all their stats</li>
+      </ul>
+
+      <h3>Data Manager Dialog</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/019_Dialog_Data_Manager.png" alt="Data Manager showing file management and backup options">
+        <figcaption>Data Manager dialog - manage all game data files.</figcaption>
+      </figure>
+      <p><strong>Access:</strong> Tools → Data Manager</p>
+      <p><strong>Manage:</strong></p>
+      <ul>
+        <li>Backup all game data</li>
+        <li>Restore from backups</li>
+        <li>Edit game log entries</li>
+        <li>Manage played words list</li>
+        <li>Edit notes and preferences</li>
+      </ul>
+
+      <h3>Analytics Dashboard</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/020_Dialog_Analytics_Dashboard.png" alt="Analytics Dashboard showing performance metrics and charts">
+        <figcaption>Analytics Dashboard - comprehensive game metrics and performance analysis.</figcaption>
+      </figure>
+      <p><strong>Access:</strong> Tools → Analytics Dashboard</p>
+      <p><strong>Metrics displayed:</strong></p>
+      <ul>
+        <li>Total games played and win statistics</li>
+        <li>Player performance charts</li>
+        <li>Win rate trends over time</li>
+        <li>Most and least successful words</li>
+        <li>Player leaderboards and rankings</li>
+        <li>Session history and statistics</li>
+      </ul>
     </section>
 
     <footer>
