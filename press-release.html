@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galgje v8.0.1 - Extended Press Release</title>
+  <title>Galgje v8.0.14 - Extended Press Release</title>
   <link rel="icon" href="app.ico" type="image/x-icon">
-  <meta name="description" content="Galgje v8.0.1 - the most advanced Hangman game for Windows. Unlimited multiplayer, stats sets manager, analytics-grade statistics, customizable shortcuts, cinematic Word Display, and a gorgeous interface.">
+  <meta name="description" content="Galgje v8.0.14 - the most advanced Hangman game for Windows. Unlimited multiplayer, stats sets manager, analytics-grade statistics, customizable shortcuts for every menu item, cinematic Word Display, podium views, and a gorgeous interface.">
   <style>
     :root {
       --bg: #0a0e14;
@@ -331,6 +331,21 @@
       background: var(--surface);
       border-top: 1px solid var(--border);
     }
+    .screenshot-gallery-item {
+      margin: 2.5rem 0;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .screenshot-gallery-item:last-child { border-bottom: none; }
+    .screenshot-gallery-item h3 {
+      margin-top: 0;
+      color: var(--accent3);
+    }
+    .screenshot-gallery-item .shows {
+      font-size: 0.92rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
     .quote {
       font-size: 1.35rem;
       font-style: italic;
@@ -366,7 +381,7 @@
     <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/app.ico" alt="Galgje icon" class="logo" width="104" height="104">
     <div>
       <span class="badge">Extended Press Release</span>
-      <span class="badge new">Version 8.0.1</span>
+      <span class="badge new">Version 8.0.14</span>
     </div>
     <h1>Galgje - Hangman, Reimagined</h1>
     <p class="subtitle">The ultimate Windows hangman experience: unlimited local multiplayer, analytics-grade statistics, a cinematic Word Display for the big screen, colorful menu-bar icons, clipboard-ready reports and images, and an interface that feels as polished as it plays.</p>
@@ -379,17 +394,18 @@
       <a href="#statistics">Statistics</a>
       <a href="#menus">Every Menu</a>
       <a href="#word-display">Word Display</a>
+      <a href="#screenshots">Screenshots</a>
       <a href="#download">Download</a>
     </nav>
     <figure class="hero-screenshot">
-      <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/main-gameplay.png" alt="Galgje main window - multiplayer hangman with live statistics, timer, and custom hangman drawing">
+      <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/001_Main_Game_Window.png" alt="Galgje main window - multiplayer hangman with live statistics, timer, and custom hangman drawing">
     </figure>
   </header>
 
   <main class="container">
 
     <div class="lead">
-      <strong>FOR IMMEDIATE RELEASE</strong> - <em>Galgje</em> (Dutch for “gallows” / hangman) ships version <strong>7.3.6</strong> as a feature-complete, production-ready Windows desktop game. Built for living-room game nights, classrooms, and streamers, Galgje combines classic letter-by-letter word guessing with unlimited local multiplayer, independent <strong>stats sets</strong> (each with its own notes, game log, and played words), a redesigned <strong>Stats Sets Manager</strong>, configurable game rules, a pressure-cooker timer, persistent career statistics, 15+ achievements, a full <strong>Player Manager</strong> analytics suite, customizable keyboard shortcuts, and more export options than any hangman game has any right to offer - text <em>and</em> beautiful clipboard images. Download free from <a href="https://github.com/AzzKickah84/Galgje-releases/releases">GitHub Releases</a>.
+      <strong>FOR IMMEDIATE RELEASE</strong> - <em>Galgje</em> (Dutch for “gallows” / hangman) ships version <strong>8.0.14</strong> as a feature-complete, production-ready Windows desktop game. Built for living-room game nights, classrooms, and streamers, Galgje combines classic letter-by-letter word guessing with unlimited local multiplayer, independent <strong>stats sets</strong> (each with its own notes, game log, and played words), a redesigned <strong>Stats Sets Manager</strong>, safe <strong>backup & restore</strong>, configurable game rules, full-screen <strong>podium and presentation views</strong>, customizable keyboard shortcuts for <em>every</em> menu item, a pressure-cooker timer, persistent career statistics, 15+ achievements, a full <strong>Player Manager</strong> analytics suite, and more export options than any hangman game has any right to offer - text <em>and</em> beautiful clipboard images. Download free from <a href="https://github.com/AzzKickah84/Galgje-releases/releases">GitHub Releases</a>.
     </div>
 
     <p class="quote">“It’s not just hangman. It’s hangman with a league table, rivalries, and a one-click screenshot of last night’s carnage.”</p>
@@ -504,7 +520,7 @@
       <div class="card highlight">
         <div class="icon">⌨️</div>
         <h3>Customizable Shortcuts</h3>
-        <p>Settings → Keyboard shortcuts: remap new game, random word, pause, stats export, player manager, word window, language, and settings. Press Delete to clear.</p>
+        <p>Settings → Keyboard shortcuts: remap <em>every</em> menu command - including podium, presentation mode, full-screen views, backup tools, and data editors. Press Delete to clear; duplicates are blocked.</p>
       </div>
       <div class="card highlight">
         <div class="icon">⌨️</div>
@@ -568,8 +584,8 @@
 
     <h2 id="word-display">Word Display - Cinema Mode for Game Night</h2>
     <figure class="screenshot-full">
-      <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/word-display.png" alt="Word Display presentation window with player cards, hangman, performance chart, and timer">
-      <figcaption>The Word Display window - a three-column cinematic layout with live player cards, animated hangman, performance graph, and countdown timer. Open with <kbd>Ctrl+W</kbd> or auto-launch on startup from Settings.</figcaption>
+      <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/007_Word_Display_Form.png" alt="Word Display presentation window with player cards, hangman, performance chart, and timer">
+      <figcaption>The Word Display window - a cinematic layout for projectors and streams. Open via Tools or assign a custom shortcut in Settings.</figcaption>
     </figure>
     <p>A dedicated secondary window for projectors, TVs, and streams. Player cards glow with live stats; the hangman updates in sync; the performance chart tells the story of who’s carrying the team. On game over, the entire view renders to a bitmap and copies to the clipboard - ready for Discord, WhatsApp, or your stream overlay.</p>
 
@@ -590,8 +606,8 @@
 
     <h2 id="statistics">Statistics &amp; Export - Share Everything</h2>
     <figure class="screenshot-full">
-      <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/player-statistics.png" alt="Player statistics panel with win rates and leaderboard">
-      <figcaption>Persistent career statistics - tracked across sessions, sortable in real time, exportable as text or gorgeous clipboard images.</figcaption>
+      <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/002_Tab_Player_Statistics.png" alt="Player statistics panel with win rates and leaderboard">
+      <figcaption>Persistent career statistics - tracked across sessions, sortable in real time, exportable as text or clipboard images.</figcaption>
     </figure>
 
     <h3>Clipboard Reports (Text)</h3>
@@ -676,7 +692,10 @@
     <table class="menu-table">
       <thead><tr><th>Item</th><th>Shortcut</th><th>What it does</th></tr></thead>
       <tbody>
+        <tr><td>Show Stats of Selected Player</td><td> - </td><td>Popup with the selected player’s current stats</td></tr>
         <tr><td>Player Manager</td><td><code>Ctrl+Shift+P</code></td><td>Open the full analytics suite</td></tr>
+        <tr><td>Compare Players</td><td><code>Ctrl+Shift+C</code></td><td>Charts, Excel, and PDF comparison tools</td></tr>
+        <tr><td>Export Statistics</td><td> - </td><td>Export player stats (PDF, HTML, CSV)</td></tr>
         <tr><td>Add Player</td><td> - </td><td>Add someone to the current game</td></tr>
         <tr><td>Remove Player</td><td> - </td><td>Remove from current game (stats preserved)</td></tr>
         <tr><td>Eliminate Player</td><td> - </td><td>Mark as eliminated this round</td></tr>
@@ -731,29 +750,257 @@
       <li><strong>Keyboard shortcuts</strong> - select a command, press a new key combo; saved to <code>game_settings.ini</code> and applied immediately (Delete clears a shortcut; duplicates are blocked)</li>
     </ul>
 
-    <h2>Screenshots</h2>
+    <h2 id="screenshots">Complete Screenshot Gallery</h2>
+    <p>Every major window, tab, full-screen view, and dialog in Galgje v8.0.14 - with descriptions of what you see and how to use each feature. All images are captured from the live application.</p>
+
+    <div class="screenshot-gallery-item">
+      <h3>001 - Main Game Window</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/001_Main_Game_Window.png" alt="Galgje main window during active gameplay">
+        <figcaption>The main game window - word entry, letter buttons, hangman canvas, player roster, timer, and tabbed panels.</figcaption>
+      </figure>
+      <p>The heart of Galgje: type or randomize a word, select a player, guess letters, and watch the hangman draw in real time. The status bar shows live set stats; bottom buttons handle backup, new game, and quick actions.</p>
+      <p class="shows"><strong>Use for:</strong> Everyday gameplay · Host view on laptop while projector shows Word Display</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>002 - Player Statistics Tab</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/002_Tab_Player_Statistics.png" alt="Player Statistics tab with sortable columns">
+        <figcaption>All-time career stats - games, wins, eliminations, errors, guesses, and win rate per player.</figcaption>
+      </figure>
+      <p>Click any column header to sort. Double-click a player to open detailed stats. Data persists across sessions and respects the active stats set.</p>
+      <p class="shows"><strong>Shows:</strong> Career totals · Win percentages · Sortable leaderboard</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>003 - Game Log Tab</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/003_Tab_Game_Log.png" alt="Game Log tab with timestamped events">
+        <figcaption>Timestamped event stream - every guess, elimination, new game, and settings change.</figcaption>
+      </figure>
+      <p>Review exactly what happened and when. Copy the log via Tools → Copy & Export, or open the full-screen log view for projectors.</p>
+      <p class="shows"><strong>Use for:</strong> Disputes · Stream archives · Tournament records</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>004 - Notes Tab</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/004_Tab_Notes.png" alt="Notes tab with auto-saved text">
+        <figcaption>Auto-saved scratchpad - house rules, inside jokes, stream commentary, league standings.</figcaption>
+      </figure>
+      <p>Notes save automatically per stats set. Perfect for keeping running commentary during a game night without leaving the app.</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>005 - Players Tab</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/005_Tab_Players.png" alt="Players tab with error counts and status">
+        <figcaption>Live in-game roster - wrong guesses, total guesses, limits, elimination status, and winner highlighting.</figcaption>
+      </figure>
+      <p>During a round, this tab shows who is still in, who is eliminated (red bold), and who won (green bold). Select a player here before guessing letters.</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>006 - Played Words Tab</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/006_Tab_Played_Words.png" alt="Played words tab with search and history">
+        <figcaption>Searchable word archive - filter, delete entries, double-click to replay any previous word.</figcaption>
+      </figure>
+      <p>Build a history of every word your group has tackled. Double-click a row to start a new game with that word instantly.</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>007 - Word Display Window</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/007_Word_Display_Form.png" alt="Word Display secondary presentation window">
+        <figcaption>Secondary presentation window - ideal for projectors, TVs, and streaming overlays.</figcaption>
+      </figure>
+      <p>Opens on a second monitor with player cards, hangman, performance chart, and timer. On game over, the entire view copies to clipboard as an image. Enable auto-open on startup in Settings → Display.</p>
+      <p class="shows"><strong>Access:</strong> View → Show Word Window · Customizable shortcut in Settings</p>
+    </div>
+
+    <h3 style="margin-top:2.5rem;color:var(--accent);">Full-Screen Projector Views</h3>
+    <p>Audience-safe by design: stats views never reveal the secret word. Word Progress masks unguessed letters as underscores.</p>
+
+    <div class="screenshot-gallery-item">
+      <h3>008 - Word Progress (Full-Screen)</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/008_Preview_Word_Progress.png" alt="Word Progress full-screen view">
+        <figcaption>Masked puzzle, hangman gallows, A–Z letter board (green = hit, red = miss), per-player error leaderboard.</figcaption>
+      </figure>
+      <p><strong>Perfect for:</strong> Live gameplay on a projector, stream overlays, classrooms.<br>
+      <strong>Never shows:</strong> The actual answer - only letters already guessed.</p>
+      <p class="shows"><strong>Access:</strong> Tools → Copy & Export → View Word Progress (Full-Screen)</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>009 - Statistics / Standings (Full-Screen)</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/009_Preview_Stats.png" alt="Statistics full-screen leaderboard">
+        <figcaption>Summary tiles, medal podium (top 3), ranked leaderboard with win-rate bars.</figcaption>
+      </figure>
+      <p>Display between games to show who is leading the league. Great for tournament halftimes and end-of-night reveals.</p>
+      <p class="shows"><strong>Access:</strong> Tools → Copy & Export → View Top 10 Statistics (Full-Screen)</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>010 - Game Log (Full-Screen)</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/010_Preview_Text_Log.png" alt="Game Log full-screen view">
+        <figcaption>Large, readable timestamped event history for review or archiving.</figcaption>
+      </figure>
+      <p>Keep on screen to follow every guess in real time during competitive sessions or for post-game review.</p>
+      <p class="shows"><strong>Access:</strong> Tools → Copy & Export → View Game Log (Full-Screen)</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>011 - Image Report (Full-Screen)</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/011_Preview_Image_Report.png" alt="Image Report full-screen view">
+        <figcaption>Statistics rendered as a formatted visual report - copy as image for sharing.</figcaption>
+      </figure>
+      <p>Professional layout with colors and structure. Copy to clipboard and paste into Discord, Teams, or documents.</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>🏆 Podium & Presentation Mode</h3>
+      <p>New in v8.0.14: full-screen <strong>Podium</strong> view (Hall of Fame with gold/silver/bronze), <strong>Podium From Last Game</strong>, and auto-cycling <strong>Presentation Mode</strong> for hands-free streams. Assign custom keyboard shortcuts in Settings → Keyboard shortcuts.</p>
+    </div>
+
+    <h3 style="margin-top:2.5rem;color:var(--accent);">Dialogs &amp; Settings</h3>
+
+    <div class="screenshot-gallery-item">
+      <h3>012 - Settings Dialog</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/012_Dialog_Settings.png" alt="Settings dialog">
+        <figcaption>Configure language, timer, sound, display, export, logging, stats, privacy, and keyboard shortcuts.</figcaption>
+      </figure>
+      <p>Tabbed settings cover everything from hoster name and word language to customizable shortcuts for <em>every</em> menu item - including podium and full-screen views. Press Delete to clear a shortcut; duplicates are blocked.</p>
+      <p class="shows"><strong>Access:</strong> Tools → Settings (<kbd>Ctrl+,</kbd> by default)</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>013 - Game Rules Dialog</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/013_Dialog_Game_Rules.png" alt="Game Rules dialog">
+        <figcaption>Complete reference for elimination limits, timer rules, and victory conditions.</figcaption>
+      </figure>
+      <p>Share with new players before the first round. Explains wrong-guess caps, the AzzMastah rule, and manual winner/elimination options.</p>
+      <p class="shows"><strong>Access:</strong> Tools → Game Rules</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>014 - About Dialog</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/014_Dialog_About.png" alt="About dialog">
+        <figcaption>Version number, runtime info, and quick links to manual and changelog.</figcaption>
+      </figure>
+      <p class="shows"><strong>Access:</strong> Help → About Galgje</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>015 - Player Manager</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/015_Dialog_Player_Manager.png" alt="Player Manager dialog">
+        <figcaption>Ten-tab analytics suite - leaderboard, compare, insights, word history, teams, and more.</figcaption>
+      </figure>
+      <p>Your personal sports desk: radar charts, head-to-head reports, letter heatmaps, play-by-play replay, and export tools. Resizable window optimized for 1280×920+.</p>
+      <p class="shows"><strong>Access:</strong> Players → Player Manager (<kbd>Ctrl+Shift+P</kbd> by default)</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>016 - Stats Editor / Manager</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/016_Dialog_Stats_Editor.png" alt="Stats Editor dialog">
+        <figcaption>Spreadsheet-style editor for all player statistics in the active set.</figcaption>
+      </figure>
+      <p>Search, filter, bulk reset, and edit individual values. Switch sets from the dropdown without leaving the dialog.</p>
+      <p class="shows"><strong>Access:</strong> Tools → Stats Editor / Manager</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>017 - Statistics Export Center</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/017_Dialog_Stats_Export.png" alt="Stats Export dialog">
+        <figcaption>One dialog for every text and image export - achievements, league tables, history sessions.</figcaption>
+      </figure>
+      <p>Pick a report type, choose text or image, copy to clipboard in one click. No hunting through submenus.</p>
+      <p class="shows"><strong>Access:</strong> Tools → Copy & Export → Statistics Export Center</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>018 - Stats Sets Manager</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/018_Dialog_Stats_Sets.png" alt="Stats Sets Manager dialog">
+        <figcaption>Side-by-side FROM/TO panes - copy or move players between independent stat sets.</figcaption>
+      </figure>
+      <p>Create seasons, tournaments, or leagues as separate sets - each with its own stats, log, notes, and played words. Copy players with optional stat reset; move with confirmation.</p>
+      <p class="shows"><strong>Access:</strong> Tools → Stats Sets → Manage Sets...</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>019 - Data Manager</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/019_Dialog_Data_Manager.png" alt="Data Manager dialog">
+        <figcaption>Central hub for editing player stats, game log, notes, played words, and backups.</figcaption>
+      </figure>
+      <p>Opens the WinME-style file editors from one place. Changes reload the active set automatically when you close an editor.</p>
+      <p class="shows"><strong>Access:</strong> Tools → Data Manager</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>020 - Analytics Dashboard</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/020_Dialog_Analytics_Dashboard.png" alt="Analytics Dashboard">
+        <figcaption>Performance metrics, charts, and session analytics at a glance.</figcaption>
+      </figure>
+      <p>Deep-dive into group performance - games played, guess patterns, and trends over time.</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>021 - Backup / Restore / Reset Dialog</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/021_Dialog_Backup_Restore_Reset.png" alt="Backup Restore Reset action selector">
+        <figcaption>Three clear actions: Create Backup, Restore from Backup, or Reset Stats Only.</figcaption>
+      </figure>
+      <p>Backups are safe - data is verified before any reset. Choose whether to clear the active set after backing up. Access from the main window button or Tools menu.</p>
+      <p class="shows"><strong>Workflow:</strong> Create Backup → optional reset · Restore → pick backup and target set · Reset → clear active set (with warning)</p>
+    </div>
+
+    <div class="screenshot-gallery-item">
+      <h3>022 - Restore Backup Dialog</h3>
+      <figure class="screenshot-full">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/022_Dialog_Restore_Backup.png" alt="Restore Backup dialog">
+        <figcaption>Browse backups with player counts and timestamps - restore to active set, new set, or delete old backups.</figcaption>
+      </figure>
+      <p>Select a backup, then restore to the active set (overwrites) or a new set (keeps current data). Delete unwanted backups with confirmation. Backup sets stay out of the regular Stats Sets menu.</p>
+      <p class="shows"><strong>Access:</strong> Tools → Restore Backup · or via the action selector dialog</p>
+    </div>
+
+    <h3 style="margin-top:2rem;color:var(--accent);">Additional Tab Views</h3>
     <div class="screenshot-row">
       <figure class="screenshot-card">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/main-window.png" alt="Main window overview">
-        <figcaption><strong>Main Window</strong> - Full layout with tabs and menu bar.</figcaption>
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/players-tab.png" alt="Players tab legacy capture">
+        <figcaption><strong>Players Tab</strong> - Live per-player errors, guesses, and elimination status during a round.</figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/players-tab.png" alt="Players tab">
-        <figcaption><strong>Players Tab</strong> - Live per-player errors, guesses, and elimination status.</figcaption>
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/notes-tab.png" alt="Notes tab legacy capture">
+        <figcaption><strong>Notes</strong> - Auto-saved scratchpad for house rules and stream commentary.</figcaption>
       </figure>
     </div>
     <div class="screenshot-row">
       <figure class="screenshot-card">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/notes-tab.png" alt="Notes tab">
-        <figcaption><strong>Notes</strong> - Auto-saved scratchpad for house rules and commentary.</figcaption>
-      </figure>
-      <figure class="screenshot-card">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/played-words-tab.png" alt="Played words tab">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/played-words-tab.png" alt="Played words tab legacy capture">
         <figcaption><strong>Played Words</strong> - Searchable archive with one-click reuse.</figcaption>
       </figure>
       <figure class="screenshot-card">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/game-log-tab.png" alt="Game log tab">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/game-log-tab.png" alt="Game log tab legacy capture">
         <figcaption><strong>Game Log</strong> - Timestamped event history for every session.</figcaption>
+      </figure>
+      <figure class="screenshot-card">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/word-display.png" alt="Word Display legacy capture">
+        <figcaption><strong>Word Display</strong> - Cinematic second-screen layout for audiences.</figcaption>
       </figure>
     </div>
 
@@ -778,11 +1025,11 @@
     </dl>
 
     <div class="cta" id="download">
-      <h2>Download Galgje v8.0.1</h2>
+      <h2>Download Galgje v8.0.14</h2>
       <p>Free Windows installer with Start Menu shortcuts to the game, User Manual, Press Release, Changelog, and example data. Requires .NET 8 Desktop Runtime.</p>
-      <a class="btn" href="https://github.com/AzzKickah84/Galgje-releases/releases/download/v8.0.1.202606290251/GalgjeSetup_v8.0.1.202606290251.exe">Download GalgjeSetup_v8.0.1.202606290251.exe</a>
+      <a class="btn" href="https://github.com/AzzKickah84/Galgje-releases/releases/download/v8.0.14/GalgjeSetup_v8.0.14.202607010133.exe">Download GalgjeSetup_v8.0.14.202607010133.exe</a>
       <p style="margin-top:1rem;font-size:0.9rem;color:var(--muted);">All releases: <a href="https://github.com/AzzKickah84/Galgje-releases/releases">github.com/AzzKickah84/Galgje-releases</a></p>
-      <p style="margin-top:0.35rem;font-size:0.9rem;color:var(--muted);">Mirror: <a href="http://62.45.220.99:8080/GalgjeHangman/GalgjeSetup_v8.0.1.202606290251.exe">62.45.220.99:8080/GalgjeHangman</a></p>
+      <p style="margin-top:0.35rem;font-size:0.9rem;color:var(--muted);">Mirror: <a href="http://62.45.220.99:8080/GalgjeHangman/GalgjeSetup_v8.0.14.202607010133.exe">62.45.220.99:8080/GalgjeHangman</a></p>
       <a class="btn-secondary" href="manual.html">Read the User Manual →</a>
     </div>
 
