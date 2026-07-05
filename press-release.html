@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galgje v8.0.14 - Extended Press Release</title>
+  <title>Galgje v8.5.0 - Extended Press Release</title>
   <link rel="icon" href="app.ico" type="image/x-icon">
   <meta name="description" content="Galgje v8.0.14 - the most advanced Hangman game for Windows. Unlimited multiplayer, stats sets manager, analytics-grade statistics, customizable shortcuts for every menu item, cinematic Word Display, podium views, and a gorgeous interface.">
   <style>
@@ -381,7 +381,7 @@
     <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/app.ico" alt="Galgje icon" class="logo" width="104" height="104">
     <div>
       <span class="badge">Extended Press Release</span>
-      <span class="badge new">Version 8.0.14</span>
+      <span class="badge new">Version 8.5.0</span>
     </div>
     <h1>Galgje - Hangman, Reimagined</h1>
     <p class="subtitle">The ultimate Windows hangman experience: unlimited local multiplayer, analytics-grade statistics, a cinematic Word Display for the big screen, colorful menu-bar icons, clipboard-ready reports and images, and an interface that feels as polished as it plays.</p>
@@ -405,12 +405,29 @@
   <main class="container">
 
     <div class="lead">
-      <strong>FOR IMMEDIATE RELEASE</strong> - <em>Galgje</em> (Dutch for “gallows” / hangman) ships version <strong>8.0.14</strong> as a feature-complete, production-ready Windows desktop game. Built for living-room game nights, classrooms, and streamers, Galgje combines classic letter-by-letter word guessing with unlimited local multiplayer, independent <strong>stats sets</strong> (each with its own notes, game log, and played words), a redesigned <strong>Stats Sets Manager</strong>, safe <strong>backup & restore</strong>, configurable game rules, full-screen <strong>podium and presentation views</strong>, customizable keyboard shortcuts for <em>every</em> menu item, a pressure-cooker timer, persistent career statistics, 15+ achievements, a full <strong>Player Manager</strong> analytics suite, and more export options than any hangman game has any right to offer - text <em>and</em> beautiful clipboard images. Download free from <a href="https://github.com/AzzKickah84/Galgje-releases/releases">GitHub Releases</a>.
+      <strong>FOR IMMEDIATE RELEASE</strong> - <em>Galgje</em> (Dutch for “gallows” / hangman) ships version <strong>8.5.0</strong> as a feature-complete, production-ready Windows desktop game.
     </div>
 
     <p class="quote">“It’s not just hangman. It’s hangman with a league table, rivalries, and a one-click screenshot of last night’s carnage.”</p>
 
-    <h2 id="whats-new">What's New in v8.0.x</h2>
+    <h2 id="whats-new">What's New in v8.5</h2>
+    <div class="version-block">
+      <strong>v8.5.0</strong> - All managers and editors stay in sync: unified data reload after restore or edit, live Data Manager refresh, import notes/played words from another stats-set, copy notes to clipboard, safety backup before Reset All, Player Statistics right-click context menu, and further performance tuning (summary cache, smarter notes sync).
+    </div>
+    <h2>Earlier in v8.2–8.3</h2>
+    <div class="version-block">
+      <strong>v8.2.0</strong> - <strong>Game Hub</strong> in Player Manager: unified game browser with rich filters, presets, bulk HTML/CSV export, and clipboard snapshots. <strong>Last Game Dashboard</strong> (1920×1080): one projector-safe screen with word progress, player stats, and league snapshot - secret word never shown - copy with one Ctrl+V (<kbd>Ctrl+Shift+G</kbd>) or open full-screen on a second monitor (<kbd>Ctrl+Shift+U</kbd>). Status bar readability fix (Aptos, no clipping). Auto-copy dashboard on win (optional).
+    </div>
+    <h2>Earlier in v8.1.x</h2>
+    <div class="version-block">
+      <strong>v8.1.1</strong> - <strong>Settings Tonight tab</strong> for game-night roster setup; <strong>Game Rules presets</strong> (Classic / Relaxed / Speed / Kids), team limits, winner modes, live rules summary; sound volume &amp; achievement popup controls; word display font size &amp; position memory; <strong>Player Manager Home</strong> dashboard and global search; Word History filters; scheduled auto-backup.
+    </div>
+    <div class="version-block">
+      <strong>v8.0.18</strong> - <strong>Game Editor</strong> tab in Player Manager: fix finished games after the fact (word, winner, dates, players, every guess). Factory reset in Tools. Insights shows recent words first. Exit confirmation and smarter startup (no more restoring completed games). Full-screen “View Last Game” fixed.
+    </div>
+    <div class="version-block">
+      <strong>v8.0.17</strong> - Hall of Fame tab, Player Manager tab tooltips, leaderboard badge names, Stats Editor overhaul with delete player and rich detail panel.
+    </div>
     <div class="version-block">
       <strong>v8.0.1</strong> - <strong>Windows ME Theming Engine</strong>: comprehensive `WindowsMETheme.cs` class applies authentic WinME styling (bright teal gradients, green accents, classic gray) across all settings and customization dialogs. Recursive control theming for buttons, group boxes, tabs, text boxes, data grids. Gradient banner headers with etched borders. Consistent font styling throughout.
     </div>
@@ -590,7 +607,7 @@
     <p>A dedicated secondary window for projectors, TVs, and streams. Player cards glow with live stats; the hangman updates in sync; the performance chart tells the story of who’s carrying the team. On game over, the entire view renders to a bitmap and copies to the clipboard - ready for Discord, WhatsApp, or your stream overlay.</p>
 
     <h2 id="player-manager">Player Manager - Your Personal Sports Analytics Desk</h2>
-    <p>Open with <kbd>Ctrl+Shift+P</kbd> or <strong>Players → Player Manager</strong>. Ten tabs. Zero compromises.</p>
+    <p>Open with <kbd>Ctrl+Shift+P</kbd> or <strong>Players → Player Manager</strong>. Thirteen tabs. Zero compromises.</p>
     <div class="grid grid-3">
       <div class="card"><h3>All Players</h3><p>Edit names, notes, colours; quick-jump to Compare, Insights, or History; copy stats; delete or reset individuals.</p></div>
       <div class="card"><h3>Leaderboard</h3><p>Sortable rankings, live bar charts, monthly activity line graph, Hall of Fame badges, “Tonight only” filter, accuracy vs win-rate scatter plot.</p></div>
@@ -598,10 +615,11 @@
       <div class="card"><h3>Explore</h3><p>Search every word ever played; see who participated and who won.</p></div>
       <div class="card"><h3>Teams</h3><p>Team standings and team-vs-team charts for squad-based game nights.</p></div>
       <div class="card"><h3>Word History</h3><p>Recent games list, per-game guess timeline, coloured guess-flow strip, player filter, copy game report.</p></div>
+      <div class="card"><h3>Game Editor</h3><p>Correct finished games: change winner, word, dates, players, and individual guesses; duplicate, delete, or recalculate stats.</p></div>
       <div class="card"><h3>Insights</h3><p>Letter heatmap, top letters, words played, rival/nemesis stats, donut chart (correct/wrong/repeat), tonight’s MVP, <strong>play-by-play replay</strong> per word.</p></div>
       <div class="card"><h3>Roster</h3><p>Manage default player list and import/export roster files.</p></div>
       <div class="card"><h3>Active Game</h3><p>Live snapshot of the current session’s players and standings.</p></div>
-      <div class="card"><h3>Tools</h3><p>Merge players, export/import, copy league table, tonight summary, last-game & all-time reports, export full history JSON, refresh log cache.</p></div>
+      <div class="card"><h3>Tools</h3><p>Merge players, export/import, factory reset, copy league table, tonight summary, last-game & all-time reports, export full history JSON.</p></div>
     </div>
 
     <h2 id="statistics">Statistics &amp; Export - Share Everything</h2>
