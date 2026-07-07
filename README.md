@@ -16,12 +16,12 @@ This repository contains **installers and documentation only**. Galgje source co
 
 | File | Description |
 |------|-------------|
-| [GalgjeSetup_v10.0.0.202607072206.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.0.0/GalgjeSetup_v10.0.0.202607072206.exe) | Windows installer (~9.08 MB) |
+| [GalgjeSetup_v10.0.0.202607072229.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.0.0/GalgjeSetup_v10.0.0.202607072229.exe) | Windows installer (~9.07 MB) |
 | [manual.html](https://azzkickah84.github.io/Galgje-releases/manual.html) | User manual with screenshots |
 | [press-release.html](https://azzkickah84.github.io/Galgje-releases/press-release.html) | Extended press release |
-| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.0.0/GalgjeSetup_v10.0.0.202607072206.exe) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
+| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.0.0/GalgjeSetup_v10.0.0.202607072229.exe) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
 
-**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.0.0/GalgjeSetup_v10.0.0.202607072206.exe
+**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.0.0/GalgjeSetup_v10.0.0.202607072229.exe
 
 ## Requirements
 
@@ -30,10 +30,10 @@ This repository contains **installers and documentation only**. Galgje source co
 
 ## Verify download (optional)
 
-SHA-256 (`GalgjeSetup_v10.0.0.202607072206.exe`):
+SHA-256 (`GalgjeSetup_v10.0.0.202607072229.exe`):
 
 `
-c4dff8e8b6d96aa6b99180e31294ac7972b7a687ed6fa917683224c2bda986b2
+d9a8295c48eca7f809a6ae3ee6a4ec4d5c4185da44ac6ed7d215a66770657c84
 `
 
 ## Author
