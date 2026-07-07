@@ -10,16 +10,16 @@ This repository contains **installers and documentation only**. Galgje source co
 
 **[View press release](https://azzkickah84.github.io/Galgje-releases/press-release.html)** - extended feature overview with screenshots.
 
-## Latest version (v8.5.0)
+## Latest version (v10.0.0)
 
 | File | Description |
 |------|-------------|
-| [GalgjeSetup_v8.5.0.202607052005.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v8.5.0/GalgjeSetup_v8.5.0.202607052005.exe) | Windows installer (~8.96 MB) |
+| [GalgjeSetup_v10.0.0.202607072156.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.0.0/GalgjeSetup_v10.0.0.202607072156.exe) | Windows installer (~9.08 MB) |
 | [manual.html](https://azzkickah84.github.io/Galgje-releases/manual.html) | User manual with screenshots |
 | [press-release.html](https://azzkickah84.github.io/Galgje-releases/press-release.html) | Extended press release |
-| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v8.5.0/GalgjeSetup_v8.5.0.202607052005.exe) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
+| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.0.0/GalgjeSetup_v10.0.0.202607072156.exe) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
 
-**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v8.5.0/GalgjeSetup_v8.5.0.202607052005.exe
+**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.0.0/GalgjeSetup_v10.0.0.202607072156.exe
 
 ## Requirements
 
@@ -28,10 +28,10 @@ This repository contains **installers and documentation only**. Galgje source co
 
 ## Verify download (optional)
 
-SHA-256 (`GalgjeSetup_v8.5.0.202607052005.exe`):
+SHA-256 (`GalgjeSetup_v10.0.0.202607072156.exe`):
 
 `
-ef7f26d0f17a9ba6dc336f766fb5dbb38397e43302e0db8f2ead760f11ee56d1
+5562e2332e79065b97309589677e210d8ec3d0d7cdf83d23f371d16fc9bda113
 `
 
 ## Author
