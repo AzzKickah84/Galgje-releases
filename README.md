@@ -1,5 +1,7 @@
 ﻿# Galgje - Download
 
+![Releases page visits](https://hitscounter.dev/api/hit?url=https%3A%2F%2Fgithub.com%2FAzzKickah84%2FGalgje-releases%2Freleases&label=Releases%20page%20visits&icon=github&color=%230070b6)
+
 Public download page for **Galgje** (advanced Hangman for Windows).
 
 This repository contains **installers and documentation only**. Galgje source code is **not** published here.
