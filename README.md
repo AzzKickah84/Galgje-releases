@@ -16,12 +16,12 @@ This repository contains **installers and documentation only**. Galgje source co
 
 | File | Description |
 |------|-------------|
-| [GalgjeSetup_v10.1.0.202607090011.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.1.0/GalgjeSetup_v10.1.0.202607090011.exe) | Windows installer (~9.18 MB) |
+| [GalgjeSetup_v10.1.0.202607090032.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.1.0/GalgjeSetup_v10.1.0.202607090032.exe) | Windows installer (~9.18 MB) |
 | [manual.html](https://azzkickah84.github.io/Galgje-releases/manual.html) | User manual with screenshots |
 | [press-release.html](https://azzkickah84.github.io/Galgje-releases/press-release.html) | Extended press release |
 | [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.1.0/CHANGELOG.md) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
 
-**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.1.0/GalgjeSetup_v10.1.0.202607090011.exe
+**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v10.1.0/GalgjeSetup_v10.1.0.202607090032.exe
 
 ## Requirements
 
@@ -30,10 +30,10 @@ This repository contains **installers and documentation only**. Galgje source co
 
 ## Verify download (optional)
 
-SHA-256 (`GalgjeSetup_v10.1.0.202607090011.exe`):
+SHA-256 (`GalgjeSetup_v10.1.0.202607090032.exe`):
 
 `
-a98822f292c2fea43c60adf0289955e0476ea07adfe606b3566d769679b9f276
+3ab28414ea3c664f41ff807899ed6b77e423db122ce6abb723e9bb27411e6a93
 `
 
 ## Author
