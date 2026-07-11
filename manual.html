@@ -415,7 +415,7 @@
     <div class="sidebar-brand">
       <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/app.ico" alt="Galgje icon" width="48" height="48">
       <h1>Galgje Manual</h1>
-      <p>Version 11.0.2 - Complete Guide</p>
+      <p>Version 11.2.0 - Complete Guide</p>
     </div>
     <nav>
       <div class="section">Getting Started</div>
@@ -434,6 +434,7 @@
       <a href="#rules">Game Rules &amp; Limits</a>
       <div class="section">Windows &amp; Tabs</div>
       <a href="#word-display">Word Display Window</a>
+      <a href="#network-game">Network Multiplayer (LAN)</a>
       <a href="#tab-players">Players Tab</a>
       <a href="#tab-played">Played Words Tab</a>
       <a href="#tab-stats">Player Statistics Tab</a>
@@ -513,7 +514,7 @@
       <h2>Installation</h2>
       <div class="steps">
         <div class="step"><div class="step-body"><h4>Install .NET 8 Desktop Runtime</h4><p>Download from <a href="https://dotnet.microsoft.com/download/dotnet/8.0/runtime" style="color:var(--accent)">dotnet.microsoft.com</a> if not already installed. The setup wizard checks this automatically.</p></div></div>
-        <div class="step"><div class="step-body"><h4>Run the Installer</h4><p>Download the latest installer from <a href="https://github.com/AzzKickah84/Galgje-releases/releases/latest" style="color:var(--accent)">GitHub Releases</a> (currently <code>GalgjeSetup_v11.0.2.20260711060005.exe</code>) and follow the wizard. The installer shows this changelog before setup begins.</p></div></div>
+        <div class="step"><div class="step-body"><h4>Run the Installer</h4><p>Download the latest installer from <a href="https://github.com/AzzKickah84/Galgje-releases/releases/latest" style="color:var(--accent)">GitHub Releases</a> (currently <code>GalgjeSetup_v11.2.0.20260711064053.exe</code>) and follow the wizard. The installer shows this changelog before setup begins.</p></div></div>
         <div class="step"><div class="step-body"><h4>Enable manual shortcuts</h4><p>Leave <strong>"Create a desktop shortcut to the User Manual"</strong> checked (on by default). The Start Menu always includes <strong>User Manual - Import Your Own Stats</strong>.</p></div></div>
         <div class="step"><div class="step-body"><h4>Open the manual after setup</h4><p>On the finish screen, tick <strong>Open the User Manual</strong> or launch it from Start Menu / Desktop. See <a href="#replace-stats" style="color:var(--accent)">Import Your Own Stats</a> to load your files.</p></div></div>
         <div class="step"><div class="step-body"><h4>Launch Galgje</h4><p>Open from the Start Menu or Desktop. On first run, Galgje creates data files in your user profile (see <a href="#data" style="color:var(--accent)">Data Locations</a>).</p></div></div>
@@ -772,6 +773,39 @@
         <li>On game over or winner, the window automatically captures and copies to clipboard</li>
       </ol>
       <div class="tip"><strong>Streaming tip</strong> Keep the Word Display on your stream monitor while operating the main window on your control screen.</div>
+    </section>
+
+    <section id="network-game">
+      <h2>Network Multiplayer (LAN)</h2>
+      <p>Play Hangman together over your local network: one player hosts the game with the full control window, other players join from their own PC and guess remotely. Find it in the <span class="btn-ref">Network Game</span> menu (between Players and View).</p>
+
+      <h3>Hosting a Game</h3>
+      <ol>
+        <li>Open <span class="btn-ref">Network Game → Host Game</span>. The server starts on <strong>port 8080</strong>.</li>
+        <li>A status window shows your <strong>IP address and port</strong> (e.g. <code>192.168.1.100:8080</code>), the connected players, and a <span class="btn-ref">Copy Address</span> button. Share that address with the other players.</li>
+        <li>Keep playing in the main window as usual - you can close the status window, hosting continues until you choose <span class="btn-ref">Disconnect from Network</span> or <span class="btn-ref">Stop Hosting</span>.</li>
+        <li>The network status indicator above the status bar shows <em>Hosting</em> with the number of connected clients.</li>
+      </ol>
+
+      <h3>Joining a Game</h3>
+      <ol>
+        <li>Open <span class="btn-ref">Network Game → Join Game</span>, enter the host's IP address, port (default 8080), and your player name.</li>
+        <li>After connecting, the app switches to <strong>client mode</strong>: you see the <em>Current Word Progress</em> window and the <em>Live Stats</em> window. The secret word stays hidden until the round ends.</li>
+        <li>You are automatically added to the host's player roster under your chosen name.</li>
+      </ol>
+
+      <h3>Guessing as a Joined Player</h3>
+      <ul>
+        <li><strong>Letter guess</strong> - type a letter in the <em>Your guess</em> box and press Enter (or click Send Guess).</li>
+        <li><strong>Whole word guess</strong> - type the complete word in the <em>Guess word</em> box. Correct = <strong>instant win</strong> for you; wrong = counts as a wrong guess.</li>
+        <li>Guess input locks automatically (with the reason shown) when you are eliminated, the round is over, or the host has not set a word yet.</li>
+      </ul>
+
+      <h3>End of a Round - the BING BING Recap</h3>
+      <p>When the word is completed, guessed outright, the hangman is complete, or the host marks a winner, <strong>everyone</strong> - host and all clients - hears the BING BING sound and sees the same <em>Round Finished!</em> window with the revealed word, the winner, the full guess timeline (who guessed what, right or wrong), per-player results, and eliminations. The host automatically gets the recap image on the clipboard, and every player can copy it with one click to paste into any chat or app.</p>
+
+      <div class="note"><strong>Good to know</strong> Your offline game is saved when you host or join, and restored automatically when the network session ends - network rounds never touch your local statistics history on client machines.</div>
+      <div class="tip"><strong>Firewall</strong> If players cannot connect, allow GalgjeApp (or port 8080 TCP) through Windows Firewall on the host machine.</div>
     </section>
 
     <!-- TABS -->
@@ -1565,7 +1599,7 @@ Chris             35      15      42.9%   6              2.14</pre>
     </section>
 
     <footer>
-      <p>© 2026 Thijs Boekholt - Galgje v11.0.2.20260711060005 User Manual</p>
+      <p>© 2026 Thijs Boekholt - Galgje v11.2.0.20260711064053 User Manual</p>
       <p>See also: <a href="press-release.html" style="color:var(--accent)">Press Release</a> · <a href="CHANGELOG.md" style="color:var(--accent)">Changelog</a></p>
     </footer>
 
