@@ -12,16 +12,16 @@ This repository contains **installers and documentation only**. Galgje source co
 
 **[View press release](https://azzkickah84.github.io/Galgje-releases/press-release.html)** - extended feature overview with screenshots.
 
-## Latest version (v11.3.5)
+## Latest version (v11.3.6)
 
 | File | Description |
 |------|-------------|
-| [GalgjeSetup_v11.3.5.20260712034249.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.3.5/GalgjeSetup_v11.3.5.20260712034249.exe) | Windows installer (~9.18 MB) |
+| [GalgjeSetup_v11.3.6.20260712212625.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.3.6/GalgjeSetup_v11.3.6.20260712212625.exe) | Windows installer (~9.18 MB) |
 | [manual.html](https://azzkickah84.github.io/Galgje-releases/manual.html) | User manual with screenshots |
 | [press-release.html](https://azzkickah84.github.io/Galgje-releases/press-release.html) | Extended press release |
-| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.3.5/CHANGELOG.md) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
+| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.3.6/CHANGELOG.md) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
 
-**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.3.5/GalgjeSetup_v11.3.5.20260712034249.exe
+**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.3.6/GalgjeSetup_v11.3.6.20260712212625.exe
 
 ## Requirements
 
@@ -30,10 +30,10 @@ This repository contains **installers and documentation only**. Galgje source co
 
 ## Verify download (optional)
 
-SHA-256 (`GalgjeSetup_v11.3.5.20260712034249.exe`):
+SHA-256 (`GalgjeSetup_v11.3.6.20260712212625.exe`):
 
 `
-a5e98da3dc0ba477e48e58685c865604e693c471571b3bbbd057eeaf0d2d9dbf
+652404f86df5c3d0df557d1aa7e0e252d76de4c15394fc13d7aa5638ed6705f6
 `
 
 ## Author
