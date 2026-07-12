@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Galgje v8.5.0 - User Manual</title>
+  <title>Galgje v11.3.5 - User Manual</title>
   <link rel="icon" href="app.ico" type="image/x-icon">
   <style>
     :root {
@@ -420,6 +420,7 @@
     <nav>
       <div class="section">Getting Started</div>
       <a href="#intro">Introduction</a>
+      <a href="#whats-new">What's New (v11.3)</a>
       <a href="#how-to-play">New? How Hangman Works</a>
       <a href="#install">Installation</a>
       <a href="#overview">Main Window Overview</a>
@@ -463,7 +464,7 @@
     <div class="hero">
       <div class="badge">Official User Manual</div>
       <h2>Galgje - Advanced Hangman for Windows</h2>
-      <p>This manual covers every feature of Galgje v8.5.0: from your very first game to advanced multiplayer sessions with timers, statistics, achievements, stats sets, the presentation Word Display window, full-screen projector views, the Player Manager (Home dashboard, Game Hub, Leaderboard, Hall of Fame, Compare, Game Editor, and more), configurable Settings and Game Rules for game night, and the menu bar.</p>
+      <p>This manual covers Galgje v11.3.5: local and <strong>network multiplayer</strong> hangman, timers, statistics, achievements, stats sets, full-screen projector views, the Player Manager, Word Display window, ZIP backup &amp; restore (stats-set and full AppData), Settings, Game Rules, and the menu bar.</p>
       <div class="tip"><strong>New users</strong> After installing, open this manual from the Start Menu shortcut <strong>User Manual - Import Your Own Stats</strong> (or the desktop shortcut created during setup). Jump to <a href="#replace-stats" style="color:var(--accent)">Import Your Own Stats</a> if you want to load your existing game history.</div>
       <figure class="hero-shot">
         <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/001_Main_Game_Window.png" alt="Galgje main window during active gameplay">
@@ -479,7 +480,19 @@
         <div class="card"><h4>⏱️ Live Timer</h4><p>5-minute countdown with bonus/penalty adjustments. Pause and resume at any time.</p></div>
         <div class="card"><h4>📊 Full Statistics</h4><p>Persistent player stats, performance graphs, and top-10 export.</p></div>
         <div class="card"><h4>🖥️ Word Display</h4><p>Secondary window for projectors, streams, and group viewing.</p></div>
+        <div class="card"><h4>🌐 Network LAN Play</h4><p>Host or join over your local network. Clients guess remotely; everyone sees the same round recap.</p></div>
       </div>
+    </section>
+
+    <section id="whats-new">
+      <h2>What's New in v11.3</h2>
+      <div class="card-grid">
+        <div class="card"><h4>🌐 Network multiplayer</h4><p>Host or join on LAN (port 8080). Client guessing, round recap for everyone, connection stats, firewall helper, 5-day version check.</p></div>
+        <div class="card"><h4>💾 Full-data ZIP backup</h4><p>Back up or restore the entire AppData folder from multiple entry points - not only Stats Control Center.</p></div>
+        <div class="card"><h4>📂 Restore from ZIP</h4><p>Auto-detects stats-set vs full-data archives. Browse USB/network ZIPs from the restore dialog.</p></div>
+        <div class="card"><h4>🎨 Network UI polish</h4><p>Redesigned host/join/stats dialogs, clearer sync-packet labels, accurate traffic meters, real ping latency.</p></div>
+      </div>
+      <p>See <a href="CHANGELOG.md" style="color:var(--accent)">CHANGELOG.md</a> for the full release history.</p>
     </section>
 
     <!-- HOW TO PLAY (FIRST TIMERS) -->
@@ -514,7 +527,7 @@
       <h2>Installation</h2>
       <div class="steps">
         <div class="step"><div class="step-body"><h4>Install .NET 8 Desktop Runtime</h4><p>Download from <a href="https://dotnet.microsoft.com/download/dotnet/8.0/runtime" style="color:var(--accent)">dotnet.microsoft.com</a> if not already installed. The setup wizard checks this automatically.</p></div></div>
-        <div class="step"><div class="step-body"><h4>Run the Installer</h4><p>Download the latest installer from <a href="https://github.com/AzzKickah84/Galgje-releases/releases/latest" style="color:var(--accent)">GitHub Releases</a> (currently <code>GalgjeSetup_v11.3.5.20260712025625.exe</code>) and follow the wizard. The installer shows this changelog before setup begins.</p></div></div>
+        <div class="step"><div class="step-body"><h4>Run the Installer</h4><p>Download the latest installer from <a href="https://github.com/AzzKickah84/Galgje-releases/releases/latest" style="color:var(--accent)">GitHub Releases</a> (currently <code>GalgjeSetup_v11.3.5.20260712034249.exe</code>) and follow the wizard. The installer shows this changelog before setup begins.</p></div></div>
         <div class="step"><div class="step-body"><h4>Enable manual shortcuts</h4><p>Leave <strong>"Create a desktop shortcut to the User Manual"</strong> checked (on by default). The Start Menu always includes <strong>User Manual - Import Your Own Stats</strong>.</p></div></div>
         <div class="step"><div class="step-body"><h4>Open the manual after setup</h4><p>On the finish screen, tick <strong>Open the User Manual</strong> or launch it from Start Menu / Desktop. See <a href="#replace-stats" style="color:var(--accent)">Import Your Own Stats</a> to load your files.</p></div></div>
         <div class="step"><div class="step-body"><h4>Launch Galgje</h4><p>Open from the Start Menu or Desktop. On first run, Galgje creates data files in your user profile (see <a href="#data" style="color:var(--accent)">Data Locations</a>).</p></div></div>
@@ -777,35 +790,62 @@
 
     <section id="network-game">
       <h2>Network Multiplayer (LAN)</h2>
-      <p>Play Hangman together over your local network: one player hosts the game with the full control window, other players join from their own PC and guess remotely. Find it in the <span class="btn-ref">Network Game</span> menu (between Players and View).</p>
+      <p>Play Hangman together over your local network: one player <strong>hosts</strong> with the full control window; others <strong>join</strong> from their own PC and guess remotely. Open <span class="btn-ref">Network Game</span> in the menu bar (between Players and View).</p>
+
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/023_Dialog_Network_Game.png" alt="Network Game dialog with Host and Join cards">
+        <figcaption>Network Game - choose Host Game or Join Game.</figcaption>
+      </figure>
 
       <h3>Hosting a Game</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/025_Dialog_Network_Host.png" alt="Host Network Game status window with IP address and connected players">
+        <figcaption>Host status window - share your IP:port, see connected players, copy the address, or stop hosting.</figcaption>
+      </figure>
       <ol>
         <li>Open <span class="btn-ref">Network Game → Host Game</span>. The server starts on <strong>port 8080</strong>.</li>
-        <li>A status window shows your <strong>IP address and port</strong> (e.g. <code>192.168.1.100:8080</code>), the connected players, and a <span class="btn-ref">Copy Address</span> button. Share that address with the other players.</li>
-        <li>Keep playing in the main window as usual - you can close the status window, hosting continues until you choose <span class="btn-ref">Disconnect from Network</span> or <span class="btn-ref">Stop Hosting</span>.</li>
+        <li>A modeless status window shows your <strong>IP address and port</strong> (e.g. <code>192.168.1.100:8080</code>), connected players, and <span class="btn-ref">Copy Address</span>. Share that address with other players.</li>
+        <li>On first host, Galgje may offer to add a <strong>Windows Firewall</strong> rule for port 8080 (you can also dismiss with “Do not show again”).</li>
+        <li>Keep playing in the main window as usual - closing the status window does <em>not</em> stop hosting. Use <span class="btn-ref">Network Game → Disconnect</span> or <span class="btn-ref">Stop Hosting</span> to end the session.</li>
         <li>The network status indicator above the status bar shows <em>Hosting</em> with the number of connected clients.</li>
+        <li>Open <span class="btn-ref">Network Game → Connection Stats</span> for live traffic, latency, sync packets, and uptime (can be minimized; not always-on-top).</li>
       </ol>
 
       <h3>Joining a Game</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/024_Dialog_Network_Join.png" alt="Join Network Game dialog with host IP, port, and player name">
+        <figcaption>Join dialog - enter host IP, port (default 8080), and your player name. Last-used values are remembered.</figcaption>
+      </figure>
       <ol>
-        <li>Open <span class="btn-ref">Network Game → Join Game</span>, enter the host's IP address, port (default 8080), and your player name.</li>
-        <li>After connecting, the app switches to <strong>client mode</strong>: you see the <em>Current Word Progress</em> window and the <em>Live Stats</em> window. The secret word stays hidden until the round ends.</li>
+        <li>Open <span class="btn-ref">Network Game → Join Game</span>, enter the host's IP address, port, and your player name.</li>
+        <li>A connecting progress window appears while Galgje connects and synchronizes game state.</li>
+        <li>After connecting, the app switches to <strong>client mode</strong>: you see the <em>Current Word Progress</em> window and <em>Live Stats</em>. The secret word stays hidden until the round ends.</li>
         <li>You are automatically added to the host's player roster under your chosen name.</li>
       </ol>
+
+      <h3>Connection Stats</h3>
+      <figure class="screenshot">
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/026_Dialog_Network_Stats.png" alt="Network Connection Stats showing traffic, latency, and connected players">
+        <figcaption>Connection Stats - bytes sent/received, sync packets, latency, uptime, and (on the host) connected player names.</figcaption>
+      </figure>
+      <p>Available for host and clients while connected. Useful to confirm traffic is flowing and to diagnose lag or firewall issues.</p>
 
       <h3>Guessing as a Joined Player</h3>
       <ul>
         <li><strong>Letter guess</strong> - type a letter in the <em>Your guess</em> box and press Enter (or click Send Guess).</li>
-        <li><strong>Whole word guess</strong> - type the complete word in the <em>Guess word</em> box. Correct = <strong>instant win</strong> for you; wrong = counts as a wrong guess.</li>
-        <li>Guess input locks automatically (with the reason shown) when you are eliminated, the round is over, or the host has not set a word yet.</li>
+        <li><strong>Whole word guess</strong> - type the complete word in the <em>Guess word</em> box. Correct = <strong>instant win</strong> for you; wrong = elimination (same as a wrong letter limit).</li>
+        <li>A <strong>5-second cooldown</strong> between guesses is shown in the UI so everyone can follow the pace.</li>
+        <li>Guess input locks when you are eliminated, the round is over, or the host has not set a word yet (the reason is shown).</li>
       </ul>
 
       <h3>End of a Round - the BING BING Recap</h3>
-      <p>When the word is completed, guessed outright, the hangman is complete, or the host marks a winner, <strong>everyone</strong> - host and all clients - hears the BING BING sound and sees the same <em>Round Finished!</em> window with the revealed word, the winner, the full guess timeline (who guessed what, right or wrong), per-player results, and eliminations. The host automatically gets the recap image on the clipboard, and every player can copy it with one click to paste into any chat or app.</p>
+      <p>When the word is completed, guessed outright, the hangman is complete, or the host marks a winner, <strong>everyone</strong> - host and all clients - hears the BING BING sound and sees the same <em>Round Finished!</em> window with the revealed word, winner, full guess timeline, per-player results, and eliminations. The host automatically gets the recap image on the clipboard; every player can copy it with one click.</p>
 
-      <div class="note"><strong>Good to know</strong> Your offline game is saved when you host or join, and restored automatically when the network session ends - network rounds never touch your local statistics history on client machines.</div>
-      <div class="tip"><strong>Firewall</strong> If players cannot connect, allow GalgjeApp (or port 8080 TCP) through Windows Firewall on the host machine.</div>
+      <h3>Version compatibility</h3>
+      <p>Host and joining players must run Galgje builds within <strong>5 days</strong> of each other (checked via the build timestamp in the version number). If versions are too far apart, join is blocked with a link to <a href="https://github.com/AzzKickah84/Galgje-releases/releases" style="color:var(--accent)">GitHub Releases</a> to download a matching build.</p>
+
+      <div class="note"><strong>Good to know</strong> Your offline game is saved when you host or join, and restored automatically when the network session ends - network rounds do not write to clients' local statistics history.</div>
+      <div class="tip"><strong>Firewall</strong> If players cannot connect, allow GalgjeApp (or TCP port 8080) through Windows Firewall on the host. Use the built-in port check when hosting, or add the rule from the prompt.</div>
     </section>
 
     <!-- TABS -->
@@ -843,7 +883,7 @@
         <li><strong>Win Rate</strong> - Percentage of games won</li>
       </ul>
       <p>Click any column header to sort. Double-click a player to add them to the current game. <strong>Right-click</strong> a player for a context menu: add to current game, mark as winner, set errors, eliminate or un-eliminate, reset statistics, delete from statistics, or copy the player name. Click <span class="btn-ref">Refresh Stats</span> to force a reload. Click <span class="btn-ref">Copy Stats Top10</span> to copy the top 10 players to clipboard.</p>
-      <p>Click <span class="btn-ref">Backup + Reset all Stats</span> to export a timestamped CSV backup and then clear all statistics.</p>
+      <p>Click <span class="btn-ref">Backup/Restore/Reset Stats</span> (bottom-right) to open the backup wizard - see <a href="#backup-restore" style="color:var(--accent)">Backup &amp; Restore</a>.</p>
     </section>
 
     <section id="tab-graph">
@@ -873,7 +913,7 @@
     <!-- FULL-SCREEN VIEWS -->
     <section id="fullscreen-views">
       <h2>Full-Screen Projector Views</h2>
-      <p>New in <strong>v8.0.14</strong>: the backup/restore/reset workflow has been redesigned for clarity. A single button now opens a dialog with three distinct actions, so you never accidentally lose data by clicking blindly.</p>
+      <p>Open audience-safe full-screen views from the <strong>View</strong> menu (or Tools, depending on your layout). These are ideal for projectors, TVs, and stream overlays.</p>
 
       <div class="note"><strong>Audience-safe by design</strong> None of these views ever reveal the secret word. The Word Progress view shows only the letters that have already been guessed (everything else stays masked as <code>_</code>), and the stats views show standings and numbers - never the current answer.</div>
 
@@ -1212,103 +1252,63 @@ Session notes go here.</pre>
       <h4>player_achievements.json</h4>
       <p>JSON file created automatically by Galgje. To transfer achievements from another PC, copy the entire file from that PC's <code>%LocalAppData%\Galgje\</code> folder. Do not edit by hand unless you know JSON.</p>
 
-      <div class="tip"><strong>Pro tip</strong> Use the in-app <span class="btn-ref">Backup + Reset all Stats</span> button before replacing <code>player_statistics.log</code> manually. It exports a timestamped CSV backup first, so you can always undo.</div>
+      <div class="tip"><strong>Pro tip</strong> Use <strong>Backup all data to ZIP</strong> before replacing files manually, or restore from a previous ZIP if something goes wrong.</div>
       <div class="warn"><strong>Never copy data into Program Files</strong> - <code>C:\Program Files\Galgje\</code> is read-only. Always use <code>%LocalAppData%\Galgje</code>. Galgje only auto-imports from the install folder once on first run when AppData is still empty.</div>
       <div class="note"><strong>Stats not showing?</strong> Confirm files are in AppData (not Program Files), filenames match exactly, and Galgje was restarted after copying. Check that <code>player_statistics.log</code> uses commas with no extra spaces and six numeric columns per line.</div>
     </section>
 
-    <!-- BACKUP & RESTORE -->
     <section id="backup-restore">
-      <h2>Backup & Restore Stats</h2>
-      <p>Galgje v8.0.14 provides a clear, three-action dialog for managing your stats: backup, restore, or reset. Backups are completely safe - all data is preserved even if the backup fails.</p>
+      <h2>Backup &amp; Restore</h2>
+      <p>Galgje offers several backup paths: <strong>stats-set backups</strong> (one league/season), <strong>full AppData ZIP backups</strong> (all sets + settings), and <strong>restore from ZIP</strong> files on disk or USB. Everything is available from multiple places so you do not have to hunt through menus.</p>
 
       <h3>The Action Selector Dialog</h3>
       <figure class="screenshot">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/021_Dialog_Backup_Restore_Reset.png" alt="Backup/Restore/Reset action selector dialog with three distinct buttons">
-        <figcaption>Backup/Restore/Reset dialog - choose your action: Create Backup, Restore from Backup, or Reset Stats Only.</figcaption>
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/021_Dialog_Backup_Restore_Reset.png" alt="Backup/Restore/Reset action selector with five options">
+        <figcaption>Backup/Restore/Reset - create a set backup, back up all data to ZIP, restore from ZIP, browse backups, or reset without backup.</figcaption>
       </figure>
-      <p><strong>Access:</strong> Click the <span class="btn-ref">Backup/Restore/Reset Stats</span> button (bottom of main window) or use <strong>Tools ▸ Backup and Reset All Stats</strong></p>
+      <p><strong>Access:</strong> <span class="btn-ref">Backup/Restore/Reset Stats</span> (bottom of main window) · <strong>Tools → Backup and Reset All Stats</strong> · <strong>Settings → Data &amp; Privacy</strong> · <strong>Player Manager → Tools</strong> · <strong>Stats Control Center</strong> · <strong>Data Manager</strong></p>
 
-      <h3>Option 1: Create Backup</h3>
-      <p>Backs up all data from the current active set to a new backup stats-set.</p>
-      <p><strong>What gets backed up:</strong></p>
+      <h3>Option 1: Create Backup Set</h3>
+      <p>Copies the active stats-set into a new backup set named <code>Backup of …-yyyyMMdd_HHmmss</code>. You can optionally reset the active set afterward.</p>
+      <p><strong>Backed up:</strong> player statistics, game log, achievements, notes, played words, and related set files.</p>
+
+      <h3>Option 2: Backup All Data to ZIP</h3>
+      <p>Creates <code>Galgje-DataBackup-yyyyMMdd_HHmmss.zip</code> in <code>%LocalAppData%\Galgje\backups\</code> containing <strong>all sets, settings, and global files</strong> (the backups folder itself is excluded to avoid nesting).</p>
+      <p>Use this before major upgrades, PC migration, or as a complete safety snapshot.</p>
+
+      <h3>Option 3: Restore from ZIP</h3>
+      <p>Pick any <code>.zip</code> file. Galgje detects the type automatically:</p>
       <ul>
-        <li>Player statistics (wins, games, errors)</li>
-        <li>Game log (timestamped events)</li>
-        <li>Player achievements and badges</li>
-        <li>Game notes</li>
-        <li>Played words history</li>
+        <li><strong>Stats-set ZIP</strong> - overwrites only the <em>active</em> stats-set files.</li>
+        <li><strong>Full data ZIP</strong> (<code>Galgje-DataBackup-*.zip</code>) - restores all AppData data (sets, settings, registry). Requires confirmation; reloads settings and stats-set list afterward.</li>
       </ul>
-      <p><strong>Workflow:</strong></p>
-      <ol>
-        <li>Click <strong>Create Backup</strong> in the action dialog</li>
-        <li>Backup is created with name like <code>"Backup of Default-20260630_145723"</code></li>
-        <li>You're asked: <strong>"Backup created successfully. Reset the active set now?"</strong>
-          <ul>
-            <li><strong>Yes</strong> → Active set is cleared (fresh start for new season)</li>
-            <li><strong>No</strong> → Active set is left unchanged; backup just acts as an archive</li>
-          </ul>
-        </li>
-      </ol>
 
-      <h3>Option 2: Restore from Backup</h3>
+      <h3>Option 4: Restore from Backup Browser</h3>
       <figure class="screenshot">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/022_Dialog_Restore_Backup.png" alt="Restore Backup dialog showing list of available backups with names, player counts, and dates">
-        <figcaption>Restore Backup dialog - select a backup to restore and choose your target (active set or new set).</figcaption>
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/022_Dialog_Restore_Backup.png" alt="Restore Backup dialog listing local sets, folders, ZIPs, and full-data backups">
+        <figcaption>Restore browser - local backup sets, external folders/ZIPs, and full-data ZIPs. Browse folder/ZIP, restore to active or new set, or delete old backups.</figcaption>
       </figure>
-      <p><strong>Workflow:</strong></p>
       <ol>
-        <li>Click <strong>Restore from Backup</strong> in the action dialog</li>
-        <li>A dialog opens showing all available backups (sorted newest first)</li>
-        <li>Each backup shows:
-          <ul>
-            <li><strong>Name</strong> - The backup set name</li>
-            <li><strong>Players</strong> - How many players were in that backup</li>
-            <li><strong>Created</strong> - Date and time the backup was made</li>
-          </ul>
-        </li>
-        <li>Select a backup and choose your target:
-          <ul>
-            <li><span class="btn-ref">Restore to Active Set</span> → Overwrites current set with backup (current data is overwritten)</li>
-            <li><span class="btn-ref">Restore to New Set</span> → Prompts for set name, creates new set, populates with backup</li>
-          </ul>
-        </li>
+        <li>Click <strong>Restore from Backup</strong> in the action dialog, or <strong>Tools → Restore Backup</strong>.</li>
+        <li>Select a row (source type shows Local, Folder, ZIP, or Full data ZIP).</li>
+        <li><span class="btn-ref">Restore to Active</span> - overwrites the active set (or full AppData for full-data ZIP).</li>
+        <li><span class="btn-ref">Restore to New Set</span> - available for local backup sets only; creates a new named set.</li>
+        <li><span class="btn-ref">Browse folder…</span> / <span class="btn-ref">Browse ZIP…</span> - restore from USB or network share.</li>
+        <li><span class="btn-ref">Backup all data to ZIP…</span> / <span class="btn-ref">Restore from ZIP…</span> - quick actions in the same dialog.</li>
       </ol>
 
-      <h3>Option 3: Reset Stats (No Backup)</h3>
-      <p>Clears all stats in the active set <strong>without creating a backup first.</strong></p>
-      <p><strong>Workflow:</strong></p>
-      <ol>
-        <li>Click <strong>Reset Stats (No Backup)</strong> in the action dialog</li>
-        <li>Confirmation warning: <strong>"Are you sure? This will clear all stats in the current set. This cannot be undone unless you have a backup!"</strong></li>
-        <li>Click <strong>Yes</strong> to confirm</li>
-        <li>Cleared data: stats, game log, achievements, notes (played words are kept)</li>
-      </ol>
+      <h3>Option 5: Reset Stats (No Backup)</h3>
+      <p>Clears all stats in the active set <strong>without</strong> creating a backup first. Strong confirmation required. Clears stats, log, achievements, and notes (played words are kept).</p>
 
-      <h3>Also Available in Tools Menu</h3>
-      <p><strong>Tools ▸ Restore Backup</strong> (separate menu item) - Opens the restore dialog directly, bypassing the action selector. Use this when you only want to restore a backup.</p>
-
-      <h3>Use Cases</h3>
+      <h3>Where Else to Find Backup Tools</h3>
       <ul>
-        <li><strong>Season archival + reset</strong> - Create backup, choose "Yes" to reset, start fresh season</li>
-        <li><strong>Archive without reset</strong> - Create backup, choose "No" to keep playing; backup is just a snapshot</li>
-        <li><strong>Accidental reset recovery</strong> - Use Restore to bring back lost stats</li>
-        <li><strong>Data comparison</strong> - Restore backup to a new set to compare old vs. new stats side-by-side</li>
-        <li><strong>Clean slate (no archive)</strong> - Reset without backup for one-off games</li>
-        <li><strong>Multi-season management</strong> - Create separate stats sets for each league season or tournament</li>
+        <li><strong>Player Manager → Tools</strong> - Backup ZIP, Restore ZIP, full-data ZIP backup</li>
+        <li><strong>Data Manager</strong> - per-set backup/restore, full-data ZIP, restore from ZIP</li>
+        <li><strong>Settings → Data &amp; Privacy</strong> - scheduled auto-backup, open backup folder (<code>…\Galgje\backups</code>)</li>
       </ul>
 
-      <h3>Safety & Data Integrity</h3>
-      <p>Galgje's backup system is designed to prevent data loss:</p>
-      <ul>
-        <li><strong>Backup verification</strong> - Files are verified after copying to ensure they're not corrupted</li>
-        <li><strong>Atomic operations</strong> - If backup fails, incomplete backups are automatically deleted</li>
-        <li><strong>No accidental resets</strong> - Every reset action requires explicit confirmation</li>
-        <li><strong>Permanent backups</strong> - Backup sets are never deleted automatically; you control deletion via Tools ▸ Manage Stats Sets</li>
-      </ul>
-
-      <div class="tip"><strong>Pro tip: Create regular backups</strong> Create a backup at the end of each game night or season. Backups don't interfere with gameplay and take just a few seconds.</div>
-      <div class="warn"><strong>Backup sets are permanent</strong> Backup sets remain on disk forever (never deleted automatically). Use <strong>Tools ▸ Manage Stats Sets</strong> to delete old backups manually if needed.</div>
+      <div class="tip"><strong>Pro tip</strong> Create a full-data ZIP at the end of each season and a set backup before risky experiments. Restoration from ZIP is the fastest way to recover on a new PC.</div>
+      <div class="warn"><strong>Full-data restore overwrites AppData</strong> Files in the ZIP replace matching paths under <code>%LocalAppData%\Galgje</code>. Confirm you selected the correct archive.</div>
     </section>
 
     <!-- COPY & EXPORT -->
@@ -1416,19 +1416,12 @@ Chris             35      15      42.9%   6              2.14</pre>
         <tr><td>App won't start</td><td>Install .NET 8 Desktop Runtime (x64)</td></tr>
         <tr><td>Random Word fails</td><td>Check internet connection; bundled offline list should work without it. Reinstall if <code>opentaal_wordlist.txt</code> is missing from the install folder.</td></tr>
         <tr><td>No sound</td><td>Check the mute button (🔊/🔇) and Windows volume settings</td></tr>
-        <tr><td>Stats not showing</td><td>Data lives in <code>%LocalAppData%\Galgje</code>, not Program Files. Copy files there, or restart - Galgje auto-imports from the install folder.</td></tr>
-        <tr><td>Can't guess letters</td><td>Ensure a player is selected and not eliminated</td></tr>
+        <tr><td>Stats not showing</td><td>Data lives in <code>%LocalAppData%\Galgje</code>, not Program Files. Copy files there, or restart - Galgje auto-imports from the install folder on first run.</td></tr>
+        <tr><td>Can't join network game</td><td>Same Galgje build within 5 days on host and client. Update from <a href="https://github.com/AzzKickah84/Galgje-releases/releases" style="color:var(--accent)">GitHub Releases</a>. Check firewall (port 8080 TCP on host).</td></tr>
+        <tr><td>Network connects but no updates</td><td>Open Connection Stats on both sides. Confirm sync packets increase. Restart host if stuck.</td></tr>
+        <tr><td>Can't guess letters</td><td>Ensure a player is selected and not eliminated (local play). In network client mode, check elimination/cooldown message.</td></tr>
         <tr><td>Timer stuck</td><td>Pause and resume, or start a New Game</td></tr>
-      </table>
-    </section>
-      <table>
-        <tr><th>Problem</th><th>Solution</th></tr>
-        <tr><td>App won't start</td><td>Install .NET 8 Desktop Runtime (x64)</td></tr>
-        <tr><td>Random Word fails</td><td>Check internet connection; bundled offline list should work without it. Reinstall if <code>opentaal_wordlist.txt</code> is missing from the install folder.</td></tr>
-        <tr><td>No sound</td><td>Check the mute button (🔊/🔇) and Windows volume settings</td></tr>
-        <tr><td>Stats not showing</td><td>Data lives in <code>%LocalAppData%\Galgje</code>, not Program Files. Copy files there, or restart - Galgje auto-imports from the install folder.</td></tr>
-        <tr><td>Can't guess letters</td><td>Ensure a player is selected and not eliminated</td></tr>
-        <tr><td>Timer stuck</td><td>Pause and resume, or start a New Game</td></tr>
+        <tr><td>Restore from ZIP failed</td><td>Confirm the file is a Galgje stats-set or <code>Galgje-DataBackup-*.zip</code> archive, not a random ZIP.</td></tr>
       </table>
     </section>
 
@@ -1451,13 +1444,15 @@ Chris             35      15      42.9%   6              2.14</pre>
         <tr><td>Un-Eliminate</td><td>Bottom</td><td>Restore eliminated player</td></tr>
         <tr><td>Set</td><td>Bottom</td><td>Apply manual error count</td></tr>
         <tr><td>Reset Player's Stats</td><td>Bottom</td><td>Clear selected player's all-time stats</td></tr>
-        <tr><td>Backup + Reset all Stats</td><td>Bottom-right</td><td>Export CSV backup then clear all stats</td></tr>
+        <tr><td>Backup/Restore/Reset Stats</td><td>Bottom-right</td><td>Open backup wizard (set backup, full ZIP, restore ZIP, browse, reset)</td></tr>
         <tr><td>Copy Stats Top10</td><td>Bottom-right</td><td>Copy leaderboard to clipboard</td></tr>
         <tr><td>NL / EN</td><td>Bottom-right</td><td>Switch language</td></tr>
         <tr><td>Refresh Stats</td><td>Statistics tab</td><td>Reload statistics list</td></tr>
         <tr><td>Clear Log</td><td>Game Log tab</td><td>Empty the game log</td></tr>
         <tr><td>Copy Last 25 Log Lines</td><td>Game Log tab</td><td>Copy recent log to clipboard</td></tr>
         <tr><td>Delete</td><td>Played words tab</td><td>Remove selected word from history</td></tr>
+        <tr><td>Host Game / Join Game</td><td>Network Game menu</td><td>Start or join a LAN multiplayer session</td></tr>
+        <tr><td>Connection Stats</td><td>Network Game menu</td><td>Live traffic and latency monitor while connected</td></tr>
       </table>
     </section>
 
@@ -1479,7 +1474,7 @@ Chris             35      15      42.9%   6              2.14</pre>
         <li><strong>Timer</strong> - default duration, correct/wrong bonus/penalty, auto-start; quick presets (3 / 5 / 10 / 15 min)</li>
         <li><strong>Display</strong> - word window on startup, always on top, remember Player Manager tab, font size preset, remember window position/monitor</li>
         <li><strong>Export &amp; PDF</strong> - export folder, log lines, HTML/PDF behavior, shortcuts to export tools</li>
-        <li><strong>Data &amp; Privacy</strong> - backup on exit, metrics, automatic scheduled backup, link to Backup &amp; Restore</li>
+        <li><strong>Data &amp; Privacy</strong> - backup on exit, metrics, automatic scheduled backup, <strong>Backup all data to ZIP</strong>, <strong>Restore from ZIP</strong>, open backup folder (<code>…\Galgje\backups</code>), link to Backup &amp; Restore</li>
         <li><strong>Sound</strong> - mute, volume slider, achievement popup toggle, auto-copy achievement image</li>
         <li><strong>Keyboard shortcuts</strong> - customize shortcuts for every menu command</li>
       </ul>
@@ -1512,6 +1507,7 @@ Chris             35      15      42.9%   6              2.14</pre>
       <p><strong>Game Hub:</strong> browse finished games with filters (player, word, dates, winner, outcome, length, and more). Use presets (Tonight, 7 days, 30 days, All) or save your own. Sort columns, copy a snapshot to the clipboard, or bulk-export HTML/CSV. Shift+double-click a row to compare players from that game. Also reachable via Players → Game Hub or Tools → Game Hub.</p>
       <p><strong>Game Editor:</strong> select a finished game to fix the word, winner, start/end times, participating players, and individual guesses. Use <em>Save</em> to write changes to history; optionally recalculate player statistics afterward. Quick actions include duplicate, delete, sync players from guesses, and set winner from the last correct guess.</p>
       <p><strong>Tools → Reset all:</strong> permanently wipes all stats, custom stats sets (keeps Default), achievements, profiles, and word history. A detailed confirmation dialog is shown first.</p>
+      <p><strong>Tools → Backup &amp; restore:</strong> same five-option backup wizard as the main window (set backup, full-data ZIP, restore from ZIP, browse backups, reset).</p>
       <p><strong>Features:</strong></p>
       <ul>
         <li>View all players and their statistics</li>
@@ -1568,17 +1564,16 @@ Chris             35      15      42.9%   6              2.14</pre>
 
       <h3>Data Manager Dialog</h3>
       <figure class="screenshot">
-        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/019_Dialog_Data_Manager.png" alt="Data Manager showing file management and backup options">
-        <figcaption>Data Manager dialog - manage all game data files.</figcaption>
+        <img src="https://raw.githubusercontent.com/AzzKickah84/Galgje-releases/main/screenshots/019_Dialog_Data_Manager.png" alt="Data Manager showing file editors and backup options">
+        <figcaption>Data Manager - edit raw set files; back up / restore the set; full-data ZIP backup and restore from ZIP.</figcaption>
       </figure>
-      <p><strong>Access:</strong> Tools → Data Manager</p>
+      <p><strong>Access:</strong> Edit → Data Manager (or Tools → Data Manager)</p>
       <p><strong>Manage:</strong></p>
       <ul>
-        <li>Backup all game data</li>
-        <li>Restore from backups</li>
-        <li>Edit game log entries</li>
-        <li>Manage played words list</li>
-        <li>Edit notes and preferences</li>
+        <li>Edit player statistics, game log, notes, and played words for the active set</li>
+        <li>Backup &amp; Restore rolling set backups</li>
+        <li><strong>Backup all data to ZIP…</strong> and <strong>Restore from ZIP…</strong></li>
+        <li>Open the set data folder in Explorer</li>
       </ul>
 
       <h3>Analytics Dashboard</h3>
@@ -1599,7 +1594,7 @@ Chris             35      15      42.9%   6              2.14</pre>
     </section>
 
     <footer>
-      <p>© 2026 Thijs Boekholt - Galgje v11.3.5.20260712025625 User Manual</p>
+      <p>© 2026 Thijs Boekholt - Galgje v11.3.5.20260712034249 User Manual</p>
       <p>See also: <a href="press-release.html" style="color:var(--accent)">Press Release</a> · <a href="CHANGELOG.md" style="color:var(--accent)">Changelog</a></p>
     </footer>
 
