@@ -12,16 +12,16 @@ This repository contains **installers and documentation only**. Galgje source co
 
 **[View press release](https://azzkickah84.github.io/Galgje-releases/press-release.html)** - extended feature overview with screenshots.
 
-## Latest version (v11.3.6)
+## Latest version (v11.4.0)
 
 | File | Description |
 |------|-------------|
-| [GalgjeSetup_v11.3.6.20260713002516.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.3.6/GalgjeSetup_v11.3.6.20260713002516.exe) | Windows installer (~9.2 MB) |
+| [GalgjeSetup_v11.4.0.20260713004014.exe](https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.4.0/GalgjeSetup_v11.4.0.20260713004014.exe) | Windows installer (~9.2 MB) |
 | [manual.html](https://azzkickah84.github.io/Galgje-releases/manual.html) | User manual with screenshots |
 | [press-release.html](https://azzkickah84.github.io/Galgje-releases/press-release.html) | Extended press release |
-| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.3.6/CHANGELOG.md) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
+| [CHANGELOG.md](https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.4.0/CHANGELOG.md) | See release assets on [Releases](https://github.com/AzzKickah84/Galgje-releases/releases) |
 
-**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.3.6/GalgjeSetup_v11.3.6.20260713002516.exe
+**Direct installer link:** https://github.com/AzzKickah84/Galgje-releases/releases/download/v11.4.0/GalgjeSetup_v11.4.0.20260713004014.exe
 
 ## Requirements
 
@@ -30,10 +30,10 @@ This repository contains **installers and documentation only**. Galgje source co
 
 ## Verify download (optional)
 
-SHA-256 (`GalgjeSetup_v11.3.6.20260713002516.exe`):
+SHA-256 (`GalgjeSetup_v11.4.0.20260713004014.exe`):
 
 `
-bce5207b0e8c46e44225f72263cf75e172a264e854dba3492a1cb94f9927e568
+971ebf4ea2cc8cda060174fbf206fba04f841d27085db7d630939f4a08d8c437
 `
 
 ## Author
