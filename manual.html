@@ -3,36 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Galgje User Manual — v20.1.2</title>
+  <title>Galgje User Manual — v20.1.3.20260714180843</title>
   <style>
-    body { font-family: Segoe UI, Tahoma, sans-serif; max-width: 900px; margin: 2rem auto; padding: 0 1.5rem; line-height: 1.55; color: #222; background: #fafafa; }
+    body { font-family: Segoe UI, Tahoma, sans-serif; max-width: 920px; margin: 2rem auto; padding: 0 1.5rem; line-height: 1.55; color: #222; background: #fafafa; }
     h1 { color: #1a3a5c; border-bottom: 2px solid #1a3a5c; padding-bottom: 0.3rem; }
     h2 { color: #2a5a8c; margin-top: 2rem; }
-    h3 { color: #444; }
+    h3 { color: #444; margin-top: 1.25rem; }
     code, .path { background: #eee; padding: 0.1rem 0.35rem; border-radius: 3px; font-size: 0.95em; }
     .version { color: #666; font-size: 0.95rem; }
-    ul { padding-left: 1.4rem; }
+    ul, ol { padding-left: 1.4rem; }
     table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
-    th, td { border: 1px solid #ccc; padding: 0.5rem 0.75rem; text-align: left; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem 0.75rem; text-align: left; vertical-align: top; }
     th { background: #e8eef5; }
     .note { background: #fff8e6; border-left: 4px solid #e6b800; padding: 0.75rem 1rem; margin: 1rem 0; }
+    figure { margin: 1.25rem 0; background: #fff; border: 1px solid #ddd; border-radius: 6px; padding: 0.75rem; }
+    figure img { max-width: 100%; height: auto; display: block; border: 1px solid #ccc; }
+    figcaption { margin-top: 0.5rem; color: #555; font-size: 0.92rem; }
+    .toc a { color: #2a5a8c; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
 
 <h1>Galgje — User Manual</h1>
-<p class="version">Version <strong>v20.1.2</strong> · July 14, 2026 · Copyright © 2026 Thijs Boekholt</p>
+<p class="version">Version <strong>v20.1.3.20260714180843</strong> · July 14, 2026 · Copyright © 2026 Thijs Boekholt</p>
 
 <p>Galgje is a feature-rich Hangman word game for Windows with statistics, achievements, multiplayer, and extensive player management tools.</p>
 
-<h2>1. Getting started</h2>
+<nav class="toc">
+  <strong>Contents</strong>
+  <ol>
+    <li><a href="#getting-started">Getting started</a></li>
+    <li><a href="#playing">Playing a game</a></li>
+    <li><a href="#player-manager">Player Manager</a></li>
+    <li><a href="#word-browser">Word Browser</a></li>
+    <li><a href="#network">Network play</a></li>
+    <li><a href="#data">Data, backups &amp; locations</a></li>
+    <li><a href="#help">Help menu</a></li>
+    <li><a href="#troubleshooting">Troubleshooting</a></li>
+  </ol>
+</nav>
+
+<h2 id="getting-started">1. Getting started</h2>
 <ul>
-  <li>Install from the latest <code>GalgjeSetup-v20.1.2.*.exe</code> on <a href="https://github.com/AzzKickah84/Galgje-releases/releases/latest">GitHub Releases</a>, or run from source with <code>BuildAndRun.bat</code>.</li>
+  <li>Install from the latest <code>GalgjeSetup-v20.1.3.20260714180843.exe</code> on <a href="https://github.com/AzzKickah84/Galgje-releases/releases/latest">GitHub Releases</a>, or run from source with <code>BuildAndRun.bat</code>.</li>
   <li>On first launch, sample players may be created if you have no statistics yet.</li>
-  <li>Your data is stored in <code>%LocalAppData%\Galgje</code> and survives upgrades.</li>
+  <li>By default, game data is stored in <code>%LocalAppData%\Galgje</code> and survives upgrades.</li>
+  <li>You can point game data to another folder — including a network share — via <strong>Settings → Data locations</strong> (see section 6).</li>
 </ul>
 
-<h2>2. Playing a game</h2>
+<figure>
+  <img src="screenshots/Main_Game_Window.png" alt="Galgje main game window">
+  <figcaption>Main game window with letter grid, player stats, and game elapsed time above the copyright line.</figcaption>
+</figure>
+
+<h2 id="playing">2. Playing a game</h2>
 <ol>
   <li>Choose <strong>New Game</strong> and pick English or Dutch words.</li>
   <li>Click letters or type them to guess the hidden word.</li>
@@ -41,7 +66,7 @@
 </ol>
 <p>A subtle <strong>game elapsed time</strong> counter appears at the bottom-right of the main window (above the copyright line). The same elapsed time is shown on the Live Stats board, Word Progress window, and in winner/dashboard screenshots. Time includes resumed games.</p>
 
-<h2>3. Player Manager</h2>
+<h2 id="player-manager">3. Player Manager</h2>
 <p>Open via <strong>Players</strong> menu or toolbar. Key tabs:</p>
 <table>
   <tr><th>Tab</th><th>Purpose</th></tr>
@@ -53,47 +78,95 @@
   <tr><td>Stats Health</td><td>Find inconsistencies; ignore known differences</td></tr>
 </table>
 
+<figure>
+  <img src="screenshots/Dialog_Player_Manager.png" alt="Player Manager dialog">
+  <figcaption>Player Manager — central hub for statistics, word tools, and maintenance.</figcaption>
+</figure>
+
+<h3>Stats Audit</h3>
+<p>The <strong>Stats Audit</strong> tab records every change to player statistics in a permanent log file (<code>stats_audit.jsonl</code>) per stats set. Use the filter bar to narrow by player, change source (manual edit, game end, import, reconcile), and date range.</p>
+<ul>
+  <li>Manual edits in the stats editor are logged before saving.</li>
+  <li>Game-end stat updates are logged automatically.</li>
+  <li>Imports and reconcile operations are tagged with their source.</li>
+</ul>
+
+<figure>
+  <img src="screenshots/Dialog_Player_Manager_Stats_Audit.png" alt="Stats Audit tab in Player Manager">
+  <figcaption>Stats Audit — filter by player, source, and date; review old and new values for every change.</figcaption>
+</figure>
+
 <div class="note">
   <strong>Statistics are authoritative.</strong> When you manually edit a player's stats and save, those numbers stay as you set them. The game does not silently overwrite your edits.
 </div>
 
-<h2>4. Word Browser</h2>
+<h2 id="word-browser">4. Word Browser</h2>
 <p>Available under <strong>Tools → Word Browser</strong> and as a tab in Player Manager.</p>
 <ul>
   <li>Filter by language, length, contains/starts/ends, pattern (<code>_</code> = wildcard).</li>
-  <li>Filter by <strong>Played words only</strong> to review words you have already used in games</li>
+  <li>Filter by <strong>Played words only</strong> to review words you have already used in games.</li>
   <li>Enable <strong>Look up meanings online</strong> to show definitions in the analysis panel.</li>
   <li>Sources: <strong>Wiktionary</strong>, <strong>Van Dale</strong> (Dutch), or <strong>OpenTaal</strong>.</li>
   <li>Use <strong>Use Word</strong> to set the selected word for the next game.</li>
 </ul>
 
-<h2>5. Network play</h2>
+<h2 id="network">5. Network play</h2>
 <p>Host or join games over the local network. Versions must be within the supported release range (based on internal release numbers, not the visible timestamp).</p>
 
-<h2>6. Data &amp; backups</h2>
+<h2 id="data">6. Data, backups &amp; locations</h2>
+
+<h3>Default storage</h3>
 <ul>
-  <li>Game data: <code>%LocalAppData%\Galgje</code></li>
+  <li><strong>Game data</strong> (stats, logs, word history, stats sets, backups): <code>%LocalAppData%\Galgje</code></li>
+  <li><strong>App settings</strong> (language, shortcuts, window positions): same folder, file <code>game_settings.ini</code> — always kept on this PC</li>
   <li>Daily automatic ZIP backups (last 7 days kept)</li>
   <li>Installer options: keep, back up, or delete existing data on upgrade</li>
   <li>Data Manager: edit stats, logs, played words, backups</li>
 </ul>
 
-<h2>7. Help menu</h2>
+<h3>Custom &amp; network data locations</h3>
+<p>Open <strong>Settings → Data locations</strong> to manage where game data is stored:</p>
 <ul>
-  <li><strong>User Manual</strong> — this document</li>
+  <li><strong>Overview</strong> — shows settings folder, current game data folder, and active stats set path.</li>
+  <li><strong>Custom folder</strong> — point Galgje to a local folder or network share (e.g. <code>\\server\share\Galgje</code> or <code>G:\GalgjeData</code>).</li>
+  <li><strong>Test access</strong> — verifies read/write permissions before switching.</li>
+  <li><strong>Copy or move</strong> — migrate existing data to the new folder; optional ZIP backup first.</li>
+  <li><strong>Network warning</strong> — optional startup alert if the configured network folder is unavailable.</li>
+</ul>
+
+<figure>
+  <img src="screenshots/Dialog_Settings_Data_Locations.png" alt="Settings Data locations tab">
+  <figcaption>Settings → Data locations — configure local or network game data folders, test access, and copy/move existing data.</figcaption>
+</figure>
+
+<div class="note">
+  <strong>Restart required.</strong> After changing the game data location, restart Galgje so all windows use the new folder. App settings always remain on this PC.
+</div>
+
+<div class="note">
+  <strong>Network shares.</strong> Use one PC at a time when writing to a shared folder to avoid file conflicts.
+</div>
+
+<h2 id="help">7. Help menu</h2>
+<ul>
+  <li><strong>User Manual</strong> — this document (also available as an offline ZIP with screenshots)</li>
   <li><strong>Changelog</strong> — <code>CHANGELOG.md</code></li>
   <li><strong>About</strong> — version info and bundled components</li>
 </ul>
 
-<h2>8. Troubleshooting</h2>
+<h2 id="troubleshooting">8. Troubleshooting</h2>
 <table>
   <tr><th>Problem</th><th>Solution</th></tr>
   <tr><td>Stats look wrong after manual edit</td><td>Your saved edit is correct; use Stats Reconcile only if you want to compare with history</td></tr>
+  <tr><td>Stats Audit list is empty</td><td>Audit logging starts from v20.1.3; older changes are not backfilled. Make a test edit to verify logging works.</td></tr>
+  <tr><td>Network data folder unavailable at startup</td><td>Check your connection or open Settings → Data locations to change the folder or disable the startup warning</td></tr>
+  <tr><td>Changed data location but old data still shown</td><td>Restart Galgje after changing the folder in Settings</td></tr>
   <tr><td>Word meaning not found</td><td>Try another source (Van Dale for Dutch); links may still appear in the meaning box</td></tr>
   <tr><td>Network version mismatch</td><td>Install the same or compatible release on all machines</td></tr>
+  <tr><td>Dialog text or buttons overlap</td><td>Update to the latest version; v20.1.3 includes layout fixes across Settings, Player Manager, and related dialogs</td></tr>
 </table>
 
-<p><em>Installed files include LICENSE.txt and CHANGELOG.txt in the program folder.</em></p>
+<p><em>Installed files include LICENSE.txt and CHANGELOG.txt in the program folder. For a shareable offline copy of this manual with screenshots, use the <code>Galgje-Manual-offline-v*.zip</code> from the installer output folder or GitHub release.</em></p>
 
 </body>
 </html>

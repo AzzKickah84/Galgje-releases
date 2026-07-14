@@ -2,6 +2,30 @@
 
 All notable changes to Galgje are documented here.
 
+## v20.1.3.20260714180843 — July 14, 2026
+
+### Data locations (Settings)
+- New **Settings → Data locations** tab to manage where game data is stored
+- Custom local or network folder (`\\server\share\Galgje`) for stats, logs, history, and backups
+- Test read/write access, copy or move existing data with optional ZIP backup
+- Startup warning when configured network folder is unavailable
+- App settings (language, shortcuts) always stay on this PC; restart required after path change
+
+### Stats Audit
+- Audit logging now records manual edits, game-end updates, imports, and reconcile operations
+- Fixed empty audit list (old stats captured before save; game-end and import sources wired)
+- Filter by player, source type, and date range; improved tab layout
+
+### UI & layout
+- Fixed clipping and overlapping controls across Settings, Player Manager, Game Rules, Stats Health, Word Browser, and Live Stats dialogs
+- Responsive toolbars and filter rows on narrow window widths
+
+### Offline manual
+- User manual updated with screenshots
+- Shareable offline ZIP package (`Galgje-Manual-offline-v*.zip`) for distribution without internet
+
+---
+
 ## v20.1.2.20260714035621 — July 14, 2026
 
 ### Game elapsed time
