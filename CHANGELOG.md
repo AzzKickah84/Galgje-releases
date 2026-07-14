@@ -2,7 +2,15 @@
 
 All notable changes to Galgje are documented here.
 
-## v20.1.0.20260714023500 — July 14, 2026
+## v20.1.1.20260714025430 — July 14, 2026
+
+### Word Browser
+- New **Played words only** filter to browse words you have already played
+- Improved formatting of online word meanings (clearer line breaks and sections)
+
+---
+
+## v20.1.0 — July 14, 2026
 
 ### Word Browser
 - Online word meanings are now easier to read (line breaks, section headers)
