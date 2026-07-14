@@ -2,7 +2,28 @@
 
 All notable changes to Galgje are documented here.
 
-## v20.0.19.20260714020145 — July 14, 2026
+## v20.1.0.20260714023500 — July 14, 2026
+
+### Word Browser
+- Online word meanings are now easier to read (line breaks, section headers)
+- Definitions from Wiktionary, Van Dale, and dictionary APIs
+
+### GitHub releases
+- Cumulative download counter on release pages (never resets on new versions)
+- Each release includes installer, manual, press release, and changelog
+
+### Statistics (from v20.0.19)
+- Stats Audit tab, authoritative manual stat edits
+- Stats Health and Compare Stats ignore options
+
+### Installer
+- Keep, back up, or delete existing game data during setup
+- Local-time version timestamps
+- Shareware license and setup changelog
+
+---
+
+## v20.0.19 — July 14, 2026
 
 ### Word Browser
 - Online word meanings now work reliably (Wiktionary, Van Dale, dictionary fallbacks)
