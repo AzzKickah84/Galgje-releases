@@ -2,7 +2,16 @@
 
 All notable changes to Galgje are documented here.
 
-## v20.1.1.20260714025430 — July 14, 2026
+## v20.1.2.20260714035621 — July 14, 2026
+
+### Game elapsed time
+- Subtle **game elapsed time** counter on the main window (above copyright, no overlap)
+- Same elapsed time on Live Stats board, Word Progress window, and winner/dashboard screenshots
+- Includes time from resumed games (cumulative, not reset on resume)
+
+---
+
+## v20.1.1 — July 14, 2026
 
 ### Word Browser
 - New **Played words only** filter to browse words you have already played
