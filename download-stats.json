@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
   "repository": "AzzKickah84/Galgje-releases",
-  "totalDownloads": 5,
+  "totalDownloads": 6,
   "latestRelease": "v20.1.4.20260714220248",
-  "lastUpdatedUtc": "2026-08-14T07:12:04Z",
+  "lastUpdatedUtc": "2026-08-14T12:44:47Z",
   "note": "Cumulative installer (.exe) downloads across all GitHub releases. Does not reset on new releases.",
   "perRelease": [
     {
       "tag": "v20.1.4.20260714220248",
       "name": "Galgje v20.1.4.20260714220248",
       "published_at": "2026-07-14T20:05:26Z",
-      "installer_downloads": 0,
+      "installer_downloads": 1,
       "assets": [
         {
           "name": "GalgjeSetup-v20.1.4.20260714220248.exe",
-          "download_count": 0
+          "download_count": 1
         }
       ]
     },
